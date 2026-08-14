@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function CoursesPage() {
   const courses = [
@@ -12,6 +13,7 @@ export default function CoursesPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-black">
+        <Breadcrumbs />
       {/* Page Header */}
       <div className="bg-gray-50 border-b border-gray-200 py-16 px-6">
         <div className="max-w-7xl mx-auto">
