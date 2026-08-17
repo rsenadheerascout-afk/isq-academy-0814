@@ -15,7 +15,7 @@ export interface featureCourseSectionProps{
 
 function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) {
   return (
-    <section className="bg-gray-50 py-20 px-6 border-y border-gray-200">
+    <section className="bg-gray-50 py-24 lg:px-24 md:px-20 px-6 border-y border-gray-200">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl mb-12 text-center">
           Featured Courses

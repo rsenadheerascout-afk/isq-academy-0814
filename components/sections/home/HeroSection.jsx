@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function HeroSection() {
 
   return (
-    <section className="relative bg-[url('/hero-back.jpg')] bg-cover bg-center bg-no-repeat text-white py-24 lg:px-40 md:px-20 px-6 overflow-hidden">
+    <section className="relative bg-[url('/hero-back.jpg')] bg-cover bg-center bg-no-repeat text-white py-24 lg:px-24 md:px-20 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <h1 className="text-5xl mb-6">

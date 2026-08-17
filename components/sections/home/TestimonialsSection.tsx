@@ -10,7 +10,7 @@ export interface testimonialsProps{
 
 function TestimonialsSection({ testimonials }: testimonialsProps) {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto text-center">
+    <section className="py-24 lg:px-24 md:px-20 px-6 max-w-7xl mx-auto text-center">
       <h2 className="text-3xl mb-12">
         What our learners are saying
       </h2>

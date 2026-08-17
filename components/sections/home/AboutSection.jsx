@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutSection() {
   return (
-    <section id="about" className="max-w-5xl mx-auto px-6 mb-24">
+    <section id="about" className="py-2 lg:px-24 md:px-20 px-6max-w-5xl mx-auto px-6 mb-24">
       <div className="border border-gray-200 flex flex-col md:flex-row">
         <div className="p-10 md:w-1/2 flex flex-col justify-center">
           <h3 className="text-xl mb-4">About iSeeQ Academy</h3>
