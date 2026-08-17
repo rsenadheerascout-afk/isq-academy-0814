@@ -173,7 +173,7 @@ export default function HomePage() {
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
-              className="border-2 border-gray-100 p-8 relative"
+              className="border border-gray-200 border-b-4 border-b-[#00beb2] p-8 relative shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300"
             >
               <span className="text-6xl text-[#fdc806] absolute top-4 left-6 font-serif">
                 “
