@@ -13,14 +13,14 @@ export default function HeroSection() {
             <h1 className="text-5xl mb-6">
               iSeeQ Academy Online
             </h1>
-            <div className="w-12 h-1 bg-[#00beb2] mb-6"></div>
+            <div className="w-12 h-1 bg-[#00beb2] mb-6 rounded-lg"></div>
             <p className="text-xl max-w-2xl mb-10 leading-relaxed text-gray-300">
               Improve your professional thinking and performance through
               flexible online learning led by industry experts.
             </p>
             <Link
               href="/courses"
-              className="inline-block bg-[#00beb2] text-black px-8 py-3 hover:bg-[#fdc806] transition-colors duration-300"
+              className="inline-block bg-[#00beb2] text-black px-8 py-3 hover:bg-[#fdc806] transition-colors duration-300 rounded-lg"
             >
               Browse courses
             </Link>

@@ -104,7 +104,7 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          <button className="bg-black text-white px-6 py-2 text-sm hover:bg-[#00beb2] transition-colors">
+          <button className="bg-black text-white px-6 py-2 text-sm hover:bg-[#00beb2] transition-colors rounded-lg">
             Log in
           </button>
         </div>

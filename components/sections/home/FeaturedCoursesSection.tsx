@@ -15,7 +15,7 @@ export interface featureCourseSectionProps{
 
 function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) {
   return (
-    <section className="bg-gray-50 py-24 lg:px-24 md:px-20 px-6 border-y border-gray-200">
+    <section className="bg-gray-50 py-20 lg:px-40 md:px-20 px-6 border-y border-gray-200">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl mb-12 text-center">
           Featured Courses
@@ -26,14 +26,14 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
             <Link
               key={course.slug}
               href={`/courses/${course.slug}`}
-              className="bg-white border border-gray-200 border-b-4 border-b-[#00beb2] shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 flex flex-col group cursor-pointer"
+              className="bg-white border border-gray-200 border-b-4 border-b-[#00beb2] shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 flex flex-col group cursor-pointer rounded-2xl"
             >
-              <div className="h-48 w-full relative overflow-hidden">
+              <div className="h-48 w-full relative overflow-hidden rounded-2xl">
                 <Image
                   src={course.image}
                   alt={course.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-2xl"
                 />
 
                 <div className="absolute inset-0 bg-[#00beb2]/10"></div>
@@ -65,7 +65,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
         <div className="mt-12 text-center">
           <Link
             href="/courses"
-            className="inline-block bg-black text-white px-8 py-3 hover:bg-[#00beb2] transition-colors"
+            className="inline-block bg-black text-white px-8 py-3 hover:bg-[#00beb2] transition-colors rounded-full"
           >
             View all courses
           </Link>

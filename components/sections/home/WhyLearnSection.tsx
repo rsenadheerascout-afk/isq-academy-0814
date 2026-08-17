@@ -15,7 +15,7 @@ interface WhyLearnSectionProps {
 // WhyLearnSection
 function WhyLearnSection({ benefits }: WhyLearnSectionProps) {
   return (
-    <section className="max-w-7xl mx-auto py-16 lg:px-20 md:px-12 px-6">
+    <section className="max-w-auto mx-auto py-16 lg:px-40 md:px-20 px-6">
       <h2 className="text-3xl mb-16 md:mb-20 text-center">
         Why learn with iSeeQ Academy Online?
       </h2>
