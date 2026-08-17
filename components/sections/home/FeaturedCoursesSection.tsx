@@ -15,8 +15,9 @@ export interface featureCourseSectionProps{
 
 function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) {
   return (
-    <section className="bg-gray-50 py-20 lg:px-40 md:px-20 px-6 border-y border-gray-200">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative overflow-clip bg-gray-50 py-20 lg:px-40 md:px-20 px-6 border-y border-gray-200">
+      
+      <div className="max-w-7xl mx-auto z-10 relative">
         <h2 className="text-3xl mb-12 text-center">
           Featured Courses
         </h2>
@@ -71,6 +72,14 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
           </Link>
         </div>
       </div>
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[#00beb2]/20 blur-3xl" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl" 
+      />
     </section>
   );
 }
