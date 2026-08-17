@@ -30,7 +30,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 text-sm items-center">
+          <nav className="hidden md:flex space-x-8 text-sm items-center text-black">
             {/* Dropdown Container */}
             <div
               className="relative"
@@ -43,7 +43,7 @@ export default function Navbar() {
 
               {/* Dropdown Menu */}
               {isCoursesOpen && (
-                <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-xl py-4 flex flex-col z-[101]">
+                <div className="absolute top-full left-0 w-64 bg-white  border border-gray-200 shadow-xl py-4 flex flex-col z-[101]">
                   <Link
                     href="/courses"
                     className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
