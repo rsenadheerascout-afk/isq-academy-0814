@@ -10,7 +10,7 @@ export interface testimonialsProps{
 
 function TestimonialsSection({ testimonials }: testimonialsProps) {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto text-center">
+    <section className="py-20 lg:px-40 md:px-20 px-6 max-w-auto mx-auto text-center">
       <h2 className="text-3xl mb-12">
         What our learners are saying
       </h2>
@@ -19,7 +19,7 @@ function TestimonialsSection({ testimonials }: testimonialsProps) {
         {testimonials?.map((testimonial, i) => (
           <div
             key={i}
-            className="border border-gray-200 border-b-4 border-b-[#00beb2] p-8 relative shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300"
+            className="border border-gray-200 border-b-4 border-b-[#00beb2] p-8 relative shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 rounded-lg"
           >
             <span className="text-6xl text-[#fdc806] absolute top-4 left-6 font-serif">
               “
