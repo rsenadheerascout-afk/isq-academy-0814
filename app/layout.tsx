@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // 1. Configure the font array to map to your specific files in the /fonts folder
 const futuraLtPaneuropean = localFont({
@@ -63,6 +64,7 @@ export default function RootLayout({
         {/* Navbar will render on every page */}
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
