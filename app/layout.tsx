@@ -1,7 +1,40 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+
+// 1. Configure the font array to map to your specific files in the /fonts folder
+const futuraLtPaneuropean = localFont({
+  src: [
+    {
+      path: "./fonts/FuturaLTPaneuropeanBook.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/FuturaLTPaneuropeanBookItalic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/FuturaLTPaneuropeanBoldItalic.woff2",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./fonts/FuturaLTPaneuropeanExtraBold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/FuturaLTPaneuropeanExtraBoldItalic.woff2",
+      weight: "800",
+      style: "italic",
+    },
+  ],
+  variable: "--font-futura-lt-paneuropean",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +57,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased bg-white text-black">
+    // 2. Inject the CSS variable into the HTML tag here
+    <html lang="en" className={`${futuraLtPaneuropean.variable}`}>
+      <body className="antialiased bg-white text-black">
         {/* Navbar will render on every page */}
         <Navbar />
         {children}

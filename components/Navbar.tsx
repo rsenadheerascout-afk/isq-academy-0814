@@ -10,14 +10,13 @@ export default function Navbar() {
   return (
     <>
       {/* Top Notification Bar */}
-      <div className="bg-[#00beb2] text-white text-sm py-2 px-4 text-center font-medium">
+      <div className="bg-[#00beb2] text-white text-sm py-2 px-4 text-center font-normal">
         Purchasing features are currently disabled. We are working to restore these as soon as possible.
       </div>
 
       {/* Navigation Bar */}
-      <header className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans">
+      <header className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans font-normal">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 relative">
-
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -31,8 +30,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 text-sm font-semibold items-center">
-
+          <nav className="hidden md:flex space-x-8 text-sm items-center">
             {/* Dropdown Container */}
             <div
               className="relative"
@@ -46,32 +44,67 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               {isCoursesOpen && (
                 <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-xl py-4 flex flex-col z-[101]">
-                  <Link href="/courses" className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors">
+                  <Link
+                    href="/courses"
+                    className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
+                  >
                     View all courses
                   </Link>
-                  <Link href="/courses/business" className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors">
+                  <Link
+                    href="/courses/business"
+                    className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
+                  >
                     Business & Management
                   </Link>
-                  <Link href="/courses/tech" className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors">
+                  <Link
+                    href="/courses/tech"
+                    className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
+                  >
                     Technology & AI
                   </Link>
-                  <Link href="/courses/communication" className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors">
+                  <Link
+                    href="/courses/communication"
+                    className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
+                  >
                     Communication
                   </Link>
-                  <Link href="/courses/esg-risk" className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors">
+                  <Link
+                    href="/courses/esg-risk"
+                    className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
+                  >
                     ESG & Risk
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link href="/organizations" className="hover:text-[#00beb2] transition-colors">For organizations ▼</Link>
-            <Link href="/about" className="hover:text-[#00beb2] transition-colors">About</Link>
-            <Link href="/blog" className="hover:text-[#00beb2] transition-colors">Blog</Link>
-            <Link href="/contact" className="hover:text-[#00beb2] transition-colors">Contact us</Link>
+            <Link
+              href="/organizations"
+              className="hover:text-[#00beb2] transition-colors"
+            >
+              For organizations ▼
+            </Link>
+            <Link
+              href="/about"
+              className="hover:text-[#00beb2] transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/blog"
+              className="hover:text-[#00beb2] transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-[#00beb2] transition-colors"
+            >
+              Contact us
+            </Link>
           </nav>
 
-          <button className="bg-black text-white px-6 py-2 text-sm font-semibold hover:bg-[#00beb2] transition-colors">
+          <button className="bg-black text-white px-6 py-2 text-sm hover:bg-[#00beb2] transition-colors">
             Log in
           </button>
         </div>
