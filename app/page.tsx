@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/home/HeroSection'
 import StoryFeature from '@/components/sections/home/StoryFeature'
+import OngoingCoursesSection from '@/components/sections/home/OngoingProgramsSection'
 import WhyLearnSection from '@/components/sections/home/WhyLearnSection'
 import FeaturedCoursesSection from '@/components/sections/home/FeaturedCoursesSection'
 import TestimonialsSection from '@/components/sections/home/TestimonialsSection'
 import AboutSection from '@/components/sections/home/AboutSection'
 import OrganizationsSection from '@/components/sections/home/OrganizationsSection'
 import NewsletterForm from '@/components/sections/home/NewsletterForm'
+import OngoingProgramsSection from '@/components/sections/home/OngoingProgramsSection';
 
 export default function HomePage() {
   const featuredCourses = [
@@ -71,6 +73,9 @@ export default function HomePage() {
 
       {/* Video / Story Feature */}
       <StoryFeature/>
+
+      {/* Ongoing Programs Section */}
+      <OngoingProgramsSection/>
 
       {/* Why Learn Section */}
       <WhyLearnSection benefits={benefits}/>
