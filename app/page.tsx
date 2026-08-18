@@ -72,7 +72,7 @@ export default function HomePage() {
       <HeroSection/>
 
       {/* Video / Story Feature */}
-      <StoryFeature/>
+      {/* <StoryFeature/> */}
 
       {/* Ongoing Programs Section */}
       <OngoingProgramsSection/>

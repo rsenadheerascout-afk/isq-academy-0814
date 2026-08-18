@@ -18,14 +18,14 @@ function NewsletterForm() {
           </div>
           <div>
             <label className="block text-sm mb-1">
-              First name *
+              Full name *
             </label>
             <input
               type="text"
               className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
             />
           </div>
-          <div>
+          {/* <div>
             <label className="block text-sm mb-1">
               Last name *
             </label>
@@ -33,8 +33,8 @@ function NewsletterForm() {
               type="text"
               className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
             />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <label className="block text-sm mb-1">
               Country *
             </label>
@@ -46,7 +46,7 @@ function NewsletterForm() {
               <option>United Kingdom</option>
               <option>United States</option>
             </select>
-          </div>
+          </div> */}
           <div>
             <label className="block text-sm mb-1">
               Email address *
@@ -58,6 +58,15 @@ function NewsletterForm() {
           </div>
           <div>
             <label className="block text-sm mb-1">
+              Contact Number *
+            </label>
+            <input
+              type="tel"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
+            />
+          </div>
+          {/* <div>
+            <label className="block text-sm mb-1">
               Course(s) of interest (optional)
             </label>
             <select
@@ -68,7 +77,7 @@ function NewsletterForm() {
               <option>Generative AI in Business</option>
               <option>Business Essentials</option>
             </select>
-          </div>
+          </div> */}
           <button
             type="submit"
             className="w-full bg-black text-white py-3 mt-4 hover:bg-[#00beb2] transition-colors rounded-xl"

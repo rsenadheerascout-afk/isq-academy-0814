@@ -1,11 +1,21 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import InteractiveDots from "@/components/ui/InteractiveDots";
 
 export default function Footer() {
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
   return (
-    <footer className="bg-[#1a1a1a] text-white py-16 px-6 border-t-[6px] border-[#00beb2] font-normal">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-[#1a1a1a] text-white py-16 px-6 border-t-[6px] border-[#00beb2] font-normal overflow-hidden">
+      {/* Background canvas/dots layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* <InteractiveDots isButtonHovered={isButtonHovered} /> */}
+      </div>
+
+      {/* Foreground content grid */}
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Discover Courses */}
         <div>
           <h4 className="text-[#00beb2] text-xs uppercase tracking-wider mb-4">
@@ -13,7 +23,12 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <Link href="/courses" className="hover:text-white underline">
+              <Link
+                onMouseEnter={() => setIsButtonHovered(true)}
+                onMouseLeave={() => setIsButtonHovered(false)}
+                href="/courses"
+                className="hover:text-white underline"
+              >
                 Explore courses
               </Link>
             </li>

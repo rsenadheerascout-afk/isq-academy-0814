@@ -12,10 +12,27 @@ interface Dot {
 
 interface InteractiveDotsProps {
   isButtonHovered?: boolean;
+  imageUrl?: string;
 }
 
-export default function InteractiveDots({ isButtonHovered = false }: InteractiveDotsProps) {
+export default function InteractiveDots({
+  isButtonHovered = false,
+  imageUrl = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+}: InteractiveDotsProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const timeRef = useRef<number>(0);
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  // Preload image
+  useEffect(() => {
+    if (!imageUrl) return;
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = imageUrl;
+    img.onload = () => {
+      imgRef.current = img;
+    };
+  }, [imageUrl]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,21 +45,17 @@ export default function InteractiveDots({ isButtonHovered = false }: Interactive
     let width = (canvas.width = canvas.offsetWidth);
     let height = (canvas.height = canvas.offsetHeight);
 
-    // Mouse position & interactive influence zone
-    const mouse = { x: -1000, y: -1000, maxRadius: 180 };
-
+    const mouse = { x: -1000, y: -1000, maxRadius: 200 };
     let dots: Dot[] = [];
 
-    // Uniform grid configuration
-    const spacing = 32; // Distance between dots in pixels
-    const baseRadius = 2.5; // Fixed base dot size across all dots
+    const spacing = 32;
+    const baseRadius = 2.5;
 
     const generateGrid = () => {
       dots = [];
       const cols = Math.floor(width / spacing);
       const rows = Math.floor(height / spacing);
 
-      // Offset to center the grid perfectly
       const offsetX = (width - cols * spacing) / 2 + spacing / 2;
       const offsetY = (height - rows * spacing) / 2 + spacing / 2;
 
@@ -84,49 +97,125 @@ export default function InteractiveDots({ isButtonHovered = false }: Interactive
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
     const animate = () => {
+      timeRef.current += 0.03;
       ctx.clearRect(0, 0, width, height);
 
-      dots.forEach((dot) => {
-        let targetRadius = dot.baseRadius;
-        let targetAlpha = 0.35;
-        let dotColor = `rgba(0, 190, 178, ${dot.alpha})`;
-        let shadowColor = `rgba(0, 190, 178, ${dot.alpha})`;
+      // Define Right-Side Image Boundary (Right 45% of the canvas)
+      const rightZoneStart = width * 0.55;
 
-        // --- STATE 1: Button Hovered State (All dots uniformly turn yellow and expand) ---
+      // --- 1. UPDATE DOT STATES ---
+      dots.forEach((dot) => {
+        const isRightZone = dot.x >= rightZoneStart;
+
+        // Larger base size for right-side image dots
+        const effectiveBaseRadius = isRightZone ? 10 : dot.baseRadius;
+
+        // Wave calculations
+        const waveX = Math.sin(dot.x * 0.008 + timeRef.current) * 4;
+        const waveY = Math.cos(dot.y * 0.008 + timeRef.current) * 4;
+        const waveOffset = waveX + waveY;
+
+        let targetRadius = effectiveBaseRadius + waveOffset * 0.6;
+        let targetAlpha = 0.35 + (waveOffset / 8) * 0.25;
+
         if (isButtonHovered) {
-          targetRadius = dot.baseRadius * 0.5;
+          targetRadius = effectiveBaseRadius * 0.5;
           targetAlpha = 0.9;
-          dotColor = `#fdc806`;
-          shadowColor = `#fdc806`;
-        } 
-        // --- STATE 2: Proximity Cursor Interaction ---
-        else {
+        } else {
           const distX = mouse.x - dot.x;
           const distY = mouse.y - dot.y;
           const distance = Math.hypot(distX, distY);
 
           if (distance < mouse.maxRadius) {
             const intensity = 1 - distance / mouse.maxRadius;
-            targetRadius = dot.baseRadius + intensity * 7;
-            targetAlpha = 0.35 + intensity * 0.55;
+            // Expand squares further on mouse proximity for clarity
+            targetRadius += intensity * (isRightZone ? 10 : 8);
+            targetAlpha += intensity * 0.55;
           }
         }
 
-        // Smooth interpolation
         dot.radius += (targetRadius - dot.radius) * 0.15;
         dot.alpha += (targetAlpha - dot.alpha) * 0.15;
+      });
 
-        // Draw dot
+      // --- 2. DRAW BASE DOT GRID (Left side + Unfilled background) ---
+      dots.forEach((dot) => {
+        const isRightZone = dot.x >= rightZoneStart;
+
         ctx.beginPath();
-        ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+        if (isRightZone) {
+          // Draw subtle background placeholders on the right side
+          const squareSize = Math.max(1, dot.radius * 1.8);
+          ctx.roundRect(
+            dot.x - squareSize / 2,
+            dot.y - squareSize / 2,
+            squareSize,
+            squareSize,
+            4
+          );
+        } else {
+          // Draw standard circles on the left side
+          ctx.arc(dot.x, dot.y, Math.max(0.5, dot.radius), 0, Math.PI * 2);
+        }
 
-        ctx.fillStyle = dotColor;
-        ctx.shadowColor = shadowColor;
-        ctx.shadowBlur = dot.radius > dot.baseRadius + 1 ? 8 : 0;
-
+        const color = isButtonHovered ? "#fdc806" : `rgba(0, 190, 178, ${dot.alpha})`;
+        ctx.fillStyle = color;
+        ctx.shadowColor = color;
+        ctx.shadowBlur = dot.radius > dot.baseRadius + 2 ? 8 : 0;
         ctx.fill();
         ctx.shadowBlur = 0;
       });
+
+      // --- 3. CLIP IMAGE INSIDE SQUARES (Right side only) ---
+      if (imgRef.current) {
+        const img = imgRef.current;
+        const rightZoneWidth = width - rightZoneStart;
+
+        // Offscreen canvas layer dedicated to masking
+        const offCanvas = document.createElement("canvas");
+        offCanvas.width = width;
+        offCanvas.height = height;
+        const offCtx = offCanvas.getContext("2d");
+
+        if (offCtx) {
+          // Step 3a: Draw larger rounded square masks for dots in the right zone
+          dots.forEach((dot) => {
+            if (dot.x >= rightZoneStart) {
+              const squareSize = Math.max(1, dot.radius * 2.1);
+              offCtx.beginPath();
+              offCtx.roundRect(
+                dot.x - squareSize / 2,
+                dot.y - squareSize / 2,
+                squareSize,
+                squareSize,
+                4 // Corner radius for rounded squares
+              );
+              offCtx.fillStyle = "#ffffff";
+              offCtx.fill();
+            }
+          });
+
+          // Step 3b: Mask image inside the squares
+          offCtx.globalCompositeOperation = "source-in";
+
+          const imgAspect = img.naturalWidth / img.naturalHeight;
+          let drawW = rightZoneWidth;
+          let drawH = drawW / imgAspect;
+
+          if (drawH < height) {
+            drawH = height;
+            drawW = drawH * imgAspect;
+          }
+
+          const drawX = rightZoneStart + (rightZoneWidth - drawW) / 2;
+          const drawY = (height - drawH) / 2;
+
+          offCtx.drawImage(img, drawX, drawY, drawW, drawH);
+
+          // Step 3c: Stamp clipped image onto main canvas
+          ctx.drawImage(offCanvas, 0, 0);
+        }
+      }
 
       animationFrameId = requestAnimationFrame(animate);
     };
