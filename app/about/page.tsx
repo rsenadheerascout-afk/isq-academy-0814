@@ -9,12 +9,14 @@ export default function AboutPage() {
       <Breadcrumbs />
 
       {/* 2. Hero Banner */}
-      <section className="relative w-full bg-[#f4f4f5] py-16 md:py-24 px-4 md:px-8 overflow-hidden">
-        {/* Optional: Add a subtle background image or gradient here to match the cloudy texture in the reference */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-50"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl text-gray-900 tracking-tight">
+      <section className="relative w-full min-h-[280px] md:min-h-[360px] overflow-hidden">
+        {/* Background Image */}
+        <img src="/hero-back.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        {/* Dark/light overlay for readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-20 md:py-28">
+          <h1 className="text-4xl md:text-5xl text-white tracking-tight">
             About iSeeQ Academy
           </h1>
         </div>
@@ -22,7 +24,7 @@ export default function AboutPage() {
 
       {/* 3. Main Content Area */}
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-16 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
-        
+
         {/* Our Mission */}
         <div>
           <h2 className="text-3xl mb-6 text-gray-900">Our Mission</h2>
@@ -44,13 +46,13 @@ export default function AboutPage() {
               Our offering has been designed and developed using the latest in learning design theory and technology. Our courses are fully online and offer a flexible way to fit learning around your life.
             </p>
             <p>Each course includes a balance of:</p>
-            
+
             <ul className="list-disc pl-6 space-y-2 py-2">
               <li>expert-led seminars</li>
               <li>collaboration with peers</li>
               <li>individual study to challenge and support you in achieving your objectives</li>
             </ul>
-            
+
             <p>
               Our courses cover a range of subject areas, but each course has a strong focus on real-world applications for individuals and businesses.
             </p>
@@ -63,13 +65,13 @@ export default function AboutPage() {
         {/* Our Community */}
         <div>
           <h2 className="text-3xl mb-6 text-gray-900">Our Community</h2>
-          
+
           {/* Quote Header */}
           <p className="mb-6">
             <span className="text-gray-900">Dr. Sarah Jenkins: </span>
             <span className="italic text-gray-600">Director of Learning, iSeeQ Academy</span>
           </p>
-          
+
           {/* Quote Body */}
           <div className="space-y-4 text-gray-600 border-l-2 border-gray-200 pl-6">
             <p>
