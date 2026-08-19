@@ -10,7 +10,6 @@ export interface heroProps {
 export default function HeroSection({ imageLink }: heroProps) {
   // Access the context setters
   const [isButtonHovered, setIsButtonHovered] = useState(false);
-  console.log(imageLink);
   
   return (
     <section className="relative bg-slate-950 text-white py-24 lg:px-40 md:px-20 px-6 overflow-hidden">
