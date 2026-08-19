@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 export default function Navbar() {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileCoursesOpen, setIsMobileCoursesOpen] = useState(false);
 
   return (
     <>
@@ -43,7 +45,7 @@ export default function Navbar() {
 
               {/* Dropdown Menu */}
               {isCoursesOpen && (
-                <div className="absolute top-full left-0 w-64 bg-white  border border-gray-200 shadow-xl py-4 flex flex-col z-[101]">
+                <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-xl py-4 flex flex-col z-[101]">
                   <Link
                     href="/courses"
                     className="px-6 py-2 hover:bg-gray-50 hover:text-[#00beb2] transition-colors"
@@ -79,12 +81,6 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/organizations"
-              className="hover:text-[#00beb2] transition-colors"
-            >
-              For organizations ▼
-            </Link>
-            <Link
               href="/about"
               className="hover:text-[#00beb2] transition-colors"
             >
@@ -97,17 +93,125 @@ export default function Navbar() {
               Blog
             </Link>
             <Link
-              href="/contact"
+              href="/#contact"
               className="hover:text-[#00beb2] transition-colors"
             >
               Contact us
             </Link>
           </nav>
 
-          <button className="bg-black text-white px-6 py-2 text-sm hover:bg-[#00beb2] transition-colors rounded-lg">
-            Log in
-          </button>
+          {/* Desktop Right Actions */}
+          <div className="hidden md:flex items-center">
+            <button className="bg-black text-white px-6 py-2 text-sm hover:bg-[#00beb2] transition-colors rounded-lg">
+              Log in
+            </button>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <div className="flex items-center md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-gray-700 hover:text-[#00beb2] focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              {isMobileMenuOpen ? (
+                /* Close (X) Icon */
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                /* Hamburger Icon */
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Dropdown Drawer */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-b border-gray-200 px-6 pt-2 pb-6 space-y-4">
+            {/* Mobile Courses Accordion */}
+            <div>
+              <button
+                onClick={() => setIsMobileCoursesOpen(!isMobileCoursesOpen)}
+                className="w-full text-left py-2 text-gray-800 font-medium flex justify-between items-center"
+              >
+                <span>Explore courses</span>
+                <span className={`text-xs transition-transform ${isMobileCoursesOpen ? 'rotate-180' : ''}`}>▼</span>
+              </button>
+
+              {isMobileCoursesOpen && (
+                <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#00beb2] flex flex-col text-sm">
+                  <Link
+                    href="/courses"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-1 text-gray-600 hover:text-[#00beb2]"
+                  >
+                    View all courses
+                  </Link>
+                  <Link
+                    href="/courses/business"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-1 text-gray-600 hover:text-[#00beb2]"
+                  >
+                    Business & Management
+                  </Link>
+                  <Link
+                    href="/courses/tech"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-1 text-gray-600 hover:text-[#00beb2]"
+                  >
+                    Technology & AI
+                  </Link>
+                  <Link
+                    href="/courses/communication"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-1 text-gray-600 hover:text-[#00beb2]"
+                  >
+                    Communication
+                  </Link>
+                  <Link
+                    href="/courses/esg-risk"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-1 text-gray-600 hover:text-[#00beb2]"
+                  >
+                    ESG & Risk
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/about"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 text-gray-800 hover:text-[#00beb2] transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/blog"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 text-gray-800 hover:text-[#00beb2] transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 text-gray-800 hover:text-[#00beb2] transition-colors"
+            >
+              Contact us
+            </Link>
+
+            <div className="pt-2">
+              <button className="w-full bg-black text-white px-6 py-2.5 text-sm hover:bg-[#00beb2] transition-colors rounded-lg">
+                Log in
+              </button>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
