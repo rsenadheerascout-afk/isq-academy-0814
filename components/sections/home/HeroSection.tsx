@@ -3,14 +3,19 @@ import Link from "next/link";
 import { useState } from "react";
 import InteractiveDots from "@/components/ui/InteractiveDots"; // Adjust path if needed
 
-export default function HeroSection() {
+export interface heroProps {
+  imageLink: string;
+}
+
+export default function HeroSection({ imageLink }: heroProps) {
   // Access the context setters
   const [isButtonHovered, setIsButtonHovered] = useState(false);
+  
   return (
     <section className="relative bg-slate-950 text-white py-24 lg:px-40 md:px-20 px-6 overflow-hidden">
       {/* Canvas Interactive Background */}
       {/* <InteractiveBubbles /> */}
-      <InteractiveDots isButtonHovered={isButtonHovered} />
+      <InteractiveDots isButtonHovered={isButtonHovered} imageUrl={imageLink} />
 
       {/* Dark Overlay for Text Readability */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>

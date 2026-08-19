@@ -69,7 +69,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-black font-sans font-normal">
       {/* Hero Section */}
-      <HeroSection/>
+      <HeroSection imageLink={'/about-academy.jpg'}/>
 
       {/* Video / Story Feature */}
       {/* <StoryFeature/> */}
