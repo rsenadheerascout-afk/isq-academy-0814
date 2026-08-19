@@ -11,7 +11,7 @@ export default function OngoingProgramsSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-      <div className="relative rounded-[2.5rem] overflow-visible bg-gradient-to-r from-teal-600 via-primary to-secondary p-8 md:p-14 text-white shadow-2xl">
+      <div className="relative rounded-[2.5rem] overflow-visible bg-gradient-to-r from-teal-600 via-primary to-teal-600 p-8 md:p-14 text-white shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column: Program Information */}
