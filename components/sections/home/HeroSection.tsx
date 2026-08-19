@@ -26,7 +26,7 @@ export default function HeroSection() {
 
         <Link
           href="/courses"
-          className="inline-block bg-[#00beb2] text-black px-8 py-3 hover:bg-[#fdc806] hover:shadow-[#fdc806] hover:shadow-[0_0_20px_rgba(34,211,238,0.7)] hover:scale-105 transition duration-300 rounded-lg pointer-events-auto font-light"
+          className="inline-block bg-[#00beb2] text-black px-8 py-3 hover:bg-[#fdc806] hover:shadow-[#fdc806] hover:shadow-[0_0_20px_rgba(34,211,238,0.7)] hover:scale-105 transition duration-150 rounded-lg pointer-events-auto font-light"
           onMouseEnter={() => setIsButtonHovered(true)}
           onMouseLeave={() => setIsButtonHovered(false)}
         >

@@ -11,7 +11,7 @@ export default function OngoingProgramsSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-      <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-teal-600 via-primary to-secondary p-8 md:p-14 text-white shadow-2xl">
+      <div className="relative rounded-[2.5rem] overflow-visible bg-gradient-to-r from-teal-600 via-primary to-secondary p-8 md:p-14 text-white shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column: Program Information */}
@@ -66,14 +66,14 @@ export default function OngoingProgramsSection() {
             <div className="relative w-72 h-[350px] pt-6">
               
               {/* Back Dark Badge Card */}
-              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform -rotate-12 translate-x-3 translate-y-2 p-5 border border-white/10 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 translate-x-15 translate-y-20 p-5 border border-white/10 flex flex-col justify-end text-white scale-130">
                 <div className="text-2xl font-normal tracking-widest opacity-40 uppercase mb-4">
                   iSeeQ
                 </div>
               </div>
 
               {/* Front Main Badge Card */}
-              <div className="absolute inset-0 bg-white text-black rounded-2xl shadow-2xl transform rotate-3 p-4 flex flex-col justify-between border border-gray-100 z-10">
+              <div className="absolute inset-0 bg-white text-black rounded-2xl shadow-2xl transform rotate-3 p-4 flex flex-col justify-between border border-gray-100 z-10 lg:scale-150">
                 {/* Photo Area */}
                 <div className="relative w-full h-44 bg-gray-200 rounded-xl overflow-hidden">
                   <img
