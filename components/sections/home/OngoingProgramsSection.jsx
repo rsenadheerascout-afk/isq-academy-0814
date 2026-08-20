@@ -66,7 +66,7 @@ export default function OngoingProgramsSection() {
             <div className="relative w-72 h-[350px] pt-6">
               
               {/* Back Dark Badge Card */}
-              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 translate-x-15 translate-y-20 p-5 border border-white/10 flex flex-col justify-end text-white scale-130">
+              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 lg:translate-x-15 translate-x-5 lg:translate-y-20 translate-y-14 p-5 border border-white/10 flex flex-col justify-end text-white lg:scale-125 scale-110 ">
                 <div className="text-2xl font-normal tracking-widest opacity-40 uppercase mb-4">
                   iSeeQ
                 </div>
