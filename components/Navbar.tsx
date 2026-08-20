@@ -1,13 +1,24 @@
 // components/Navbar.tsx
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MobileMenu from './MobileMenu'; // Import the new component
+import MobileMenu from './MobileMenu';
 
-// Define categories outside the component to prevent unnecessary re-renders
-const courseCategories = [
+interface SubCategory {
+  label: string;
+  href: string;
+}
+
+interface Category {
+  id: string;
+  label: string;
+  href: string;
+  subCategories: SubCategory[];
+}
+
+const courseCategories: Category[] = [
   {
     id: 'business',
     label: 'Business and Management',
@@ -52,13 +63,28 @@ const courseCategories = [
 
 export default function Navbar() {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isOrgOpen, setIsOrgOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const closeDropdown = () => {
+  const navRef = useRef<HTMLHeadingElement>(null);
+
+  const closeDropdowns = () => {
     setIsCoursesOpen(false);
+    setIsOrgOpen(false);
     setActiveCategory(null);
   };
+
+  // Close dropdowns on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        closeDropdowns();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -66,9 +92,10 @@ export default function Navbar() {
         Purchasing features are currently disabled. We are working to restore these as soon as possible.
       </div>
 
-      <header className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans font-normal relative">
+      <header ref={navRef} className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans font-normal">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          
+
+          {/* Brand Logo */}
           <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
               src="/isq-aca-logo.png"
@@ -80,15 +107,25 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-sm items-center text-black">
-            <div
-              className="relative"
-              onMouseEnter={() => setIsCoursesOpen(true)}
-              onMouseLeave={closeDropdown}
-            >
-              <button className="hover:text-[#00beb2] transition-colors flex items-center py-2">
-                Explore courses <span className="ml-1 text-xs">▼</span>
+
+            {/* Explore Courses Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                aria-expanded={isCoursesOpen}
+                aria-haspopup="true"
+                onClick={() => {
+                  setIsCoursesOpen((prev) => !prev);
+                  setIsOrgOpen(false);
+                }}
+                className="cursor-pointer hover:text-primary transition-colors flex items-center py-2 font-medium"
+              >
+                Explore courses
+                <span className={`ml-1 text-xs transition-transform duration-200 ${isCoursesOpen ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
               </button>
 
               {isCoursesOpen && (
@@ -103,25 +140,24 @@ export default function Navbar() {
                       >
                         <Link
                           href={category.href}
-                          onClick={closeDropdown}
-                          className={`flex justify-between items-center px-6 py-3 transition-colors ${
-                            activeCategory === category.id
+                          onClick={closeDropdowns}
+                          className={`flex justify-between items-center px-6 py-3 transition-colors ${activeCategory === category.id
                               ? 'bg-[#eef9f8] text-primary border-l-2 border-primary'
                               : 'hover:bg-gray-50 border-l-2 border-transparent'
-                          }`}
+                            }`}
                         >
                           <span>{category.label}</span>
                           <span className="text-gray-400">›</span>
                         </Link>
 
                         {activeCategory === category.id && (
-                          <div className="absolute top-0 left-full ml-0.5 w-[300px] bg-white border border-gray-200 shadow-xl min-h-full">
+                          <div className="absolute top-0 left-full w-[300px] bg-white border border-gray-200 shadow-xl min-h-full">
                             <div className="flex flex-col py-2">
                               {category.subCategories.map((sub, index) => (
                                 <Link
                                   key={index}
                                   href={sub.href}
-                                  onClick={closeDropdown}
+                                  onClick={closeDropdowns}
                                   className="px-6 py-3 hover:text-primary hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-b-0"
                                 >
                                   {sub.label}
@@ -134,11 +170,11 @@ export default function Navbar() {
                     ))}
                   </div>
 
-                  <div className="p-6 flex justify-center">
+                  <div className="p-6 flex justify-center border-t border-gray-100">
                     <Link
                       href="/courses"
-                      onClick={closeDropdown}
-                      className="border border-black px-6 py-2 text-center hover:bg-primary/10 hover:border-primary hover:text-primary transition-colors w-2/3"
+                      onClick={closeDropdowns}
+                      className="border border-black px-6 py-2 text-center hover:bg-primary/10 hover:border-primary hover:text-primary transition-colors w-full rounded-md font-medium"
                     >
                       View all courses
                     </Link>
@@ -147,29 +183,58 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/organizations" className=" text-black hover:text-primary transition-colors">
-              For organizations ▼
-            </Link>
-            <Link href="/about" className=" text-black hover:text-primary transition-colors">
+            {/* For Organizations Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                aria-expanded={isOrgOpen}
+                aria-haspopup="true"
+                onClick={() => {
+                  setIsOrgOpen((prev) => !prev);
+                  setIsCoursesOpen(false);
+                }}
+                className="cursor-pointer hover:text-primary transition-colors flex items-center py-2 font-medium"
+              >
+                For organizations
+                <span className={`ml-1 text-xs transition-transform duration-200 ${isOrgOpen ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
+              </button>
+
+              {isOrgOpen && (
+                <div className="absolute top-full left-0 mt-1 w-[280px] bg-white border border-gray-200 shadow-xl py-2 z-[101]">
+                  <Link
+                    href="/organizations"
+                    onClick={closeDropdowns}
+                    className="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-primary transition-colors"
+                  >
+                    Learning and Development for your organisation
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Standard Links */}
+            <Link href="/about" className="hover:text-primary transition-colors font-medium">
               About
             </Link>
-            <Link href="/blog" className=" text-black hover:text-primary transition-colors">
+            <Link href="/blog" className="hover:text-primary transition-colors font-medium">
               Blog
             </Link>
-            <Link href="/contact" className=" text-black hover:text-primary transition-colors">
+            <Link href="/contact" className="hover:text-primary transition-colors font-medium">
               Contact us
             </Link>
           </nav>
 
-          {/* Desktop Login Button */}
-          <button className="hidden md:block bg-black text-white px-6 py-2 text-sm hover:bg-primary transition-colors rounded-lg">
+          {/* Desktop Login Action */}
+          <button className="hidden md:block bg-black text-white px-6 py-2 text-sm hover:bg-primary transition-colors rounded-lg font-medium">
             Log in
           </button>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Menu Toggle Button */}
           <button
             className="md:hidden flex items-center p-2 text-black hover:text-primary transition-colors focus:outline-none"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -184,11 +249,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Injected Mobile Menu Component */}
-        <MobileMenu 
-          isOpen={isMobileMenuOpen} 
-          closeMenu={() => setIsMobileMenuOpen(false)} 
-          courseCategories={courseCategories} 
+        {/* Mobile Menu Drawer */}
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
+          closeMenu={() => setIsMobileMenuOpen(false)}
+          courseCategories={courseCategories}
         />
       </header>
     </>
