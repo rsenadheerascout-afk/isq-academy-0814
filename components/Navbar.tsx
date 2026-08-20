@@ -147,16 +147,16 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/organizations" className="hover:text-primary transition-colors">
+            <Link href="/organizations" className=" text-black hover:text-primary transition-colors">
               For organizations ▼
             </Link>
-            <Link href="/about" className="hover:text-primary transition-colors">
+            <Link href="/about" className=" text-black hover:text-primary transition-colors">
               About
             </Link>
-            <Link href="/blog" className="hover:text-primary transition-colors">
+            <Link href="/blog" className=" text-black hover:text-primary transition-colors">
               Blog
             </Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">
+            <Link href="/contact" className=" text-black hover:text-primary transition-colors">
               Contact us
             </Link>
           </nav>
