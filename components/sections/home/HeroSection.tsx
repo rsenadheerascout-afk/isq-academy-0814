@@ -18,7 +18,7 @@ export default function HeroSection({ imageLink }: heroProps) {
       <InteractiveDots isButtonHovered={isButtonHovered} imageUrl={imageLink} />
 
       {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/0 to-black/0 pointer-events-none"></div>
 
       {/* Content Layer */}
       <div className="max-w-7xl mx-auto relative z-10 pointer-events-none">
