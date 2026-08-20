@@ -12,6 +12,8 @@ import AboutSection from "@/components/sections/home/AboutSection";
 import OrganizationsSection from "@/components/sections/home/OrganizationsSection";
 import NewsletterForm from "@/components/sections/home/NewsletterForm";
 import OngoingProgramsSection from "@/components/sections/home/OngoingProgramsSection";
+import WomenSection from "@/components/sections/home/WomenSection";
+import SeniorSection from "@/components/sections/home/SeniorSection";
 
 export default function HomePage() {
   const featuredCourses = [
@@ -93,6 +95,12 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-black font-sans font-normal overflow-hidden">
       {/* Hero Section */}
       <HeroSection imageLink={"/about-academy.jpg"} />
+      
+      {/* Women Section */}
+      <WomenSection/>
+      
+      {/* Senior Section */}
+      <SeniorSection/>
 
       {/* Video / Story Feature */}
       {/* <StoryFeature/> */}
