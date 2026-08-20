@@ -79,10 +79,18 @@ export default function HomePage() {
         company: "iSeeQ",
       },
     },
+    {
+      text: "The quality of the courses and support from the academy made the entire learning journey worthwhile.",
+      author: {
+        name: "Ben",
+        avatarUrl: "",
+        company: "iSeeQ",
+      },
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans font-normal">
+    <div className="min-h-screen bg-white text-black font-sans font-normal overflow-hidden">
       {/* Hero Section */}
       <HeroSection imageLink={"/about-academy.jpg"} />
 
