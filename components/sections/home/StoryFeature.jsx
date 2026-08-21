@@ -7,7 +7,7 @@ function StoryFeature() {
   const carouselItems = [
     {
       id: 1,
-      title: "Compelling Communication",
+      title: "Compelling Communication - test",
       description: "Master the art of clear, impactful messaging to influence and lead effectively in any professional environment.",
       image: "/courses/communication.jpg",
       link: "/courses/compelling-communication",

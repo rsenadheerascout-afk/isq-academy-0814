@@ -1,6 +1,16 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about iSeeQ Academy, our mission, online learning approach, professional courses, and commitment to flexible education.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

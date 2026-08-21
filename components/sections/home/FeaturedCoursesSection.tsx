@@ -1,10 +1,10 @@
 import Link from "next/link";
-import React from "react";
 import Image from "next/image";
 
 export interface featureCourse {
   slug: string;
   title: string;
+  description: string;
   date: string;
   image: string;
 }
@@ -48,8 +48,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
                   </h3>
 
                   <p className="text-gray-600 text-sm mb-6">
-                    Master practical tools and techniques to integrate strategy
-                    into your organization.
+                    {course.description}
                   </p>
                 </div>
 
