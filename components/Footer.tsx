@@ -1,116 +1,79 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import InteractiveDots from "@/components/ui/InteractiveDots";
+
+const discoverLinks = [
+  ["Explore courses", "/courses"],
+  ["About", "/#about"],
+  ["Blog", "/#blog"],
+  ["Contact us", "/#contact"],
+  ["FAQs", "#"],
+];
+
+const legalLinks = [
+  ["Policies", "#"],
+  ["Terms of use", "#"],
+  ["Cancel your order", "#"],
+  ["Terms of purchase", "#"],
+  ["Privacy notice", "#"],
+  ["Accessibility", "#"],
+];
+
+const linkClass = "hover:text-white underline";
 
 export default function Footer() {
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
   return (
-    <footer className="relative bg-[#1a1a1a] text-white py-16 px-6 border-t-[6px] border-[#00beb2] font-normal overflow-hidden">
-      {/* Background canvas/dots layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* <InteractiveDots isButtonHovered={isButtonHovered} /> */}
-      </div>
-
-      {/* Foreground content grid */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative overflow-hidden border-t-[6px] border-[#00beb2] bg-[#1a1a1a] px-6 py-8 font-normal text-white">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
         {/* Discover Courses */}
         <div>
-          <h4 className="text-[#00beb2] text-xs uppercase tracking-wider mb-4">
+          <h4 className="mb-4 text-xs uppercase tracking-wider text-[#00beb2]">
             Discover Courses
           </h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>
-              <Link
-                onMouseEnter={() => setIsButtonHovered(true)}
-                onMouseLeave={() => setIsButtonHovered(false)}
-                href="/courses"
-                className="hover:text-white underline"
-              >
-                Explore courses
-              </Link>
-            </li>
-            <li>
-              <a href="/#about" className="hover:text-white underline">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/#blog" className="hover:text-white underline">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="/#contact" className="hover:text-white underline">
-                Contact us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                FAQs
-              </a>
-            </li>
+            {discoverLinks.map(([label, href]) => (
+              <li key={label}>
+                <Link href={href} className={linkClass}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Organizations */}
         <div>
-          <h4 className="text-[#00beb2] text-xs uppercase tracking-wider mb-4">
+          <h4 className="mb-4 text-xs uppercase tracking-wider text-[#00beb2]">
             For Organizations
           </h4>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>
-              <a href="/#organizations" className="hover:text-white underline">
-                Learning and Development for your organization
-              </a>
-            </li>
-          </ul>
+          <Link
+            href="/#organizations"
+            className={`text-sm text-gray-300 ${linkClass}`}
+          >
+            Learning and Development for your organization
+          </Link>
         </div>
 
         {/* Legal */}
         <div>
-          <h4 className="text-[#00beb2] text-xs uppercase tracking-wider mb-4">
+          <h4 className="mb-4 text-xs uppercase tracking-wider text-[#00beb2]">
             Legal
           </h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Policies
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Terms of use
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Cancel your order
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Terms of purchase
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Privacy notice
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white underline">
-                Accessibility
-              </a>
-            </li>
+            {legalLinks.map(([label, href]) => (
+              <li key={label}>
+                <Link href={href} className={linkClass}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Footer Branding */}
+        {/* Branding */}
         <div className="flex flex-col items-start md:items-end">
-          <Link href="/" className="flex items-center mb-4">
+          <Link href="/" className="mb-4">
             <Image
               src="/isq-aca-whlogo.png"
               alt="iSeeQ Academy"
@@ -120,24 +83,24 @@ export default function Footer() {
             />
           </Link>
 
-          {/* Copyright */}
-          <p className="text-xs text-gray-400 mb-4">
-            © Copyright 2026 iSeeQ Academy
-          </p>
-
-          {/* Social Icons */}
-          <div className="flex space-x-4">
-            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center text-xs cursor-pointer hover:bg-[#00beb2] transition-colors">
-              f
-            </div>
-            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center text-xs cursor-pointer hover:bg-[#00beb2] transition-colors">
-              in
-            </div>
-            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center text-xs cursor-pointer hover:bg-[#00beb2] transition-colors">
-              X
-            </div>
+          <div className="flex gap-4">
+            {["f", "in", "X"].map((social) => (
+              <div
+                key={social}
+                className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white text-xs text-black transition-colors hover:bg-[#00beb2]"
+              >
+                {social}
+              </div>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Copyright - Bottom Left */}
+      <div className="relative z-10 mx-auto mt-8 max-w-7xl">
+        <p className="text-xs text-gray-400">
+          © Copyright 2026 iSeeQ Academy
+        </p>
       </div>
     </footer>
   );

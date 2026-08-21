@@ -4,8 +4,13 @@
   --animate-marquee: marquee 25s linear infinite;
 
   @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -46,4 +51,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-futura-lt-paneuropean), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@keyframes spot-one {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(40px, 30px) scale(1.12);
+  }
+}
+
+@keyframes spot-two {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-35px, -25px) scale(1.08);
+  }
+}
+
+.animate-spot-one {
+  animation: spot-one 10s ease-in-out infinite;
+}
+
+.animate-spot-two {
+  animation: spot-two 12s ease-in-out infinite;
 }

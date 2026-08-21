@@ -99,7 +99,8 @@ export default function InteractiveDots({
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
     const animate = () => {
-      timeRef.current += 0.03;
+      // 1. FASTER ANIMATION: Increased from 0.03 to 0.08
+      timeRef.current += 0.08;
       ctx.clearRect(0, 0, width, height);
 
       // Check if image mode should be active based on screen size
@@ -112,8 +113,8 @@ export default function InteractiveDots({
       dots.forEach((dot) => {
         const isRightZone = showImage && dot.x >= rightZoneStart;
 
-        // Larger base size for right-side image dots on desktop
-        const effectiveBaseRadius = isRightZone ? 10 : dot.baseRadius;
+        // 2. LARGER MINIMUM SQUARE SIZE: Increased right-side base radius from 10 to 16
+        const effectiveBaseRadius = isRightZone ? 16 : dot.baseRadius;
 
         // Wave calculations
         const waveX = Math.sin(dot.x * 0.008 + timeRef.current) * 4;
@@ -133,7 +134,8 @@ export default function InteractiveDots({
 
           if (distance < mouse.maxRadius) {
             const intensity = 1 - distance / mouse.maxRadius;
-            targetRadius += intensity * (isRightZone ? 10 : 8);
+            // Adjusted hover growth ratio to match the new larger base size
+            targetRadius += intensity * (isRightZone ? 14 : 8);
             targetAlpha += intensity * 0.55;
           }
         }
@@ -149,7 +151,7 @@ export default function InteractiveDots({
         ctx.beginPath();
         if (isRightZone) {
           // Draw subtle background placeholders on the right side
-          const squareSize = Math.max(1, dot.radius * 1.8);
+          const squareSize = Math.max(1, dot.radius * 2.0); // Slightly adjusted multiplier for better fit
           ctx.roundRect(
             dot.x - squareSize / 2,
             dot.y - squareSize / 2,
@@ -162,7 +164,11 @@ export default function InteractiveDots({
           ctx.arc(dot.x, dot.y, Math.max(0.5, dot.radius), 0, Math.PI * 2);
         }
 
-        const color = isButtonHovered ? "#fdc806" : `rgba(0, 190, 178, ${dot.alpha})`;
+        // 3. COLOR CHANGE: Ensure the right side squares are a solid #00beb2, removing transparency that made them look black
+        const color = isButtonHovered 
+          ? "#fdc806" 
+          : (isRightZone ? "#00beb2" : `rgba(0, 190, 178, ${dot.alpha})`);
+          
         ctx.fillStyle = color;
         ctx.shadowColor = color;
         ctx.shadowBlur = dot.radius > dot.baseRadius + 2 ? 8 : 0;
@@ -183,7 +189,7 @@ export default function InteractiveDots({
         if (offCtx) {
           dots.forEach((dot) => {
             if (dot.x >= rightZoneStart) {
-              const squareSize = Math.max(1, dot.radius * 2.1);
+              const squareSize = Math.max(1, dot.radius * 2.2); // Adjusted mask multiplier
               offCtx.beginPath();
               offCtx.roundRect(
                 dot.x - squareSize / 2,

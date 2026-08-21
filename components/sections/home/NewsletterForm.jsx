@@ -18,7 +18,7 @@ function NewsletterForm() {
           </div>
           <div>
             <label className="block text-sm mb-1">
-              Full name *
+              Full name * 
             </label>
             <input
               type="text"

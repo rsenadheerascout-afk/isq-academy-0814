@@ -10,7 +10,8 @@ import FeaturedCoursesSection from "@/components/sections/home/FeaturedCoursesSe
 import TestimonialsSection from "@/components/sections/home/TestimonialsSection";
 import AboutSection from "@/components/sections/home/AboutSection";
 import OrganizationsSection from "@/components/sections/home/OrganizationsSection";
-import NewsletterForm from "@/components/sections/home/NewsletterForm";
+// import NewsletterForm from "@/components/sections/home/NewsletterForm";
+import ContactSection from "@/components/sections/home/ContactSection";
 import OngoingProgramsSection from "@/components/sections/home/OngoingProgramsSection";
 import WomenSection from "@/components/sections/home/WomenSection";
 import SeniorSection from "@/components/sections/home/SeniorSection";
@@ -109,7 +110,8 @@ export default function HomePage() {
       <OngoingProgramsSection />
 
       {/* Why Learn Section */}
-      <WhyLearnSection benefits={benefits} />
+      {/* <WhyLearnSection benefits={benefits} /> */}
+      <WhyLearnSection />
 
       {/* Featured Courses Section */}
       <FeaturedCoursesSection featuredCourses={featuredCourses} />
@@ -124,7 +126,10 @@ export default function HomePage() {
       <OrganizationsSection />
 
       {/* Newsletter Form */}
-      <NewsletterForm />
+      {/* <NewsletterForm /> */}
+
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 }

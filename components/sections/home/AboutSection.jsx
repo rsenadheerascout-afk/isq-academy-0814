@@ -9,11 +9,9 @@ function AboutSection() {
     >
       <div className="border bg-gradient-to-b from-slate-200 via-slate-100 to-slate-200 border-gray-200 flex flex-col md:flex-row rounded-2xl">
         <div className="p-10 md:w-1/2 flex flex-col justify-center">
-          <h3 className="text-xl mb-4 text-black">About iSeeQ Academy</h3>
+          <h3 className="text-xl mb-4 text-black">An academy that feels like a community.</h3>
           <p className="text-gray-800 text-sm mb-6 leading-relaxed">
-            We deliver premium online learning experiences for professionals who
-            want to advance their careers, connect with a network of peer
-            learners, and gain insight from leaders in the field.
+            Open evenings, parent circles, women's meetups, senior tea-and-tech afternoons — learning here doesn't stop at the classroom door.
           </p>
           <a
             href="#"
