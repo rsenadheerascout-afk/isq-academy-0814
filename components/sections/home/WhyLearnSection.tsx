@@ -34,7 +34,7 @@ function WhyLearnSection() {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-3xl mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl mb-6 text-center">
           {whyLearnContent.title}{" "}
           <span className="text-primary italic font-serif">
             {whyLearnContent.highlightedTitle}

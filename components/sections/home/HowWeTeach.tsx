@@ -57,7 +57,7 @@ export default function HowWeTeach() {
         </div>
 
         <h2 className="text-4xl sm:text-5xl  text-slate-900 tracking-tight mb-4">
-          A calmer, sharper way to <span className="italic font-serif text-[#1D3B53]">learn.</span>
+          A calmer, sharper way to <span className="italic font-serif text-primary">learn.</span>
         </h2>
 
         <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">

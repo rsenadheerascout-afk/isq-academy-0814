@@ -26,7 +26,7 @@ function CareerAccelerationSection() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl leading-tight mb-5">
                         From Degree Holder to{" "}
-                        <span className="text-[#00beb2] italic">
+                        <span className="text-[#00beb2] italic font-serif">
                             Job-Ready Professional
                         </span>
                     </h2>
