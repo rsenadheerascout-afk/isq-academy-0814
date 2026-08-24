@@ -57,7 +57,7 @@ export default function Seniors() {
             {/* CTA */}
             <div className="mt-6 sm:mt-8">
               <Link
-                href="#enroll-seniors"
+                href="/courses?filter=Senior%20Citizens"
                 className="group inline-flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 text-sm font-normal text-white shadow-md shadow-amber-600/20 transition-all hover:bg-amber-700 hover:shadow-lg hover:shadow-amber-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 active:scale-95"
               >
                 Learn About Senior Classes
