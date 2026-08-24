@@ -87,7 +87,7 @@ export default function Footer() {
             {["f", "in", "X"].map((social) => (
               <div
                 key={social}
-                className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white text-xs text-black transition-colors hover:bg-[#00beb2]"
+                className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-secondary text-xs text-black transition duration-100 hover:bg-black/50 hover:text-primary"
               >
                 {social}
               </div>
