@@ -94,30 +94,30 @@ function CareerAccelerationSection() {
                             <div className="flex items-center gap-2 text-sm text-white">
                                 <CheckCircle2
                                     size={17}
-                                    className="text-[#00beb2]"
+                                    className="text-primary"
                                 />
-                                Practical Training
+                                UI/UX
                             </div>
                             <div className="flex items-center gap-2 text-sm text-white">
                                 <CheckCircle2
                                     size={17}
-                                    className="text-[#00beb2]"
+                                    className="text-primary"
                                 />
-                                Real Projects
+                                Full-Stack Development
                             </div>
                             <div className="flex items-center gap-2 text-sm text-white">
                                 <CheckCircle2
                                     size={17}
-                                    className="text-[#00beb2]"
+                                    className="text-primary"
                                 />
-                                Industry Internship
+                                Data Science
                             </div>
                             <div className="flex items-center gap-2 text-sm text-white">
                                 <CheckCircle2
                                     size={17}
-                                    className="text-[#00beb2]"
+                                    className="text-primary"
                                 />
-                                Career Support
+                                Cybersecurity
                             </div>
                         </div>
                         <p className="text-gray-300 text-sm">
@@ -125,10 +125,10 @@ function CareerAccelerationSection() {
                         </p>
                     </div>
                     <Link
-                        href="/career-acceleration"
+                        href="/#contact"
                         className="shrink-0 inline-flex items-center gap-2 bg-[#00beb2] text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
                     >
-                        Explore the Pathway
+                        Learn More
                         <ArrowRight size={17} />
                     </Link>
                 </div>

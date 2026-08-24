@@ -22,7 +22,7 @@ export default function HeroSection({ imageLink }: heroProps) {
 
       {/* Content Layer */}
       <div className="relative z-10 w-full lg:w-1/2 pointer-events-none">
-        <h1 className="text-5xl mb-6">Technology should serve your life —<br/> not become it.</h1>
+        <h1 className="text-5xl mb-6">Technology should serve your life,<br/> not become it.</h1>
         <div className="w-12 h-1 bg-primary mb-6 rounded-lg"></div>
         <p className="text-xl max-w-2xl mb-10 leading-relaxed text-gray-300">
           Learn AI, programming, cyber security, design and digital skills through a human-centered approach that builds confidence, career opportunities —<br/> and a life beyond the screen.
