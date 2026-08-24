@@ -78,93 +78,20 @@ export default function CoursesPage() {
                 <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
                   <input
                     type="checkbox"
-                    checked={selectedSubjects.includes("Children & Teens")}
-                    onChange={(e) => {
-                      setSelectedSubjects((prev) =>
-                        e.target.checked
-                          ? [...prev, "Children & Teens"]
-                          : prev.filter(
-                              (subject) => subject !== "Children & Teens",
-                            ),
-                      );
-                    }}
-                    className="h-4 w-4 accent-primary"
-                  />
-                  <span>Children & Teens</span>
-                </label>
-
-                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
-                  <input
-                    type="checkbox"
-                    checked={selectedSubjects.includes("School Education")}
-                    onChange={(e) => {
-                      setSelectedSubjects((prev) =>
-                        e.target.checked
-                          ? [...prev, "School Education"]
-                          : prev.filter(
-                              (subject) => subject !== "School Education",
-                            ),
-                      );
-                    }}
-                    className="h-4 w-4 accent-primary"
-                  />
-                  <span>School Education</span>
-                </label>
-
-                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
-                  <input
-                    type="checkbox"
                     checked={selectedSubjects.includes("Career Tracks")}
                     onChange={(e) => {
                       setSelectedSubjects((prev) =>
                         e.target.checked
                           ? [...prev, "Career Tracks"]
                           : prev.filter(
-                              (subject) => subject !== "Career Tracks",
-                            ),
+                            (subject) => subject !== "Career Tracks",
+                          ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
                   />
                   <span>Career Tracks</span>
                 </label>
-
-                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
-                  <input
-                    type="checkbox"
-                    checked={selectedSubjects.includes("Women Empowerment")}
-                    onChange={(e) => {
-                      setSelectedSubjects((prev) =>
-                        e.target.checked
-                          ? [...prev, "Women Empowerment"]
-                          : prev.filter(
-                              (subject) => subject !== "Women Empowerment",
-                            ),
-                      );
-                    }}
-                    className="h-4 w-4 accent-primary"
-                  />
-                  <span>Women Empowerment</span>
-                </label>
-
-                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
-                  <input
-                    type="checkbox"
-                    checked={selectedSubjects.includes("Senior Citizens")}
-                    onChange={(e) => {
-                      setSelectedSubjects((prev) =>
-                        e.target.checked
-                          ? [...prev, "Senior Citizens"]
-                          : prev.filter(
-                              (subject) => subject !== "Senior Citizens",
-                            ),
-                      );
-                    }}
-                    className="h-4 w-4 accent-primary"
-                  />
-                  <span>Senior Citizens</span>
-                </label>
-
                 <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
                   <input
                     type="checkbox"
@@ -174,13 +101,81 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Business Upskilling"]
                           : prev.filter(
-                              (subject) => subject !== "Business Upskilling",
-                            ),
+                            (subject) => subject !== "Business Upskilling",
+                          ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
                   />
                   <span>Business Upskilling</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Women Empowerment")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Women Empowerment"]
+                          : prev.filter(
+                            (subject) => subject !== "Women Empowerment",
+                          ),
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Women Empowerment</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Senior Citizens")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Senior Citizens"]
+                          : prev.filter(
+                            (subject) => subject !== "Senior Citizens",
+                          ),
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Senior Citizens</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("School Education")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "School Education"]
+                          : prev.filter(
+                            (subject) => subject !== "School Education",
+                          ),
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>School Education</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Children & Teens")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Children & Teens"]
+                          : prev.filter(
+                            (subject) => subject !== "Children & Teens",
+                          ),
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Children & Teens</span>
                 </label>
               </div>
             </div>
