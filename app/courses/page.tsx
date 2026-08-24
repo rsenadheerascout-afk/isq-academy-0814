@@ -1,39 +1,26 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { courses } from '@/data/courses';
 
 export default function CoursesPage() {
-  const courses = [
-    {
-      id: 'business-essentials',
-      title: 'Business Essentials for Workplace Readiness',
-      date: '16 Oct 2026',
-      duration: '6 weeks',
-      category: 'Business',
-    },
-    {
-      id: 'gen-ai',
-      title: 'Generative AI in Business',
-      date: '16 Oct 2026',
-      duration: '8 weeks',
-      category: 'Technology',
-    },
-    {
-      id: 'communication',
-      title: 'Compelling Communication Skills',
-      date: '23 Oct 2026',
-      duration: '6 weeks',
-      category: 'Communication',
-    },
-    {
-      id: 'esg-risk',
-      title: 'ESG Risk Management',
-      date: '05 Nov 2026',
-      duration: '8 weeks',
-      category: 'Management',
-    },
-  ];
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [selectedDurations, setSelectedDurations] = useState<string[]>([]);
+
+  const filteredCourses = courses.filter((course) => {
+    const subjectMatch =
+      selectedSubjects.length === 0 ||
+      selectedSubjects.includes(course.category);
+
+    const durationMatch =
+      selectedDurations.length === 0 ||
+      selectedDurations.includes(course.duration);
+
+    return subjectMatch && durationMatch;
+  });
 
   return (
     <div className="min-h-screen bg-white font-sans text-black font-normal">
@@ -53,38 +40,204 @@ export default function CoursesPage() {
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
         {/* Sidebar Filters */}
         <aside className="w-full md:w-1/4">
-          <h2 className="text-xl mb-6 border-b border-gray-200 pb-2">
-            Filter by
-          </h2>
+          <div className="sticky top-28">
+            <h2 className="text-xl mb-6 border-b border-gray-200 pb-2">
+              Filter by
+            </h2>
 
-          <div className="mb-8">
-            <h3 className="mb-3">Subject Area</h3>
+            {/* Subject Area */}
+            <div className="mb-8">
+              <h3 className="mb-3">
+                Subject Area
+              </h3>
 
-            <div className="space-y-2 text-sm text-gray-700">
-              <label className="flex items-center space-x-2 cursor-pointer hover:text-primary">
-                <input type="checkbox" className="accent-primary" />
-                <span>Business & Management</span>
-              </label>
+              <div className="space-y-3 text-sm text-gray-700">
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Children & Teens")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Children & Teens"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "Children & Teens"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Children & Teens</span>
+                </label>
 
-              <label className="flex items-center space-x-2 cursor-pointer hover:text-primary">
-                <input type="checkbox" className="accent-primary" />
-                <span>Technology & AI</span>
-              </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("School Education")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "School Education"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "School Education"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>School Education</span>
+                </label>
 
-              <label className="flex items-center space-x-2 cursor-pointer hover:text-primary">
-                <input type="checkbox" className="accent-primary" />
-                <span>Communication</span>
-              </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Career Tracks")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Career Tracks"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "Career Tracks"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Career Tracks</span>
+                </label>
+
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Women Empowerment")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Women Empowerment"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "Women Empowerment"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Women Empowerment</span>
+                </label>
+
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Senior Citizens")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Senior Citizens"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "Senior Citizens"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Senior Citizens</span>
+                </label>
+
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubjects.includes("Business Upskilling")}
+                    onChange={(e) => {
+                      setSelectedSubjects((prev) =>
+                        e.target.checked
+                          ? [...prev, "Business Upskilling"]
+                          : prev.filter(
+                            (subject) =>
+                              subject !== "Business Upskilling"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>Business Upskilling</span>
+                </label>
+              </div>
             </div>
+
+            {/* Duration */}
+            <div className="mb-8">
+              <h3 className="mb-3">
+                Duration
+              </h3>
+
+              <div className="space-y-3 text-sm text-gray-700">
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedDurations.includes("6 weeks")}
+                    onChange={(e) => {
+                      setSelectedDurations((prev) =>
+                        e.target.checked
+                          ? [...prev, "6 weeks"]
+                          : prev.filter(
+                            (duration) =>
+                              duration !== "6 weeks"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>6 weeks</span>
+                </label>
+
+                <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
+                  <input
+                    type="checkbox"
+                    checked={selectedDurations.includes("8 weeks")}
+                    onChange={(e) => {
+                      setSelectedDurations((prev) =>
+                        e.target.checked
+                          ? [...prev, "8 weeks"]
+                          : prev.filter(
+                            (duration) =>
+                              duration !== "8 weeks"
+                          )
+                      );
+                    }}
+                    className="h-4 w-4 accent-primary"
+                  />
+                  <span>8 weeks</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Clear Filters */}
+            {(selectedSubjects.length > 0 ||
+              selectedDurations.length > 0) && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedSubjects([]);
+                    setSelectedDurations([]);
+                  }}
+                  className="text-sm text-[#00beb2] hover:underline"
+                >
+                  Clear all filters
+                </button>
+              )}
           </div>
         </aside>
 
         {/* Course Grid */}
         <main className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <Link
-              href={`/courses/${course.id}`}
-              key={course.id}
+              href={`/courses/${course.slug}`}
+              key={course.slug}
               className="bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-shadow flex flex-col group cursor-pointer"
             >
               <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
@@ -112,7 +265,7 @@ export default function CoursesPage() {
                     <span className="block text-gray-500 text-xs">
                       Next start date
                     </span>
-                    {course.date}
+                    {course.nextStartDate}
                   </div>
 
                   <div className="text-right">
@@ -125,10 +278,31 @@ export default function CoursesPage() {
               </div>
             </Link>
           ))}
+
+          {filteredCourses.length === 0 && (
+            <div className="md:col-span-2 py-16 text-center">
+              <h3 className="text-xl mb-2">
+                No courses found
+              </h3>
+
+              <p className="text-gray-500 text-sm mb-6">
+                Try changing or clearing your filters.
+              </p>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedSubjects([]);
+                  setSelectedDurations([]);
+                }}
+                className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-[#00beb2] transition-colors"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
         </main>
       </div>
-
-      <Footer />
     </div>
   );
 }
