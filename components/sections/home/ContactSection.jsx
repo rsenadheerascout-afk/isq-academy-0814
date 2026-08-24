@@ -1,5 +1,4 @@
 import React from "react";
-import {    MapPin,    Phone,    Mail,    MessageCircle,} from "lucide-react";
 import Link from "next/link";
 import { MapPin, Phone, Mail, MessageCircle, } from "lucide-react";
 
