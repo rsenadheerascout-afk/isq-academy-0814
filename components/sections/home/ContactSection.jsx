@@ -14,10 +14,10 @@ export default function ContactSection() {
                             Visit Us
                         </span>
                         <h2 className="text-4xl md:text-5xl text-gray-900 mt-2 mb-4 tracking-tight"            >
-                            Come in for a cup of tea.
+                            Come in for a Chat.
                         </h2>
                         <p className="text-gray-500 text-lg">
-                            We&apos;d rather meet you than email you. Step in for a tour and a                            chat.
+                            We&apos;d rather meet you than email you. Step in for a quick chat.
                         </p>
                     </div>
 
@@ -26,7 +26,7 @@ export default function ContactSection() {
                         {/* Location */}
                         <div className="flex items-start gap-4 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm">
                             <MapPin
-                                className="w-6 h-6 text-pr mt-1 shrink-0"
+                                className="w-6 h-6 text-primary mt-1 shrink-0"
                                 strokeWidth={1.8}
                             />
                             <div>
@@ -43,7 +43,7 @@ export default function ContactSection() {
                         {/* Phone */}
                         <div className="flex items-start gap-4 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm">
                             <Phone
-                                className="w-6 h-6 text-[#00beb2] mt-1 shrink-0"
+                                className="w-6 h-6 text-primary mt-1 shrink-0"
                                 strokeWidth={1.8}
                             />
 
@@ -76,21 +76,19 @@ export default function ContactSection() {
                             </Link>
 
                             {/* Email */}
-                            <Link href="mailto:hello@iseeq.lk" className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 py-4 px-6 rounded-2xl shadow-sm transition-colors font-medium"              >
-                                <Mail className="w-5 h-5 text-[#00beb2]" strokeWidth={1.8} />
-                                hello@iseeq.lk
+                            <Link href="mailto:academy@iseeq.lk" className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 py-4 px-6 rounded-2xl shadow-sm transition-colors font-medium"              >
+                                <Mail className="w-5 h-5 text-primary" strokeWidth={1.8} />
+                                academy@iseeq.lk
                             </Link>
 
                         </div>
                     </div>
                 </div>
 
-                {/* =========================
-            RIGHT: Google Map
-        ========================== */}
+                {/* RIGHT: Google Map */}
                 <div className="w-full h-[400px] lg:h-[550px] bg-gray-200 rounded-[2rem] overflow-hidden shadow-md border border-gray-100">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.06670868516!2d80.62002575!3d7.26620585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368d19335f609%3A0xc392476532d8edb9!2sPeradeniya%20Rd%2C%20Kandy%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d989.403318354286!2d80.623997!3d7.2847659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368834f886da9%3A0x268c51d0eb99e947!2siSeeQ!5e0!3m2!1sen!2ssg!4v1787573615387!5m2!1sen!2ssg"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
