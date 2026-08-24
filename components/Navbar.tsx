@@ -95,7 +95,7 @@ export default function Navbar() {
 
             <Link href="/about" className="hover:text-primary font-medium">About</Link>
             <Link href="/blog" className="hover:text-primary font-medium">Blog</Link>
-            <Link href="/contact" className="hover:text-primary font-medium">Contact us</Link>
+            <Link href="/#contact" onClick={closeAll} className="hover:text-primary font-medium">Contact us</Link>
           </nav>
 
           <Link href="/" className="hidden md:flex bg-black text-white px-6 py-2 text-sm hover:bg-primary transition-colors rounded-full font-medium">
