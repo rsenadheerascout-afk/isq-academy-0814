@@ -70,7 +70,7 @@ export const courseCategories: Category[] = [
   {
     id: 'business-upskilling',
     label: 'Business Upskilling',
-    href: '/courses',
+    href: '/courses?category=business-upskilling',
     subCategories: [
       { label: 'AI Productivity for Teams', href: '/courses/ai-productivity' },
       { label: 'Cyber Awareness Training', href: '/courses/cyber-awareness' },
