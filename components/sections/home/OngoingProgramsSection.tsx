@@ -128,7 +128,7 @@ export default function OngoingProgramsCarouselSection() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+    <section className="max-w-7xl mx-auto lg:px-40 md:px-20 px-6 py-12">
       <div
         className="relative rounded-[2.5rem] overflow-visible bg-gradient-to-r from-teal-600 via-primary to-secondary p-8 md:p-14 text-white shadow-2xl transition-all duration-500 ease-in-out"
         onMouseEnter={() => setIsPaused(true)}
@@ -182,7 +182,7 @@ export default function OngoingProgramsCarouselSection() {
             <div className="relative w-72 h-[350px] pt-6">
               
               {/* Back Dark Badge Card */}
-              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 lg:translate-x-15 translate-x-5 lg:translate-y-20 translate-y-14 p-5 border border-white/10 flex flex-col justify-end text-white lg:scale-125 scale-110">
+              <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 lg:translate-x-15 translate-x-5 lg:translate-y-20 translate-y-8 p-5 border border-white/10 flex flex-col justify-end text-white lg:scale-125 scale-110">
                 <div className="text-2xl font-normal tracking-widest opacity-40 uppercase mb-4">
                   iSeeQ
                 </div>

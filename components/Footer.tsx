@@ -24,7 +24,7 @@ const linkClass = "hover:text-white underline";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t-[6px] border-[#00beb2] bg-[#1a1a1a] px-6 py-8 font-normal text-white">
+    <footer className="relative overflow-hidden border-t-[6px] border-[#00beb2] bg-[#1a1a1a] lg:px-40 md:px-20 px-6 py-8 font-normal text-white">
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
         {/* Discover Courses */}
         <div>

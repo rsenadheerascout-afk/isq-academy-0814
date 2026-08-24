@@ -20,7 +20,7 @@ export default function WhyISeeQ() {
   ];
 
   return (
-    <section className="bg-[#FAF9F6] min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center font-sans text-slate-800">
+    <section className="bg-[#FAF9F6] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
       <div className="max-w-5xl w-full mx-auto text-center mb-12">
         {/* Badge */}
         <div className="inline-block mb-4">

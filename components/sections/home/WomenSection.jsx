@@ -13,7 +13,7 @@ const benefits = [
 export default function Women() {
   return (
     <section className="relative overflow-hidden bg-white py-16 text-slate-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl lg:px-40 md:px-20 px-6">
         <div className="grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-x-12">
           {/* Image */}
           <div className="relative order-2 lg:order-1">

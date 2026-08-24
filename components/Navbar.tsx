@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
 
       <header ref={navRef} className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans font-normal">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center lg:px-40 md:px-20 px-6 py-4">
           
           <Link href="/" className="flex items-center" onClick={closeAll}>
             <Image src="/isq-aca-logo.png" alt="iSeeQ Academy" width={180} height={40} priority className="h-12 w-auto object-contain" />
