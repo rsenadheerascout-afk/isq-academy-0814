@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { courses } from '@/data/courses';
 
