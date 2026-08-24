@@ -23,7 +23,7 @@ function TestimonialsSection({ testimonials = [] }: TestimonialsProps) {
     : testimonials;
 
   return (
-    <section className="relative mx-auto overflow-hidden bg-white py-16 lg:px-40 md:px-20 px-4 text-center">
+    <section className="relative mx-auto overflow-hidden bg-white py-5 pb-20 lg:px-40 md:px-20 px-4 text-center">
       {/* Top fade */}
       <div
         aria-hidden="true"
@@ -37,8 +37,8 @@ function TestimonialsSection({ testimonials = [] }: TestimonialsProps) {
       />
 
       <div className="relative z-10">
-        <h2 className="text-3xl mb-12">
-          What our learners are saying
+        <h2 className="text-3xl md:text-4xl mb-12">
+          What our <span className="font-serif italic text-primary">learners</span> are saying
         </h2>
 
         {!isSlider ? (

@@ -31,7 +31,7 @@ export default function WhyISeeQ() {
 
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl text-slate-900 tracking-tight mb-4">
-          A different kind of <span className="italic font-serif text-[#1D3B53]">classroom.</span>
+          A different kind of <span className="italic font-serif text-primary">classroom.</span>
         </h2>
 
         {/* Subtitle */}
