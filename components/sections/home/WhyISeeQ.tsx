@@ -46,7 +46,7 @@ export default function WhyISeeQ() {
         {/* Card 1: Traditional Education */}
         <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/70 shadow-sm flex flex-col justify-between">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-8">
+            <span className="text-xs font-semibold uppercase italic tracking-wider text-slate-400 block mb-8">
               TRADITIONAL EDUCATION
             </span>
             <ul className="space-y-6">
@@ -67,7 +67,7 @@ export default function WhyISeeQ() {
         {/* Card 2: The iSeeQ Approach */}
         <div className="bg-gradient-to-br from-[#0A192F] from-10% to-primary to-80%  text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-white block mb-8">
+            <span className="text-xs font-semibold uppercase italic tracking-wider text-white block mb-8">
               THE ISEEQ APPROACH
             </span>
             <ul className="space-y-6">
