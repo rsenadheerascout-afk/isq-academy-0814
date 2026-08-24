@@ -86,7 +86,7 @@ export default function Navbar() {
               </button>
               {activeMenus.org && (
                 <div className="absolute top-full left-0 mt-1 w-[280px] bg-white border border-gray-200 shadow-xl py-2 z-[101]">
-                  <Link href="/organizations" onClick={closeAll} className="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-primary">
+                  <Link href="#" onClick={closeAll} className="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-primary">
                     Learning and Development for your organisation
                   </Link>
                 </div>
