@@ -4,6 +4,7 @@ import CourseAccordion from "@/components/course/CourseAccordion";
 import Testimonials from "@/components/course/Testimonials";
 import { notFound } from "next/navigation";
 import { courses, getCourseBySlug } from "@/data/courses";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return courses.map((course) => ({
@@ -72,7 +73,7 @@ export default async function SingleCoursePage({
       {/* Hero */}
       <section className="relative flex h-[450px] w-full items-center overflow-hidden bg-gray-900">
         {/* Uncomment when course images are ready:
-        <img
+        <Image
           src={course.image}
           alt={course.title}
           className="absolute inset-0 h-full w-full object-cover"
@@ -97,21 +98,21 @@ export default async function SingleCoursePage({
       {/* Sticky Navigation */}
       <div className="sticky top-0 z-50 flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 shadow-sm md:px-8">
         <nav className="hidden space-x-8 text-sm text-gray-500 md:flex">
-          <a href="#key-info" className="transition-colors hover:text-black">
+          <Link href="#key-info" className="transition-colors hover:text-black">
             Key information
-          </a>
-          <a href="#about" className="transition-colors hover:text-black">
+          </Link>
+          <Link href="#about" className="transition-colors hover:text-black">
             About the course
-          </a>
-          <a href="#lead" className="transition-colors hover:text-black">
+          </Link>
+          <Link href="#lead" className="transition-colors hover:text-black">
             Lead
-          </a>
-          <a
+          </Link>
+          <Link
             href="#testimonials"
             className="transition-colors hover:text-black"
           >
             Testimonials
-          </a>
+          </Link>
         </nav>
 
         <button className="border-2 border-black px-6 py-2 text-sm transition-colors hover:bg-black hover:text-white">
@@ -177,7 +178,7 @@ export default async function SingleCoursePage({
 
           <div className="flex flex-col items-start border border-gray-200 bg-white p-8 sm:flex-row sm:space-x-8">
             {/* Add lead image later:
-            <img
+            <Image
               src={course.lead.image}
               alt={course.lead.name}
               className="mb-4 h-32 w-32 flex-shrink-0 rounded-full object-cover sm:mb-0"

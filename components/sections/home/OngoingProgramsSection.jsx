@@ -76,10 +76,11 @@ export default function OngoingProgramsSection() {
               <div className="absolute inset-0 bg-white text-black rounded-2xl shadow-2xl transform rotate-3 p-4 flex flex-col justify-between border border-gray-100 z-10 lg:scale-150">
                 {/* Photo Area */}
                 <div className="relative w-full h-44 bg-gray-200 rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src="/courses/communication.jpg"
                     alt="Active Student"
                     className="w-full h-full object-cover"
+                    fill
                   />
                 </div>
 

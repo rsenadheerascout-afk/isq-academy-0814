@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const benefits = [
   "Start and grow businesses online",
@@ -75,13 +76,13 @@ export default function Women() {
 
             {/* CTA */}
             <div className="mt-6 sm:mt-8">
-              <a
+              <Link
                 href="#enroll"
                 className="group inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-normal text-white shadow-md shadow-teal-600/20 transition-all hover:bg-teal-700 hover:shadow-lg hover:shadow-teal-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 active:scale-95"
               >
                 Explore Women&apos;s Pathway
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

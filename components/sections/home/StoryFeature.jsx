@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function StoryFeature() {
   const carouselItems = [
@@ -61,7 +62,7 @@ function StoryFeature() {
         
         {/* IMAGE CONTAINER */}
         <div className="absolute top-0 right-0 w-2/3 h-full">
-          <img
+          <Image
             src={carouselItems[currentIndex].image}
             alt={carouselItems[currentIndex].title}
             className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"

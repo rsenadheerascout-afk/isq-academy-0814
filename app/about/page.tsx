@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -19,7 +20,7 @@ export default function AboutPage() {
       <Breadcrumbs />
       {/* Hero Banner */}
       <section className="relative w-full min-h-[280px] md:min-h-[360px] overflow-hidden">
-        <img
+        <Image
           src="/hero-back.jpg"
           alt="About iSeeQ Academy"
           className="absolute inset-0 w-full h-full object-cover"

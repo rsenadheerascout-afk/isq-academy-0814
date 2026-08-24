@@ -1,5 +1,6 @@
 import React from "react";
 import {    MapPin,    Phone,    Mail,    MessageCircle,} from "lucide-react";
+import Link from "next/link";
 
 export default function ContactSection() {
     return (
@@ -16,7 +17,7 @@ export default function ContactSection() {
                             Come in for a cup of tea.
                         </h2>
                         <p className="text-gray-500 text-lg">
-                            We'd rather meet you than email you. Step in for a tour and a                            chat.
+                            We&apos;d rather meet you than email you. Step in for a tour and a                            chat.
                         </p>
                     </div>
 
@@ -47,19 +48,19 @@ export default function ContactSection() {
                             />
 
                             <div className="flex flex-col">
-                                <a
+                                <Link
                                     href="tel:+94777789898"
                                     className="text-gray-900  hover:text-primary transition-colors"
                                 >
                                     +94 777 789 898
-                                </a>
+                                </Link>
 
-                                <a
+                                <Link
                                     href="tel:+94812230800"
                                     className="text-gray-500 mt-1 hover:text-primary transition-colors"
                                 >
                                     +94 812 230 800
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
@@ -67,18 +68,18 @@ export default function ContactSection() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
 
                             {/* WhatsApp */}
-                            <a href="https://wa.me/94777789898" target="_blank" rel="noopener noreferrer"
+                            <Link href="https://wa.me/94777789898" target="_blank" rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 bg-[#20B256] hover:bg-[#1a9347] text-white py-4 px-6 rounded-2xl shadow-sm transition-colors font-medium"
                             >
                                 <MessageCircle className="w-5 h-5" strokeWidth={2} />
                                 Chat on WhatsApp
-                            </a>
+                            </Link>
 
                             {/* Email */}
-                            <a href="mailto:hello@iseeq.lk" className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 py-4 px-6 rounded-2xl shadow-sm transition-colors font-medium"              >
+                            <Link href="mailto:hello@iseeq.lk" className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 py-4 px-6 rounded-2xl shadow-sm transition-colors font-medium"              >
                                 <Mail className="w-5 h-5 text-[#00beb2]" strokeWidth={1.8} />
                                 hello@iseeq.lk
-                            </a>
+                            </Link>
 
                         </div>
                     </div>

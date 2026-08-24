@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function AboutSection() {
@@ -11,14 +12,14 @@ function AboutSection() {
         <div className="p-10 md:w-1/2 flex flex-col justify-center">
           <h3 className="text-xl mb-4 text-black">An academy that feels like a community.</h3>
           <p className="text-gray-800 text-sm mb-6 leading-relaxed">
-            Open evenings, parent circles, women's meetups, senior tea-and-tech afternoons — learning here doesn't stop at the classroom door.
+            Open evenings, parent circles, women&apos;s meetups, senior tea-and-tech afternoons — learning here doesn&apos;t stop at the classroom door.
           </p>
-          <a
+          <Link
             href="#"
             className="border-2 border-black px-6 py-2 text-sm w-max hover:bg-black text-black hover:text-white transition-colors rounded-full"
           >
             Read more
-          </a>
+          </Link>
         </div>
         <div className="md:w-1/2 bg-gray-100 flex items-center justify-center min-h-[250px] rounded-lg">
           <Image

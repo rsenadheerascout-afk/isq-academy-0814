@@ -12,6 +12,7 @@ import WomenSection from "@/components/sections/home/WomenSection";
 import SeniorSection from "@/components/sections/home/SeniorSection";
 
 import { featuredCourses, testimonials, } from "@/data/home";
+import WhyISeeQ from "@/components/sections/home/WhyISeeQ";
 
 export const metadata: Metadata = {
   title: "iSeeQ Academy | Professional Learning & Courses",
@@ -78,6 +79,8 @@ export default function HomePage() {
         <SeniorSection />
 
         <OngoingProgramsSection />
+
+        <WhyISeeQ />
 
         <WhyLearnSection />
 
