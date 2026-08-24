@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Bot, Cloud, HeartPlus, HouseWifi, MessageCircleHeart, ShieldCheck, Smartphone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +9,6 @@ export default function Seniors() {
     <section className="relative overflow-hidden bg-amber-50/40 py-16 text-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-x-12">
-          
           {/* Text Content */}
           <div>
             <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-100/60 px-3 py-1 text-xs font-normal uppercase tracking-wider text-amber-900">
@@ -21,20 +20,23 @@ export default function Seniors() {
             </h2>
 
             <p className="mt-3 text-base text-slate-600 sm:text-lg sm:leading-relaxed">
-              A warm, patient classroom for our parents and grandparents — taught
-              at their pace, in their language.
+              A warm, patient classroom for our parents and grandparents —
+              taught at their pace, in their language.
             </p>
 
             {/* Features */}
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
-                ["📱", "Use smartphones confidently"],
-                ["💬", "Stay connected with family"],
-                ["🏛️", "Access online services"],
-                ["🛡️", "Stay safe online"],
-                ["✨", "Understand AI tools"],
-                ["☕", "At a pace that feels human"],
-              ].map(([emoji, text]) => (
+                {
+                  icon: <Smartphone className=" text-amber-600" />,
+                  text: "Use smartphones confidently",
+                },
+                { icon: <MessageCircleHeart className=" text-amber-600" />, text: "Stay connected with family" },
+                { icon: <HouseWifi className=" text-amber-600" />, text: "Access online services" },
+                { icon: <ShieldCheck className=" text-amber-600" />, text: "Stay safe online" },
+                { icon: <Bot className=" text-amber-600" />, text: "Understand AI tools" },
+                { icon: <HeartPlus className=" text-amber-600" />, text: "At a pace that feels human" },
+              ].map(({icon, text}) => (
                 <div
                   key={text}
                   className="flex items-center gap-3.5 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-all hover:border-secondary hover:shadow-md"
@@ -43,7 +45,7 @@ export default function Seniors() {
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-xl"
                     aria-hidden="true"
                   >
-                    {emoji}
+                    {icon}
                   </span>
                   <span className="text-sm font-normal text-slate-800">
                     {text}
@@ -82,7 +84,6 @@ export default function Seniors() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

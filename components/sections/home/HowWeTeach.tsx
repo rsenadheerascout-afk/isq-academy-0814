@@ -56,7 +56,7 @@ export default function HowWeTeach() {
           </span>
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 tracking-tight mb-4">
+        <h2 className="text-4xl sm:text-5xl  text-slate-900 tracking-tight mb-4">
           A calmer, sharper way to <span className="italic font-serif text-[#1D3B53]">learn.</span>
         </h2>
 
@@ -74,7 +74,7 @@ export default function HowWeTeach() {
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-[#1E3A8A] via-[#1E3E62] to-[#122842] text-white rounded-3xl p-8 shadow-xl flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1"
+                className="bg-gradient-to-br from-primary to-[#1E3E62]  text-white rounded-3xl p-8 shadow-xl flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1"
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-6 backdrop-blur-sm">
@@ -107,7 +107,7 @@ export default function HowWeTeach() {
             >
               <div>
                 <div className="w-10 h-10 rounded-xl bg-indigo-50/70 flex items-center justify-center mb-6">
-                  <IconComponent className="w-5 h-5 text-indigo-600" />
+                  <IconComponent className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-xl font-serif font-medium text-slate-900 mb-2">
                   {item.title}
