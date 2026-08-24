@@ -14,27 +14,6 @@ export interface Category {
 
 export const courseCategories: Category[] = [
   {
-    id: 'children-teens',
-    label: 'Children & Teens',
-    href: '/courses?filter=Children%20%26%20Teens',
-    subCategories: [
-    //   { label: 'Digital Whiz Kids', href: '/courses/digital-whiz-kids' },
-    //   { label: 'Digital Whiz Teens', href: '/courses/digital-whiz-teens' },
-      { label: 'Life Skills for Future Leaders', href: '/courses/life-skills' },
-    ],
-  },
-  {
-    id: 'school-education',
-    label: 'School Education',
-    href: '/courses?filter=School%20Education',
-    subCategories: [
-      { label: 'O/L ICT', href: '/courses/ol-ict' },
-      { label: 'A/L ICT Pathway', href: '/courses/al-ict' },
-      { label: 'Pearson ICT', href: '/courses/pearson-ict' },
-      { label: 'Cambridge ICT', href: '/courses/cambridge-ict' },
-    ],
-  },
-  {
     id: 'career-tracks',
     label: 'Career Tracks',
     href: '/courses?filter=Career%20Tracks',
@@ -77,5 +56,17 @@ export const courseCategories: Category[] = [
       { label: 'Digital Transformation Programs', href: '/courses/digital-transformation' },
       { label: 'Leadership in AI Era', href: '/courses/ai-leadership' },
     ],
+  },
+  {
+    id: 'other-courses',
+    label: 'Other Courses',
+    href: '/courses?filter=School%20Education',
+    subCategories: [
+      { label: 'Life Skills for Future Leaders', href: '/courses/life-skills' },
+      { label: 'Pearson ICT', href: '/courses/pearson-ict' },
+      { label: 'Cambridge ICT', href: '/courses/cambridge-ict' },
+      { label: 'A/L ICT Pathway', href: '/courses/al-ict' },
+      { label: 'O/L ICT', href: '/courses/ol-ict' },
+    ]
   },
 ];

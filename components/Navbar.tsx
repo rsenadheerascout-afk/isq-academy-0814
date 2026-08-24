@@ -80,7 +80,7 @@ export default function Navbar() {
             </div>
 
             {/* For Organizations */}
-            <div className="relative">
+            {/* <div className="relative">
               <button onClick={() => toggleMenu('org')} className="flex items-center py-2 font-medium hover:text-primary transition-colors">
                 For organizations <span className={`ml-1 text-xs transition-transform ${activeMenus.org ? 'rotate-180' : ''}`}>▼</span>
               </button>
@@ -91,15 +91,15 @@ export default function Navbar() {
                   </Link>
                 </div>
               )}
-            </div>
+            </div> */}
 
             <Link href="/about" className="hover:text-primary font-medium">About</Link>
-            <Link href="/blog" className="hover:text-primary font-medium">Blog</Link>
+            {/* <Link href="/blog" className="hover:text-primary font-medium">Blog</Link> */}
             <Link href="/#contact" onClick={closeAll} className="hover:text-primary font-medium">Contact us</Link>
           </nav>
 
-          <Link href="/" className="hidden md:flex bg-black text-white px-6 py-2 text-sm hover:bg-primary transition-colors rounded-full font-medium">
-            Enroll Now
+          <Link href="https://wa.me/94777789898" target="_blank" className="hidden md:flex bg-black text-white px-6 py-2 text-sm hover:bg-primary transition-colors rounded-full font-medium">
+            Chat with Us
           </Link>
 
           <button onClick={() => toggleMenu('mobile')} className="md:hidden p-2 text-black hover:text-primary">
