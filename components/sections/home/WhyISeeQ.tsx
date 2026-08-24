@@ -1,4 +1,4 @@
-// components/WhyISeeQ.tsx
+// components/sections/home/WhyISeeQ.tsx
 import React from 'react';
 import { X, Check } from 'lucide-react';
 
