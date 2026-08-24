@@ -8,6 +8,7 @@ import AboutSection from "@/components/sections/home/AboutSection";
 import OrganizationsSection from "@/components/sections/home/OrganizationsSection";
 import ContactSection from "@/components/sections/home/ContactSection";
 import OngoingProgramsSection from "@/components/sections/home/OngoingProgramsSection";
+import CareerAccelerationSection from "@/components/sections/home/CareerAccelerationSection";
 import WomenSection from "@/components/sections/home/WomenSection";
 import SeniorSection from "@/components/sections/home/SeniorSection";
 
@@ -73,6 +74,8 @@ export default function HomePage() {
       <main className="min-h-screen bg-white text-black font-sans font-normal overflow-hidden">
         <HeroSection imageLink="/about-academy.jpg" />
 
+        {/* Career Acceleration Pathway Section */}
+      <CareerAccelerationSection />
         <WomenSection />
 
         <SeniorSection />
