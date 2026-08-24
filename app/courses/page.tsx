@@ -1,13 +1,38 @@
 "use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import { courses } from '@/data/courses';
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { courses } from "@/data/courses";
 
 export default function CoursesPage() {
-  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const searchParams = useSearchParams();
+  const filterParam = searchParams.get("filter"); // Get the value of ?filter=...
+
+  // Helper function to extract and sanitize the parameter string
+  const getCleanFilterParam = (param: string | null) => {
+    if (!param) return null;
+    const decoded = decodeURIComponent(param).replace(/^"|"$/g, "").trim();
+    return decoded || null;
+  };
+
+  const currentFilter = getCleanFilterParam(filterParam);
+
+  // State to track the active URL filter parameter to detect route changes
+  const [prevFilter, setPrevFilter] = useState<string | null>(currentFilter);
+
+  // Active checkbox states
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>(
+    currentFilter ? [currentFilter] : [],
+  );
   const [selectedDurations, setSelectedDurations] = useState<string[]>([]);
+
+  // React pattern: Reset state synchronously during render when URL query changes
+  if (prevFilter !== currentFilter) {
+    setPrevFilter(currentFilter);
+    setSelectedSubjects(currentFilter ? [currentFilter] : []);
+  }
 
   const filteredCourses = courses.filter((course) => {
     const subjectMatch =
@@ -30,7 +55,8 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl mb-4">Short Courses</h1>
           <p className="text-lg text-gray-600 max-w-2xl">
-            Develop your skills and advance your career with our flexible, industry-led online courses.
+            Develop your skills and advance your career with our flexible,
+            industry-led online courses.
           </p>
         </div>
       </div>
@@ -46,9 +72,7 @@ export default function CoursesPage() {
 
             {/* Subject Area */}
             <div className="mb-8">
-              <h3 className="mb-3">
-                Subject Area
-              </h3>
+              <h3 className="mb-3">Subject Area</h3>
 
               <div className="space-y-3 text-sm text-gray-700">
                 <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
@@ -60,9 +84,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Children & Teens"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "Children & Teens"
-                          )
+                              (subject) => subject !== "Children & Teens",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -79,9 +102,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "School Education"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "School Education"
-                          )
+                              (subject) => subject !== "School Education",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -98,9 +120,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Career Tracks"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "Career Tracks"
-                          )
+                              (subject) => subject !== "Career Tracks",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -117,9 +138,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Women Empowerment"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "Women Empowerment"
-                          )
+                              (subject) => subject !== "Women Empowerment",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -136,9 +156,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Senior Citizens"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "Senior Citizens"
-                          )
+                              (subject) => subject !== "Senior Citizens",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -155,9 +174,8 @@ export default function CoursesPage() {
                         e.target.checked
                           ? [...prev, "Business Upskilling"]
                           : prev.filter(
-                            (subject) =>
-                              subject !== "Business Upskilling"
-                          )
+                              (subject) => subject !== "Business Upskilling",
+                            ),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -169,9 +187,7 @@ export default function CoursesPage() {
 
             {/* Duration */}
             <div className="mb-8">
-              <h3 className="mb-3">
-                Duration
-              </h3>
+              <h3 className="mb-3">Duration</h3>
 
               <div className="space-y-3 text-sm text-gray-700">
                 <label className="flex items-center gap-3 cursor-pointer hover:text-primary">
@@ -182,10 +198,7 @@ export default function CoursesPage() {
                       setSelectedDurations((prev) =>
                         e.target.checked
                           ? [...prev, "6 weeks"]
-                          : prev.filter(
-                            (duration) =>
-                              duration !== "6 weeks"
-                          )
+                          : prev.filter((duration) => duration !== "6 weeks"),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -201,10 +214,7 @@ export default function CoursesPage() {
                       setSelectedDurations((prev) =>
                         e.target.checked
                           ? [...prev, "8 weeks"]
-                          : prev.filter(
-                            (duration) =>
-                              duration !== "8 weeks"
-                          )
+                          : prev.filter((duration) => duration !== "8 weeks"),
                       );
                     }}
                     className="h-4 w-4 accent-primary"
@@ -215,19 +225,18 @@ export default function CoursesPage() {
             </div>
 
             {/* Clear Filters */}
-            {(selectedSubjects.length > 0 ||
-              selectedDurations.length > 0) && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSubjects([]);
-                    setSelectedDurations([]);
-                  }}
-                  className="text-sm text-[#00beb2] hover:underline"
-                >
-                  Clear all filters
-                </button>
-              )}
+            {(selectedSubjects.length > 0 || selectedDurations.length > 0) && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedSubjects([]);
+                  setSelectedDurations([]);
+                }}
+                className="text-sm text-[#00beb2] hover:underline"
+              >
+                Clear all filters
+              </button>
+            )}
           </div>
         </aside>
 
@@ -255,7 +264,8 @@ export default function CoursesPage() {
                   </h3>
 
                   <p className="text-gray-600 text-sm mb-6">
-                    Gain the fundamental skills required to thrive in modern industry environments.
+                    Gain the fundamental skills required to thrive in modern
+                    industry environments.
                   </p>
                 </div>
 
@@ -280,9 +290,7 @@ export default function CoursesPage() {
 
           {filteredCourses.length === 0 && (
             <div className="md:col-span-2 py-16 text-center">
-              <h3 className="text-xl mb-2">
-                No courses found
-              </h3>
+              <h3 className="text-xl mb-2">No courses found</h3>
 
               <p className="text-gray-500 text-sm mb-6">
                 Try changing or clearing your filters.

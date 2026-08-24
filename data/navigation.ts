@@ -16,7 +16,7 @@ export const courseCategories: Category[] = [
   {
     id: 'children-teens',
     label: 'Children & Teens',
-    href: '/courses',
+    href: '/courses?filter=Children%20%26%20Teens',
     subCategories: [
     //   { label: 'Digital Whiz Kids', href: '/courses/digital-whiz-kids' },
     //   { label: 'Digital Whiz Teens', href: '/courses/digital-whiz-teens' },
@@ -26,7 +26,7 @@ export const courseCategories: Category[] = [
   {
     id: 'school-education',
     label: 'School Education',
-    href: '/courses',
+    href: '/courses?filter=School%20Education',
     subCategories: [
       { label: 'O/L ICT', href: '/courses/ol-ict' },
       { label: 'A/L ICT Pathway', href: '/courses/al-ict' },
@@ -37,7 +37,7 @@ export const courseCategories: Category[] = [
   {
     id: 'career-tracks',
     label: 'Career Tracks',
-    href: '/courses',
+    href: '/courses?filter=Career%20Tracks',
     subCategories: [
       { label: 'AI Full-Stack Developer', href: '/courses/ai-full-stack' },
       { label: 'UI/UX Designer', href: '/courses/ui-ux' },
@@ -48,7 +48,7 @@ export const courseCategories: Category[] = [
   {
     id: 'women-empowerment',
     label: 'Women Empowerment',
-    href: '/courses',
+    href: '/courses?filter=Women%20Empowerment',
     subCategories: [
       { label: 'Women in Cyber Security', href: '/courses/cyber-security' },
       { label: 'Digital Entrepreneurship for Women', href: '/courses/entrepreneurship' },
@@ -59,7 +59,7 @@ export const courseCategories: Category[] = [
   {
     id: 'senior-citizens',
     label: 'Senior Citizens',
-    href: '/courses',
+    href: '/courses?filter=Senior%20Citizens',
     subCategories: [
       { label: 'Digital Confidence for Seniors', href: '/courses/digital-confidence' },
       { label: 'Smartphone Essentials', href: '/courses/smartphone-essentials' },
@@ -70,7 +70,7 @@ export const courseCategories: Category[] = [
   {
     id: 'business-upskilling',
     label: 'Business Upskilling',
-    href: '/courses',
+    href: '/courses?filter=Business%20Upskilling',
     subCategories: [
       { label: 'AI Productivity for Teams', href: '/courses/ai-productivity' },
       { label: 'Cyber Awareness Training', href: '/courses/cyber-awareness' },
