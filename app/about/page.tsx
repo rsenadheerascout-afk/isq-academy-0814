@@ -202,7 +202,7 @@ export default function AboutPage() {
                         {advisor.expertise.map((item, index) => (
                           <span
                             key={index}
-                            className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded"
+                            className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded-full"
                           >
                             {item}
                           </span>
