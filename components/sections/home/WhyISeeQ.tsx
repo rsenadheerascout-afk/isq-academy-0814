@@ -30,7 +30,7 @@ export default function WhyISeeQ() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 tracking-tight mb-4">
+        <h2 className="text-4xl sm:text-5xl text-slate-900 tracking-tight mb-4">
           A different kind of <span className="italic font-serif text-[#1D3B53]">classroom.</span>
         </h2>
 

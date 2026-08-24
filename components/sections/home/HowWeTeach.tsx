@@ -56,7 +56,7 @@ export default function HowWeTeach() {
           </span>
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 tracking-tight mb-4">
+        <h2 className="text-4xl sm:text-5xl  text-slate-900 tracking-tight mb-4">
           A calmer, sharper way to <span className="italic font-serif text-[#1D3B53]">learn.</span>
         </h2>
 
