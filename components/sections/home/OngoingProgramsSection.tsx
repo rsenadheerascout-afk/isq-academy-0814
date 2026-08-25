@@ -20,7 +20,7 @@ interface Program {
 const COURSES_DATA: Program[] = [
   {
     id: '1',
-    title: 'AI Tools for Teachers – One-Day Hands-On Workshop',
+    title: 'AI Tools for Teachers One-Day Hands-On Workshop',
     description:
       'Use your school holiday to discover practical AI tools that save you time, spark creativity, and enhance student learning. Go back to school better prepared and more confident.',
     highlights: [
@@ -37,7 +37,7 @@ const COURSES_DATA: Program[] = [
   },
   {
     id: '2',
-    title: 'AI for Business – 4-Hour Practical Workshop',
+    title: 'AI for Business         4-Hour Practical Workshop',
     description:
       'No coding. No complicated technology. Just practical AI workflows you can use in your business to automate customer replies, create marketing content, and simplify daily operations.',
     highlights: [
@@ -55,21 +55,23 @@ const COURSES_DATA: Program[] = [
   },
   {
     id: '3',
-    title: 'Level Up with Active Bootcamps & Ongoing Programs!',
+    title: 'Free Cybersecurity Awareness Training',
     description:
-      'Join our live cohort-based learning tracks at iSeeQ Academy. Work on practical industry challenges, earn verified credentials, and connect directly with hiring partners.',
+      'Protect your business and secure your future with free cyber security awareness training designed for micro, small, and medium business owners in Kandy.',
     highlights: [
-      'Hands-on live workshops & interactive cohorts',
-      'Real-world portfolio projects mentored by industry leaders',
-      'Direct networking with global peers & recruiters',
+      'Avoid phishing attacks by identifying suspicious emails and links',
+      'Create and manage strong passwords with confidence',
+      'Secure payments, protect customer data, and keep online transactions safe',
+      'Learn practical tips to protect your business and stay safe online',
     ],
-    ctaText: 'Explore Active Programs',
-    ctaLink: '/programs',
-    imageSrc: '/courses/communication.jpg',
-    badgeRole: 'Ongoing Student',
-    badgeTrack: 'Full-Stack AI Cohort',
-    studentId: 'ID 0814',
+    ctaText: 'Register Now',
+    ctaLink: '/programs/cyber-security-awareness-training',
+    imageSrc: '/courses/cyber-security-awareness-training.jpg',
+    badgeRole: 'Micro, Small & Medium Business Owners',
+    badgeTrack: 'Cyber Security Awareness Training',
+    studentId: 'ID 1016',
   },
+
 ];
 
 export default function OngoingProgramsCarouselSection() {
@@ -234,8 +236,8 @@ export default function OngoingProgramsCarouselSection() {
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
                 className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? 'w-8 bg-white'
-                    : 'w-2.5 bg-white/40 hover:bg-white/70'
+                  ? 'w-8 bg-white'
+                  : 'w-2.5 bg-white/40 hover:bg-white/70'
                   }`}
               />
             ))}
