@@ -13,7 +13,7 @@ interface Dot {
 interface InteractiveDotsProps {
   isButtonHovered?: boolean;
   imageUrl?: string;
-  mobileBreakpoint?: number; // Configurable breakpoint (defaults to 768px)
+  mobileBreakpoint?: number;
 }
 
 export default function InteractiveDots({
@@ -40,8 +40,13 @@ export default function InteractiveDots({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const ctx = canvas.getContext("2d", { alpha: false }); // alpha: false can improve composite performance if background is solid, but left out here to keep transparency intact. We'll stick to standard context.
+    const ctx2d = canvas.getContext("2d");
+    if (!ctx2d) return;
+
+    // 1. Create Offscreen canvas ONCE
+    const offCanvas = document.createElement("canvas");
+    const offCtx = offCanvas.getContext("2d");
 
     let animationFrameId: number;
     let width = (canvas.width = canvas.offsetWidth);
@@ -52,6 +57,15 @@ export default function InteractiveDots({
 
     const spacing = 32;
     const baseRadius = 2.5;
+
+    // Cache layout variables
+    let rightZoneStart = 0;
+    let rightZoneWidth = 0;
+    let drawW = 0;
+    let drawH = 0;
+    let drawX = 0;
+    let drawY = 0;
+    let showImage = false;
 
     const generateGrid = () => {
       dots = [];
@@ -74,13 +88,39 @@ export default function InteractiveDots({
       }
     };
 
-    generateGrid();
+    const updateLayoutMath = () => {
+      showImage = width >= mobileBreakpoint;
+      rightZoneStart = showImage ? width * 0.55 : width + 1000;
+      rightZoneWidth = width - rightZoneStart;
+      
+      // Update offscreen canvas dimensions
+      offCanvas.width = width;
+      offCanvas.height = height;
+
+      // Pre-calculate image drawing coordinates if image is loaded
+      if (showImage && imgRef.current) {
+        const img = imgRef.current;
+        const imgAspect = img.naturalWidth / img.naturalHeight;
+        
+        drawW = rightZoneWidth;
+        drawH = drawW / imgAspect;
+
+        if (drawH < height) {
+          drawH = height;
+          drawW = drawH * imgAspect;
+        }
+
+        drawX = rightZoneStart + (rightZoneWidth - drawW) / 2;
+        drawY = (height - drawH) / 2;
+      }
+    };
 
     const handleResize = () => {
       if (!canvas) return;
       width = canvas.width = canvas.offsetWidth;
       height = canvas.height = canvas.offsetHeight;
       generateGrid();
+      updateLayoutMath();
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -94,26 +134,26 @@ export default function InteractiveDots({
       mouse.y = -1000;
     };
 
+    // Initial setup
+    generateGrid();
+    updateLayoutMath();
+
     window.addEventListener("resize", handleResize);
     window.addEventListener("mousemove", handleMouseMove);
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
     const animate = () => {
-      // 1. FASTER ANIMATION: Increased from 0.03 to 0.08
       timeRef.current += 0.08;
-      ctx.clearRect(0, 0, width, height);
+      ctx2d.clearRect(0, 0, width, height);
 
-      // Check if image mode should be active based on screen size
-      const showImage = width >= mobileBreakpoint;
-      
-      // Define Right-Side Image Boundary (Right 45% of the canvas)
-      const rightZoneStart = showImage ? width * 0.55 : width + 1000;
+      // We need to re-calculate image math if the image loaded *after* initial mount
+      if (showImage && imgRef.current && drawW === 0) {
+        updateLayoutMath();
+      }
 
-      // --- 1. UPDATE DOT STATES ---
+      // --- 1. UPDATE & DRAW BASE DOT GRID ---
       dots.forEach((dot) => {
         const isRightZone = showImage && dot.x >= rightZoneStart;
-
-        // 2. LARGER MINIMUM SQUARE SIZE: Increased right-side base radius from 10 to 16
         const effectiveBaseRadius = isRightZone ? 16 : dot.baseRadius;
 
         // Wave calculations
@@ -130,11 +170,13 @@ export default function InteractiveDots({
         } else {
           const distX = mouse.x - dot.x;
           const distY = mouse.y - dot.y;
-          const distance = Math.hypot(distX, distY);
+          // Faster distance check (skip Math.hypot overhead)
+          const distSq = distX * distX + distY * distY;
+          const maxRadSq = mouse.maxRadius * mouse.maxRadius;
 
-          if (distance < mouse.maxRadius) {
+          if (distSq < maxRadSq) {
+            const distance = Math.sqrt(distSq);
             const intensity = 1 - distance / mouse.maxRadius;
-            // Adjusted hover growth ratio to match the new larger base size
             targetRadius += intensity * (isRightZone ? 14 : 8);
             targetAlpha += intensity * 0.55;
           }
@@ -142,17 +184,11 @@ export default function InteractiveDots({
 
         dot.radius += (targetRadius - dot.radius) * 0.15;
         dot.alpha += (targetAlpha - dot.alpha) * 0.15;
-      });
 
-      // --- 2. DRAW BASE DOT GRID ---
-      dots.forEach((dot) => {
-        const isRightZone = showImage && dot.x >= rightZoneStart;
-
-        ctx.beginPath();
+        ctx2d.beginPath();
         if (isRightZone) {
-          // Draw subtle background placeholders on the right side
-          const squareSize = Math.max(1, dot.radius * 2.0); // Slightly adjusted multiplier for better fit
-          ctx.roundRect(
+          const squareSize = Math.max(1, dot.radius * 2.0);
+          ctx2d.roundRect(
             dot.x - squareSize / 2,
             dot.y - squareSize / 2,
             squareSize,
@@ -160,66 +196,60 @@ export default function InteractiveDots({
             4
           );
         } else {
-          // Draw standard circles on small screens or left side
-          ctx.arc(dot.x, dot.y, Math.max(0.5, dot.radius), 0, Math.PI * 2);
+          ctx2d.arc(dot.x, dot.y, Math.max(0.5, dot.radius), 0, Math.PI * 2);
         }
 
-        // 3. COLOR CHANGE: Ensure the right side squares are a solid #00beb2, removing transparency that made them look black
         const color = isButtonHovered 
           ? "#fdc806" 
           : (isRightZone ? "#00beb2" : `rgba(0, 190, 178, ${dot.alpha})`);
           
-        ctx.fillStyle = color;
-        ctx.shadowColor = color;
-        ctx.shadowBlur = dot.radius > dot.baseRadius + 2 ? 8 : 0;
-        ctx.fill();
-        ctx.shadowBlur = 0;
+        ctx2d.fillStyle = color;
+        
+        // Shadow changes are expensive; conditionally apply only if needed
+        const needsShadow = dot.radius > dot.baseRadius + 2;
+        if (needsShadow) {
+          ctx2d.shadowColor = color;
+          ctx2d.shadowBlur = 8;
+        }
+        
+        ctx2d.fill();
+        
+        if (needsShadow) {
+          ctx2d.shadowBlur = 0; // Reset
+        }
       });
 
-      // --- 3. CLIP IMAGE INSIDE SQUARES (Desktop screens only) ---
-      if (showImage && imgRef.current) {
-        const img = imgRef.current;
-        const rightZoneWidth = width - rightZoneStart;
+      // --- 2. CLIP IMAGE INSIDE SQUARES ---
+      if (showImage && imgRef.current && offCtx) {
+        // Clear the REUSED offscreen canvas
+        offCtx.clearRect(0, 0, width, height);
 
-        const offCanvas = document.createElement("canvas");
-        offCanvas.width = width;
-        offCanvas.height = height;
-        const offCtx = offCanvas.getContext("2d");
-
-        if (offCtx) {
-          dots.forEach((dot) => {
-            if (dot.x >= rightZoneStart) {
-              const squareSize = Math.max(1, dot.radius * 2.2); // Adjusted mask multiplier
-              offCtx.beginPath();
-              offCtx.roundRect(
-                dot.x - squareSize / 2,
-                dot.y - squareSize / 2,
-                squareSize,
-                squareSize,
-                4
-              );
-              offCtx.fillStyle = "#ffffff";
-              offCtx.fill();
-            }
-          });
-
-          offCtx.globalCompositeOperation = "source-in";
-
-          const imgAspect = img.naturalWidth / img.naturalHeight;
-          let drawW = rightZoneWidth;
-          let drawH = drawW / imgAspect;
-
-          if (drawH < height) {
-            drawH = height;
-            drawW = drawH * imgAspect;
+        // Draw masks
+        offCtx.fillStyle = "#ffffff";
+        dots.forEach((dot) => {
+          if (dot.x >= rightZoneStart) {
+            const squareSize = Math.max(1, dot.radius * 2.2);
+            offCtx.beginPath();
+            offCtx.roundRect(
+              dot.x - squareSize / 2,
+              dot.y - squareSize / 2,
+              squareSize,
+              squareSize,
+              4
+            );
+            offCtx.fill();
           }
+        });
 
-          const drawX = rightZoneStart + (rightZoneWidth - drawW) / 2;
-          const drawY = (height - drawH) / 2;
+        // Use source-in to clip image to masks
+        offCtx.globalCompositeOperation = "source-in";
+        offCtx.drawImage(imgRef.current, drawX, drawY, drawW, drawH);
+        
+        // Reset composite operation so masks draw properly next frame
+        offCtx.globalCompositeOperation = "source-over";
 
-          offCtx.drawImage(img, drawX, drawY, drawW, drawH);
-          ctx.drawImage(offCanvas, 0, 0);
-        }
+        // Draw offscreen result to main canvas
+        ctx2d.drawImage(offCanvas, 0, 0);
       }
 
       animationFrameId = requestAnimationFrame(animate);
