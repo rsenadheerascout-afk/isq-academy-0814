@@ -32,7 +32,7 @@ export const PROGRAM_DATA: Program[] = [
 
   {
     id: '2',
-    title: 'AI for Business 4-Hour Practical Workshop',
+    title: 'AI for Business 04Hour Practical Workshop',
     description:
       'No coding. No complicated technology. Just practical AI workflows you can use in your business to automate customer replies, create marketing content, and simplify daily operations.',
     highlights: [

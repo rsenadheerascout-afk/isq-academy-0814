@@ -1,6 +1,6 @@
 // components/sections/home/WhyISeeQ.tsx
 import React from 'react';
-import { X, Check } from 'lucide-react';
+import { X, Check, FerrisWheel } from 'lucide-react';
 
 export default function WhyISeeQ() {
   const traditionalPoints = [
@@ -25,6 +25,7 @@ export default function WhyISeeQ() {
         {/* Badge */}
         <div className="inline-block mb-4">
           <span className="bg-slate-200/60 text-slate-600 text-xs font-medium px-4 py-1.5 rounded-full border border-slate-300/40">
+          <FerrisWheel size={15} strokeWidth={1.8} className="text-primary inline-block mr-1" />
             Why iSeeQ
           </span>
         </div>

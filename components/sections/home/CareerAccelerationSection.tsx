@@ -1,14 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  MonitorPlay,
-  Target,
-  Users,
-} from "lucide-react";
+import {  ArrowRight,  Briefcase,  CheckCircle2,  MonitorPlay,  Target,  Users,} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -103,8 +96,8 @@ function CareerAccelerationSection() {
         <div className="relative mt-10">
           {/* Floating Tag */}
           <div className="absolute -top-4 z-10 bg-secondary text-black text-lg px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-[#1e1c1c]">
-            <span>You</span>
-            <span className="text-black/70">➔</span>
+            <span>Becoming a</span>
+            {/* <span className="text-black/70">➔</span> */}
             <span className=" text-black transition-all duration-300">
               {roles[currentRoleIndex]}
             </span>
@@ -137,10 +130,10 @@ function CareerAccelerationSection() {
               </p>
             </div>
             <Link
-              href="/career-acceleration"
+              href="/courses?filter=Career%20Tracks"
               className="shrink-0 inline-flex items-center gap-2 bg-[#00beb2] text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
             >
-              Explore the Pathway
+              Explore More
               <ArrowRight size={17} />
             </Link>
           </div>

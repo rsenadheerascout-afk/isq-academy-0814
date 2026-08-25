@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useState } from 'react';
+import {BrainCircuit} from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -66,6 +67,13 @@ export default function OngoingProgramsSection() {
 
   return (
     <section className="max-w-7xl mx-auto lg:px-40 md:px-20 px-6 py-12">
+      {/* Section Label */}
+      <div className="flex justify-center mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+          <BrainCircuit size={15} strokeWidth={1.8} className="text-primary" />
+          <span>Workshops & Industry Training</span>
+        </div>
+      </div>
       <div
         className="
           relative overflow-visible rounded-[2.5rem]

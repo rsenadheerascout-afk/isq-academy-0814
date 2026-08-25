@@ -1,4 +1,5 @@
 import { ArrowRight, Bot, Cloud, HeartPlus, HouseWifi, MessageCircleHeart, ShieldCheck, Smartphone } from "lucide-react";
+import { LiaHatCowboySolid } from "react-icons/lia";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,17 +9,22 @@ export default function Seniors() {
   return (
     <section className="relative overflow-hidden bg-amber-50/40 py-16 text-slate-900">
       <div className="mx-auto max-w-7xl lg:px-40 md:px-20 px-6">
+        {/* Section Label */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+            <LiaHatCowboySolid size={15} strokeWidth={1.8} className="text-primary" />
+            <span>Digital Inclusion</span>
+          </div>
+        </div>
         <div className="grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-x-12">
           {/* Text Content */}
           <div>
-            <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-100/60 px-3 py-1 text-xs font-normal uppercase tracking-wider text-amber-900">
+            {/* <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-100/60 px-3 py-1 text-xs font-normal uppercase tracking-wider text-amber-900">
               Digital Inclusion
-            </div>
-
+            </div> */}
             <h2 className="mt-3 text-3xl font-normal leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
               No one should be left behind by technology.
             </h2>
-
             <p className="mt-3 text-base text-slate-600 sm:text-lg sm:leading-relaxed">
               A warm, patient classroom for our parents and grandparents —
               taught at their pace, in their language.
