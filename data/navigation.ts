@@ -25,6 +25,17 @@ export const courseCategories: Category[] = [
     ],
   },
   {
+    id: 'business-upskilling',
+    label: 'Business Upskilling',
+    href: '/courses?filter=Business%20Upskilling',
+    subCategories: [
+      { label: 'AI Productivity for Teams', href: '/courses/ai-productivity' },
+      { label: 'Cyber Awareness Training', href: '/courses/cyber-awareness' },
+      { label: 'Digital Transformation Programs', href: '/courses/digital-transformation' },
+      { label: 'Leadership in AI Era', href: '/courses/ai-leadership' },
+    ],
+  },
+  {
     id: 'women-empowerment',
     label: 'Women Empowerment',
     href: '/courses?filter=Women%20Empowerment',
@@ -44,17 +55,6 @@ export const courseCategories: Category[] = [
       { label: 'Smartphone Essentials', href: '/courses/smartphone-essentials' },
       { label: 'Safe Internet Usage', href: '/courses/safe-internet' },
       { label: 'AI for Everyday Life', href: '/courses/ai-everyday' },
-    ],
-  },
-  {
-    id: 'business-upskilling',
-    label: 'Business Upskilling',
-    href: '/courses?filter=Business%20Upskilling',
-    subCategories: [
-      { label: 'AI Productivity for Teams', href: '/courses/ai-productivity' },
-      { label: 'Cyber Awareness Training', href: '/courses/cyber-awareness' },
-      { label: 'Digital Transformation Programs', href: '/courses/digital-transformation' },
-      { label: 'Leadership in AI Era', href: '/courses/ai-leadership' },
     ],
   },
   {

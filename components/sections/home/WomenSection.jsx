@@ -1,4 +1,5 @@
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Rose } from "lucide-react";
+import { SlUserFemale } from "react-icons/sl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,6 +15,13 @@ export default function Women() {
   return (
     <section className="relative overflow-hidden bg-white py-16 text-slate-900">
       <div className="mx-auto max-w-7xl lg:px-40 md:px-20 px-6">
+        {/* Section Label */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+            <SlUserFemale size={15} strokeWidth={1.8} className="text-primary" />
+            <span>Women In Technology</span>
+          </div>
+        </div>
         <div className="grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-x-12">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
@@ -46,10 +54,9 @@ export default function Women() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-normal uppercase tracking-wider text-teal-700">
+            {/* <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-normal uppercase tracking-wider text-teal-700">
               Women in Technology
-            </div>
-
+            </div> */}
             <h2 className="mt-3 text-3xl font-normal leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Bridging the Digital Gender Gap, One woman at a time.
             </h2>

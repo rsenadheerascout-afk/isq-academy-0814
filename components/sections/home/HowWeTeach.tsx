@@ -1,6 +1,6 @@
 // components/sections/home/HowWeTeach.tsx
 import React from 'react';
-import { Heart, BookOpen, GraduationCap, MessageSquare, Users, Sparkles } from 'lucide-react';
+import { Heart, BookOpen, GraduationCap, MessageSquare, Users, Sparkles, BookType } from 'lucide-react';
 
 interface Principle {
   icon: React.ElementType;
@@ -47,14 +47,16 @@ export default function HowWeTeach() {
   ];
 
   return (
-    <section className="bg-[#FAF9F6] min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center font-sans text-slate-800">
+    <section className="bg-[#FAF9F6] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
       {/* Header Section */}
       <div className="max-w-4xl w-full mx-auto text-center mb-12">
-        <div className="inline-block mb-4">
-          <span className="bg-slate-200/60 text-slate-600 text-xs font-medium px-4 py-1.5 rounded-full border border-slate-300/40">
-            How We Teach
-          </span>
-        </div>
+        {/* Section Label */}
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+              <BookType size={15} strokeWidth={1.8} className="text-primary" />
+              <span>How We Teach</span>
+            </div>
+          </div>
 
         <h2 className="text-4xl sm:text-5xl  text-slate-900 tracking-tight mb-4">
           A calmer, sharper way to <span className="italic font-serif text-primary">learn.</span>

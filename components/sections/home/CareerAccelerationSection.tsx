@@ -1,14 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  MonitorPlay,
-  Target,
-  Users,
-} from "lucide-react";
+import {  ArrowRight,  Briefcase,  CheckCircle2,  MonitorPlay,  Target,  Users,} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -137,10 +130,10 @@ function CareerAccelerationSection() {
               </p>
             </div>
             <Link
-              href="/career-acceleration"
+              href="/courses?filter=Career%20Tracks"
               className="shrink-0 inline-flex items-center gap-2 bg-[#00beb2] text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
             >
-              Explore the Pathway
+              Explore More
               <ArrowRight size={17} />
             </Link>
           </div>
