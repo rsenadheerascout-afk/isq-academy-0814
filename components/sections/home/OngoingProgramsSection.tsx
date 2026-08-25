@@ -29,8 +29,8 @@ const COURSES_DATA: Program[] = [
       'Use AI responsibly with practical strategies for effective classroom learning',
     ],
     ctaText: 'Register Now',
-    ctaLink: '/programs/ai-tools-for-teachers',
-    imageSrc: '/courses/ai-tools-for-teachers.jpg',
+    ctaLink: '/courses/ai-professionals',
+    imageSrc: '/ongoing/women.jpg',
     badgeRole: 'School Teachers & Educators',
     badgeTrack: 'AI Tools for Teachers',
     studentId: 'ID 1015',
@@ -47,8 +47,8 @@ const COURSES_DATA: Program[] = [
       'Summarize daily accounts, track tasks, and draft supplier communications effortlessly',
     ],
     ctaText: 'Reserve Your Seat',
-    ctaLink: '/programs/ai-for-business',
-    imageSrc: '/courses/ai-for-business.jpg',
+    ctaLink: '/courses/generative-ai-in-business',
+    imageSrc: '/ongoing/man.jpg',
     badgeRole: 'Business Owners & Entrepreneurs',
     badgeTrack: 'AI for Business',
     studentId: 'ID 1014',
@@ -192,7 +192,7 @@ export default function OngoingProgramsCarouselSection() {
               {/* Front Main Badge Card */}
               <div key={activeCourse.id} className="absolute inset-0 bg-white text-black rounded-2xl shadow-2xl transform rotate-3 p-4 flex flex-col justify-between border border-gray-100 z-10 lg:scale-150 transition-transform duration-300">
                 {/* Photo Area */}
-                <div className="relative w-full h-44 bg-gray-200 rounded-xl overflow-hidden">
+                <div className="relative w-full h-54 bg-gray-200 rounded-xl overflow-hidden">
                   <Image
                     src={activeCourse.imageSrc}
                     alt={activeCourse.badgeRole}
