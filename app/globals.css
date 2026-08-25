@@ -80,3 +80,43 @@ html {
 .animate-spot-two {
   animation: spot-two 12s ease-in-out infinite;
 }
+
+.testimonial-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 2rem;
+
+  animation: testimonial-marquee 35s linear infinite;
+
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.testimonial-marquee:hover .testimonial-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonial-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
