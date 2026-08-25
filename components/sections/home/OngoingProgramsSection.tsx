@@ -20,6 +20,41 @@ interface Program {
 const COURSES_DATA: Program[] = [
   {
     id: '1',
+    title: 'AI Tools for Teachers – One-Day Hands-On Workshop',
+    description:
+      'Use your school holiday to discover practical AI tools that save you time, spark creativity, and enhance student learning. Go back to school better prepared and more confident.',
+    highlights: [
+      'Plan lessons faster with AI-powered tools and create engaging teaching materials',
+      'Generate quizzes, tests, rubrics, and personalized learning content in minutes',
+      'Use AI responsibly with practical strategies for effective classroom learning',
+    ],
+    ctaText: 'Register Now',
+    ctaLink: '/programs/ai-tools-for-teachers',
+    imageSrc: '/courses/ai-tools-for-teachers.jpg',
+    badgeRole: 'School Teachers & Educators',
+    badgeTrack: 'AI Tools for Teachers',
+    studentId: 'ID 1015',
+  },
+  {
+    id: '2',
+    title: 'AI for Business – 4-Hour Practical Workshop',
+    description:
+      'No coding. No complicated technology. Just practical AI workflows you can use in your business to automate customer replies, create marketing content, and simplify daily operations.',
+    highlights: [
+      'Handle WhatsApp & Facebook messages automatically in English, Sinhala, or Tamil',
+      'Generate high-converting social media captions, posts, and marketing ideas without hiring an agency',
+      'Turn Sinhala/Tamil voice notes into professional business emails and formal documents',
+      'Summarize daily accounts, track tasks, and draft supplier communications effortlessly',
+    ],
+    ctaText: 'Reserve Your Seat',
+    ctaLink: '/programs/ai-for-business',
+    imageSrc: '/courses/ai-for-business.jpg',
+    badgeRole: 'Business Owners & Entrepreneurs',
+    badgeTrack: 'AI for Business',
+    studentId: 'ID 1014',
+  },
+  {
+    id: '3',
     title: 'Level Up with Active Bootcamps & Ongoing Programs!',
     description:
       'Join our live cohort-based learning tracks at iSeeQ Academy. Work on practical industry challenges, earn verified credentials, and connect directly with hiring partners.',
@@ -34,40 +69,6 @@ const COURSES_DATA: Program[] = [
     badgeRole: 'Ongoing Student',
     badgeTrack: 'Full-Stack AI Cohort',
     studentId: 'ID 0814',
-  },
-  {
-    id: '2',
-    title: 'Master Modern Web Development & Cloud Architecture',
-    description:
-      'Build end-to-end scalable web applications using React, Next.js, and cloud platforms. Gain practical skills with continuous code reviews.',
-    highlights: [
-      'Comprehensive full-stack project building',
-      '1-on-1 mentorship sessions every week',
-      'Resume reviews & interview preparation',
-    ],
-    ctaText: 'Join Next Cohort',
-    ctaLink: '/programs/web-dev',
-    imageSrc: '/courses/webdev.jpg',
-    badgeRole: 'Frontend Developer',
-    badgeTrack: 'React & Next.js Track',
-    studentId: 'ID 0925',
-  },
-  {
-    id: '3',
-    title: 'Accelerate Your Career in Data Science & Machine Learning',
-    description:
-      'Dive deep into predictive analytics, neural networks, and real-world datasets. Learn to deploy production-ready machine learning models.',
-    highlights: [
-      'Real-world dataset analysis & modeling',
-      'Live dynamic problem-solving sessions',
-      'Access to exclusive hiring partner network',
-    ],
-    ctaText: 'Apply Now',
-    ctaLink: '/programs/data-science',
-    imageSrc: '/courses/datascience.jpg',
-    badgeRole: 'AI Specialist',
-    badgeTrack: 'Data & ML Masterclass',
-    studentId: 'ID 1042',
   },
 ];
 
@@ -138,13 +139,13 @@ export default function OngoingProgramsCarouselSection() {
         onTouchEnd={handleTouchEnd}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[460px]">
-          
+
           {/* Left Column: Program Information */}
           <div key={activeCourse.id} className="lg:col-span-7 space-y-6 z-10 transition-opacity duration-300">
             <h2 className="text-3xl md:text-5xl font-normal leading-tight tracking-wide">
               {activeCourse.title}
             </h2>
-            
+
             <p className="text-base md:text-lg text-white/90 font-normal leading-relaxed max-w-xl">
               {activeCourse.description}
             </p>
@@ -180,7 +181,7 @@ export default function OngoingProgramsCarouselSection() {
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end items-center mt-8 lg:mt-0 min-h-[380px]">
             {/* Layered Cards Container */}
             <div className="relative w-72 h-[350px] pt-6">
-              
+
               {/* Back Dark Badge Card */}
               <div className="absolute inset-0 bg-neutral-900 rounded-2xl shadow-xl transform rotate-3 lg:translate-x-15 translate-x-5 lg:translate-y-20 translate-y-8 p-5 border border-white/10 flex flex-col justify-end text-white lg:scale-125 scale-110">
                 <div className="text-2xl font-normal tracking-widest opacity-40 uppercase mb-4">
@@ -224,7 +225,7 @@ export default function OngoingProgramsCarouselSection() {
 
         {/* Carousel Controls & Indicators */}
         <div className="flex flex-col sm:flex-row items-center justify-between mt-8 pt-4 border-t border-white/20 gap-4">
-          
+
           {/* Pagination Indicators */}
           <div className="flex items-center space-x-2">
             {COURSES_DATA.map((_, index) => (
@@ -232,11 +233,10 @@ export default function OngoingProgramsCarouselSection() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
                     ? 'w-8 bg-white'
                     : 'w-2.5 bg-white/40 hover:bg-white/70'
-                }`}
+                  }`}
               />
             ))}
           </div>
