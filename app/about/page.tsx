@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about iSeeQ Academy, our mission, online learning approach, professional courses, and commitment to flexible education.",
+    "Learn about iSeeQ Academy, our mission, learning approach, professional courses, and commitment to flexible education.",
   alternates: {
     canonical: "/about",
   },
@@ -110,12 +110,12 @@ export default function AboutPage() {
             <div className="space-y-4">
               <p>
                 We improve professional thinking and performance through
-                flexible online learning led by industry experts and experienced
+                flexible learning led by industry experts and experienced
                 academics.
               </p>
               <p>
-                iSeeQ Academy offers a broad programme of online short courses.
-                Our aim is to deliver premium online learning experiences for
+                iSeeQ Academy offers a broad programme of short courses.
+                Our aim is to deliver premium learning experiences for
                 professionals who want to advance their careers, connect with a
                 network of peer learners, and gain insight from leaders in the
                 field.
@@ -129,10 +129,7 @@ export default function AboutPage() {
 
             <div className="space-y-4">
               <p>
-                Our offering has been designed and developed using the latest in
-                learning design theory and technology. Our courses are fully
-                online and offer a flexible way to fit learning around your
-                life.
+                Our offering has been designed and developed using the latest in learning design theory and technology. Our courses offer a flexible way to fit learning around your life.
               </p>
               <p>Each course includes a balance of:</p>
               <ul className="list-disc pl-6 space-y-2 py-2">
@@ -145,9 +142,7 @@ export default function AboutPage() {
               </ul>
 
               <p>
-                Our courses cover a range of subject areas, but each course has
-                a strong focus on real-world applications for individuals and
-                businesses.
+                Our courses cover a range of subject areas, but each course has a strong focus on real-world applications for individuals and businesses.
               </p>
               <p>
                 Browse all our{" "}
@@ -155,7 +150,7 @@ export default function AboutPage() {
                   href="/courses"
                   className="text-orange-700 hover:text-orange-800 underline underline-offset-4 decoration-1"
                 >
-                  online short courses
+                  courses
                 </Link>
                 .
               </p>

@@ -26,7 +26,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
           {featuredCourses?.map((course) => (
             <Link
               key={course.slug}
-              href={`/courses/${course.slug}`}
+              href={`/courses`}
               className="bg-white border border-gray-200 border-b-4 border-b-[#00beb2] shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 flex flex-col group cursor-pointer rounded-2xl"
             >
               <div className="h-48 w-full relative overflow-hidden rounded-2xl">
@@ -43,7 +43,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
 
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl mb-4 group-hover:underline decoration-[#00beb2] decoration-2 underline-offset-4">
+                  <h3 className="text-xl mb-4 group-hover:underline decoration-primary decoration-2 underline-offset-4">
                     {course.title}
                   </h3>
 
@@ -54,7 +54,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
 
                 <div className="text-sm border-t border-gray-100 pt-4">
                   Next course:{" "}
-                  <span className="text-[#00beb2]">
+                  <span className="text-primary">
                     {course.date}
                   </span>
                 </div>
@@ -66,7 +66,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
         <div className="mt-12 text-center">
           <Link
             href="/courses"
-            className="inline-block bg-black text-white px-8 py-3 hover:bg-[#00beb2] transition-colors rounded-full"
+            className="inline-block bg-black text-white px-8 py-3 hover:bg-primary transition-colors rounded-full"
           >
             View all courses
           </Link>

@@ -55,8 +55,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl mb-4">Short Courses</h1>
           <p className="text-lg text-gray-600 max-w-2xl">
-            Develop your skills and advance your career with our flexible,
-            industry-led online courses.
+            Develop your skills and advance your career with our flexible, industry-led courses.
           </p>
         </div>
       </div>

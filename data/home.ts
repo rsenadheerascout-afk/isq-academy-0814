@@ -1,11 +1,11 @@
 export const featuredCourses = [
   {
-    slug: "compelling-communication",
-    title: "Compelling Communication",
+    slug: "full-stack-development",
+    title: "Full-Stack Development",
     description:
-      "Develop practical communication skills to communicate clearly, confidently, and effectively in professional environments.",
-    date: "16 Oct 2026",
-    image: "/courses/communication.jpg",
+      "Build modern web applications from front end to back end while developing practical skills in HTML, CSS, JavaScript, React, APIs, databases, and server-side development.",
+    date: "Coming Soon",
+    image: "/courses/full-stack-development.jpg",
   },
   {
     slug: "generative-ai-in-business",
@@ -35,7 +35,7 @@ export const benefits = [
     desc: "Connect with a network of peers from around the world.",
   },
   {
-    title: "Earn an online certificate",
+    title: "Earn a valuable certificate",
     desc: "Evidence your learning with an official certificate on completion.",
   },
   {

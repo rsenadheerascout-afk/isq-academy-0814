@@ -66,7 +66,7 @@ export default function OngoingProgramsSection() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto lg:px-40 md:px-20 px-6 py-12">
+    <section className="max-w-7xl mx-auto lg:px-40 md:px-20 px-6 py-6">
       {/* Section Label */}
       <div className="flex justify-center mb-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
@@ -75,12 +75,7 @@ export default function OngoingProgramsSection() {
         </div>
       </div>
       <div
-        className="
-          relative overflow-visible rounded-[2.5rem]
-          bg-gradient-to-r from-teal-600 via-primary to-secondary
-          p-8 md:p-14 text-white shadow-2xl
-          transition-all duration-500 ease-in-out
-        "
+        className="relative overflow-visible rounded-[2.5rem] bg-gradient-to-r from-teal-600 via-primary to-secondary px-8 py-4 md:px-14 md:py-8 text-white shadow-2xl transition-all duration-500 ease-in-out"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
@@ -116,13 +111,13 @@ export default function OngoingProgramsSection() {
             </p>
 
             {/* CTA */}
-            <div className="pt-2">
+            {/* <div className="pt-2">
               <Link
                 href={activeProgram.ctaLink}
                 className="inline-block bg-white text-gray-900 px-7 py-3.5 rounded-md font-normal text-sm md:text-base hover:bg-gray-100 transition-colors shadow-lg">
                 {activeProgram.ctaText}
               </Link>
-            </div>
+            </div> */}
           </div>
           {/* ID Card */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end items-center mt-8 lg:mt-0 min-h-[380px]">

@@ -1398,7 +1398,7 @@ export const courses: Course[] = [
     nextStartDate: "2026-10-01",
     category: "Business Upskilling",
     commitment: "4–6 hours per week",
-    studyMode: "Tutor guided / online",
+    studyMode: "Tutor guided / Self-paced",
 
     lead: {
       name: "Course Instructor",
@@ -1460,7 +1460,7 @@ export const courses: Course[] = [
     nextStartDate: "2026-10-01",
     category: "Business Upskilling",
     commitment: "4–6 hours per week",
-    studyMode: "Tutor guided / online",
+    studyMode: "Tutor guided / Self-paced",
 
     lead: {
       name: "Course Instructor",
@@ -1522,7 +1522,7 @@ export const courses: Course[] = [
     nextStartDate: "2026-10-01",
     category: "Business Upskilling",
     commitment: "4–6 hours per week",
-    studyMode: "Tutor guided / online",
+    studyMode: "Tutor guided / Self-paced",
 
     lead: {
       name: "Course Instructor",
@@ -1584,7 +1584,7 @@ export const courses: Course[] = [
     nextStartDate: "2026-10-01",
     category: "Business Upskilling",
     commitment: "4–6 hours per week",
-    studyMode: "Tutor guided / online",
+    studyMode: "Tutor guided / Self-paced",
 
     lead: {
       name: "Course Instructor",
