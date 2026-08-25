@@ -1,91 +1,95 @@
 // components/sections/home/WhyISeeQ.tsx
 import React from 'react';
-import { X, Check, FerrisWheel } from 'lucide-react';
+import { Handshake, CirclePile, Check, CircleCheckBig } from 'lucide-react';
 
 export default function WhyISeeQ() {
-  const traditionalPoints = [
-    'Memorization',
-    'Content coverage',
-    'Large classes',
-    'Theory-heavy lectures',
-    'Technology obsession',
-  ];
-
-  const iSeeQPoints = [
-    'Understanding',
-    'Confidence',
-    'Small batches of 15',
-    'Real practice & projects',
-    'Balanced living',
+  const reasons = [
+    {
+      icon: Handshake,
+      title: 'Tailored Mentorship',
+      description:
+        'Guided entirely by your unique strengths, passions, and individual ambitions.',
+    },
+    {
+      icon: CirclePile,
+      title: 'Small Cohorts (5–15)',
+      description:
+        'Intimate batch sizes ensuring deep connection and quality over pure volume.',
+    },
+    {
+      icon: Check,
+      title: 'Multi-Specialists',
+      description:
+        'Every course is co-taught by a diverse team of industry professionals.',
+    },
   ];
 
   return (
-    <section className="bg-[#FAF9F6] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
+    <section className="bg-[#f8fefe] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
       <div className="max-w-5xl w-full mx-auto text-center mb-12">
-        {/* Badge */}
-        <div className="inline-block mb-4">
-          <span className="bg-slate-200/60 text-slate-600 text-xs font-medium px-4 py-1.5 rounded-full border border-slate-300/40">
-          <FerrisWheel size={15} strokeWidth={1.8} className="text-primary inline-block mr-1" />
-            Why iSeeQ
-          </span>
+        {/* Section Label */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+            <CircleCheckBig size={15} strokeWidth={1.8} className="text-primary" />
+            <span>Why iSeeQ</span>
+          </div>
         </div>
-
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl text-slate-900 tracking-tight mb-4">
-          A different kind of <span className="italic font-serif text-primary">classroom.</span>
+          Where Potential Becomes Purpose.
         </h2>
 
         {/* Subtitle */}
-        <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">
-          Built for the way people actually grow — not the way curricula were written in the 90s.
+        <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          We don’t measure success only by what you learn, but by who you become.
+          <br />
+          An ecosystem where education, psychology, and industry unite for individual growth.
         </p>
       </div>
 
-      {/* Comparison Cards Grid */}
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        
-        {/* Card 1: Traditional Education */}
-        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/70 shadow-sm flex flex-col justify-between">
-          <div>
-            <span className="text-lg italic tracking-wider text-slate-600 block mb-8">
-              Traditional Education
-            </span>
-            <ul className="space-y-6">
-              {traditionalPoints.map((item, index) => (
-                <li key={index} className="flex items-center space-x-4">
-                  <span className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
-                    <X className="w-4 h-4 text-slate-400" />
-                  </span>
-                  <span className="text-slate-500 line-through decoration-slate-300 font-medium">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      {/* Feature Cards */}
+      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        {reasons.map((reason, index) => {
+          const Icon = reason.icon;
+          return (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-8 sm:p-10 border border-slate-200/70 shadow-sm flex flex-col"
+            >
+              {/* Icon */}
+              <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+                <Icon
+                  className="w-5 h-5 text-primary"
+                  strokeWidth={1.8}
+                />
+              </div>
+              {/* Title */}
+              <h3 className="text-lg font-medium text-slate-900 mb-3">
+                {reason.title}
+              </h3>
+              {/* Description */}
+              <p className="text-slate-500 text-sm leading-relaxed">
+                {reason.description}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      {/* Bottom Feature Pill */}
+      <div className="mt-6">
+        <div className="inline-flex items-center justify-center gap-8 px-8 py-3 rounded-full bg-primary/5 border border-primary/20 text-primary text-xs sm:text-sm">
 
-        {/* Card 2: The iSeeQ Approach */}
-        <div className="bg-gradient-to-br from-[#0A192F] from-10% to-primary to-80%  text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col justify-between">
-          <div>
-            <span className="text-lg italic tracking-wider text-white block mb-8">
-              The iSeeQ Approach
-            </span>
-            <ul className="space-y-6">
-              {iSeeQPoints.map((item, index) => (
-                <li key={index} className="flex items-center space-x-4">
-                  <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
-                    <Check className="w-4 h-4 text-slate-200" />
-                  </span>
-                  <span className="text-white font-normal">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          <span className="flex items-center gap-2">
+            <Check className="w-4 h-4" strokeWidth={2} />
+            Global & Local Industry Exposure
+          </span>
 
+          <span className="flex items-center gap-2">
+            <Check className="w-4 h-4" strokeWidth={2} />
+            Learner-Driven Evaluation
+          </span>
+
+        </div>
       </div>
     </section>
   );

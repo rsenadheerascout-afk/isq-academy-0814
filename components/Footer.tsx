@@ -49,7 +49,7 @@ export default function Footer() {
             For Organizations
           </h4>
           <Link
-            href="/#organizations"
+            href="/courses?filter=Business%20Upskilling"
             className={`text-sm text-gray-300 ${linkClass}`}
           >
             Learning and Development for your organization
