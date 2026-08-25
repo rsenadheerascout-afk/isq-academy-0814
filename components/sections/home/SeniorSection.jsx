@@ -34,21 +34,21 @@ export default function Seniors() {
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
                 {
-                  icon: <Smartphone className=" text-amber-600" />,
+                  icon: <Smartphone className=" text-yellow-400" />,
                   text: "Use smartphones confidently",
                 },
-                { icon: <MessageCircleHeart className=" text-amber-600" />, text: "Stay connected with family" },
-                { icon: <HouseWifi className=" text-amber-600" />, text: "Access online services" },
-                { icon: <ShieldCheck className=" text-amber-600" />, text: "Stay safe online" },
-                { icon: <Bot className=" text-amber-600" />, text: "Understand AI tools" },
-                { icon: <HeartPlus className=" text-amber-600" />, text: "At a pace that feels human" },
+                { icon: <MessageCircleHeart className=" text-yellow-400" />, text: "Stay connected with family" },
+                { icon: <HouseWifi className=" text-yellow-400" />, text: "Access online services" },
+                { icon: <ShieldCheck className=" text-yellow-400" />, text: "Stay safe online" },
+                { icon: <Bot className=" text-yellow-400" />, text: "Understand AI tools" },
+                { icon: <HeartPlus className=" text-yellow-400" />, text: "At a pace that feels human" },
               ].map(({icon, text}) => (
                 <div
                   key={text}
                   className="flex items-center gap-3.5 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-all hover:border-secondary hover:shadow-md"
                 >
                   <span
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-xl"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-yellow-50 text-xl"
                     aria-hidden="true"
                   >
                     {icon}
@@ -64,7 +64,7 @@ export default function Seniors() {
             <div className="mt-6 sm:mt-8">
               <Link
                 href="/courses?filter=Senior%20Citizens"
-                className="group inline-flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 text-sm font-normal text-white shadow-md shadow-amber-600/20 transition-all hover:bg-amber-700 hover:shadow-lg hover:shadow-amber-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-normal text-white shadow-md shadow-amber-600/20 transition-all hover:bg-yellow-500 hover:shadow-lg hover:shadow-amber-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 active:scale-95"
               >
                 Learn About Senior Classes
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

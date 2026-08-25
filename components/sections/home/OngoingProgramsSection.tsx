@@ -154,7 +154,7 @@ export default function OngoingProgramsSection() {
                 </div>
                 {/* Verification */}
                 <div className="flex justify-between items-center pt-2 border-t border-gray-100 text-[11px] text-gray-400 font-normal">
-                  <span>Verified Learner</span>
+                  {/* <span>Verified Learner</span> */}
                   <span>{activeProgram.studentId}</span>
                 </div>
               </div>

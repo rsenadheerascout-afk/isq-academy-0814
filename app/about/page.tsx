@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
+import WhyLearnSection from "@/components/sections/home/WhyLearnSection";
 
 export const metadata: Metadata = {
   title: "About",
@@ -95,12 +96,10 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         {/* Background Color Spots */}
         {/* Animated Background Color Spots */}
-        <div
-          aria-hidden="true"
+        <div aria-hidden="true"
           className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-primary/30 blur-3xl animate-spot-one"
         />
-        <div
-          aria-hidden="true"
+        <div aria-hidden="true"
           className="absolute top-[45%] -right-32 w-80 h-80 rounded-full bg-secondary/20 blur-3xl animate-spot-two"
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
@@ -122,7 +121,11 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          </div>
+                    {/* Why Learn */}
+          <WhyLearnSection />
 
+          <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
           {/* Our Courses */}
           <div>
             <h2 className="text-3xl mb-6 text-gray-900">Our Courses</h2>
@@ -242,6 +245,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+        
       </section>
     </main>
   );

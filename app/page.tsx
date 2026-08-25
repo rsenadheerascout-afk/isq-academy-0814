@@ -88,7 +88,7 @@ export default function HomePage() {
 
         <HowWeTeach />
 
-        <WhyLearnSection />
+        {/* <WhyLearnSection /> */}
 
         <FeaturedCoursesSection featuredCourses={featuredCourses} />
 

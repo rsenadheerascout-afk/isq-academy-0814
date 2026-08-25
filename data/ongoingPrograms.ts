@@ -27,12 +27,12 @@ export const PROGRAM_DATA: Program[] = [
     imageSrc: '/ongoing/women.jpg',
     badgeRole: 'School Teachers & Educators',
     badgeTrack: 'AI Tools for Teachers',
-    studentId: 'ID 1015',
+    studentId: 'Date: 2026-10-02',
   },
 
   {
     id: '2',
-    title: 'AI for Business 04Hour Practical Workshop',
+    title: 'AI for Business Practical Workshop',
     description:
       'No coding. No complicated technology. Just practical AI workflows you can use in your business to automate customer replies, create marketing content, and simplify daily operations.',
     highlights: [
@@ -46,7 +46,7 @@ export const PROGRAM_DATA: Program[] = [
     imageSrc: '/ongoing/man.jpg',
     badgeRole: 'Business Owners & Entrepreneurs',
     badgeTrack: 'AI for Business',
-    studentId: 'ID 1014',
+    studentId: 'Date: 2026-10-08',
   },
 
   {
@@ -65,6 +65,6 @@ export const PROGRAM_DATA: Program[] = [
     imageSrc: '/ongoing/cyberman.jpg',
     badgeRole: 'Micro, Small & Medium Business Owners',
     badgeTrack: 'Cyber Security Awareness Training',
-    studentId: 'ID 1016',
+    studentId: 'Date: 2026-09-20',
   },
 ];

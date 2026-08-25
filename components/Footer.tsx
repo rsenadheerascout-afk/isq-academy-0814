@@ -84,25 +84,25 @@ export default function Footer() {
             />
           </Link>
           {/* Social Media icons */}
-<div className="flex gap-4">
-  {[
-    { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/company/iseeq-academy" },
-    { name: "Instagram", icon: FaInstagram, url: "#" },
-    { name: "Facebook", icon: FaFacebookF, url: "#" },
-  ].map((social) => {
-    const Icon = social.icon;
-    return (
-      <a
-        key={social.name}
-        href={social.url}
-        target="_blank" rel="noopener noreferrer" aria-label={social.name}
-        className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white text-primary transition duration-100 hover:bg-secondary hover:text-primary"
-      >
-        <Icon className="w-3.5 h-3.5" />
-      </a>
-    );
-  })}
-</div>
+          <div className="flex gap-4">
+            {[
+              { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/company/iseeq-academy" },
+              { name: "Instagram", icon: FaInstagram, url: "#" },
+              { name: "Facebook", icon: FaFacebookF, url: "#" },
+            ].map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank" rel="noopener noreferrer" aria-label={social.name}
+                  className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-primary text-black transition duration-100 hover:bg-secondary hover:text-black"
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
 
