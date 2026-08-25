@@ -69,4 +69,12 @@ export const testimonials = [
       company: "iSeeQ",
     },
   },
+  {
+    text: "The quality of the courses and support from the academy made the entire learning journey worthwhile.",
+    author: {
+      name: "Ben-2",
+      avatarUrl: "",
+      company: "iSeeQ",
+    },
+  },
 ];
