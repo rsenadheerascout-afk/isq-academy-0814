@@ -103,15 +103,15 @@ function CareerAccelerationSection() {
         <div className="relative mt-10">
           {/* Floating Tag */}
           <div className="absolute -top-4 z-10 bg-secondary text-black text-lg px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-[#1e1c1c]">
-            <span>You</span>
-            <span className="text-black/70">➔</span>
-            <span className=" text-black transition-all duration-300">
+            <span>You&apos;ll be a</span>
+            {/* <span className="text-black/70">➔</span> */}
+            <span className=" font-serif italic font-semibold text-black transition-all duration-300">
               {roles[currentRoleIndex]}
             </span>
           </div>
 
           {/* Bottom Highlight Card */}
-          <div className="bg-[#292727] rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="bg-[#292727] rounded-2xl pt-12 p-6 md:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
               <div className="flex flex-wrap gap-x-6 gap-y-3 mb-3">
                 <div className="flex items-center gap-2 text-sm text-white">
