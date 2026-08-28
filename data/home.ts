@@ -54,6 +54,14 @@ export const testimonials = [
     },
   },
   {
+    text: "The support and overall quality of content has been exactly what I expected. It instills the highest traditions and reputation of the academy.",
+    author: {
+      name: "John",
+      avatarUrl: "",
+      company: "iSeeQ",
+    },
+  },
+  {
     text: "The learning experience has been practical, engaging, and incredibly useful for my professional development.",
     author: {
       name: "Doe",
