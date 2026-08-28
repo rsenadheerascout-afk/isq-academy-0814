@@ -53,7 +53,7 @@ export default function CoursesPage() {
       {/* Page Header */}
       <div className="bg-gray-50 border-b border-gray-200 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl mb-4">Short Courses</h1>
+          <h1 className="text-4xl mb-4">Courses We Offer</h1>
           <p className="text-lg text-gray-600 max-w-2xl">
             Develop your skills and advance your career with our flexible, industry-led courses.
           </p>
