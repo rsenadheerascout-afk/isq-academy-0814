@@ -88,7 +88,7 @@ export default function Footer() {
   {[
     { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/company/iseeq-academy" },
     { name: "Instagram", icon: FaInstagram, url: "#" },
-    { name: "Facebook", icon: FaFacebookF, url: "#" },
+    { name: "Facebook", icon: FaFacebookF, url: "https://www.facebook.com/ISeeQ-Academy-61583222218319/" },
   ].map((social) => {
     const Icon = social.icon;
     return (
