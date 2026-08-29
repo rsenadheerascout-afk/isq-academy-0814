@@ -22,7 +22,7 @@ function CareerAccelerationSection() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:px-40 md:px-20 px-6">
+    <section className="relative overflow-hidden bg-white py-8 md:py-10 lg:py-12 lg:px-40 md:px-20 px-6">
       {/* Background accents */}
       <div
         aria-hidden="true"
@@ -45,7 +45,7 @@ function CareerAccelerationSection() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl leading-tight mb-5">
             From Degree Holder to{" "}
-            <span className="text-[#00beb2] italic font-serif">
+            <span className="text-primary italic font-serif">
               Job-Ready Professional
             </span>
           </h2>
@@ -108,19 +108,19 @@ function CareerAccelerationSection() {
             <div>
               <div className="flex flex-wrap gap-x-6 gap-y-3 mb-3">
                 <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-[#00beb2]" />
+                  <CheckCircle2 size={17} className="text-primary" />
                   Practical Training
                 </div>
                 <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-[#00beb2]" />
+                  <CheckCircle2 size={17} className="text-primary" />
                   Real Projects
                 </div>
                 <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-[#00beb2]" />
+                  <CheckCircle2 size={17} className="text-primary" />
                   Industry Internship
                 </div>
                 <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-[#00beb2]" />
+                  <CheckCircle2 size={17} className="text-primary" />
                   Career Support
                 </div>
               </div>
@@ -131,7 +131,7 @@ function CareerAccelerationSection() {
             </div>
             <Link
               href="/courses?filter=Career%20Tracks"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#00beb2] text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
+              className="shrink-0 inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
             >
               Explore More
               <ArrowRight size={17} />

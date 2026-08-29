@@ -9,7 +9,7 @@ function CareerAccelerationHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="relative z-10">
-            <div className="inline-flex items-center bg-[#00beb2] text-white px-4 py-1.5 rounded-full text-xs font-medium mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-4 py-1.5 rounded-full text-xs font-medium mb-6">
               3-Month Crash Program + 6-Month Internship
             </div>
 
@@ -17,7 +17,7 @@ function CareerAccelerationHero() {
               From Degree Holder
               <br className="hidden lg:block" />
               to Job-Ready{" "}
-              <span className="text-[#00beb2]">
+              <span className="text-primary">
                 Full-Stack Engineer
               </span>
             </h1>
@@ -82,7 +82,7 @@ function CareerAccelerationHero() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#00beb2] text-white px-7 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
               >
                 Apply Now
                 <ArrowRight size={17} />
@@ -90,11 +90,11 @@ function CareerAccelerationHero() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border border-gray-200 bg-white text-gray-800 px-7 py-3 rounded-full hover:border-[#00beb2] transition-colors text-sm"
+                className="inline-flex items-center gap-2 border border-gray-200 bg-white text-gray-800 px-7 py-3 rounded-full hover:border-primary transition-colors text-sm"
               >
                 <MessageCircle
                   size={17}
-                  className="text-[#00beb2]"
+                  className="text-primary"
                 />
                 Talk to an Advisor
               </Link>
@@ -105,18 +105,18 @@ function CareerAccelerationHero() {
           <div className="relative min-h-[420px] flex items-center justify-center">
             <div
               aria-hidden="true"
-              className="absolute inset-10 bg-[#00beb2]/15 rounded-full blur-3xl"
+              className="absolute inset-10 bg-primary/15 rounded-full blur-3xl"
             />
 
-            <div className="absolute top-8 right-8 bg-white p-3 rounded-full shadow-lg z-20 text-[#00beb2] font-bold">
+            <div className="absolute top-8 right-8 bg-white p-3 rounded-full shadow-lg z-20 text-primary font-bold">
               {"</>"}
             </div>
 
-            <div className="absolute top-1/2 right-0 bg-white p-3 rounded-full shadow-lg z-20 text-[#00beb2] font-bold">
+            <div className="absolute top-1/2 right-0 bg-white p-3 rounded-full shadow-lg z-20 text-primary font-bold">
               {"{ }"}
             </div>
 
-            <div className="absolute bottom-16 left-4 bg-white p-3 rounded-full shadow-lg z-20 text-[#00beb2]">
+            <div className="absolute bottom-16 left-4 bg-white p-3 rounded-full shadow-lg z-20 text-primary">
               <LayoutDashboard size={22} />
             </div>
 
@@ -141,7 +141,7 @@ function ProgramFeature({
 }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="text-[#00beb2] shrink-0">{icon}</div>
+      <div className="text-primary shrink-0">{icon}</div>
 
       <span className="text-sm font-medium text-gray-800">
         {text}
