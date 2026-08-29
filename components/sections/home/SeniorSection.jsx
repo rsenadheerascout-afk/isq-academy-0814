@@ -7,8 +7,8 @@ const seniorImg = "/fallback-avatar";
 
 export default function Seniors() {
   return (
-    <section className="relative overflow-hidden bg-amber-50/40 py-16 text-slate-900">
-      <div className="mx-auto max-w-7xl lg:px-40 md:px-20 px-6">
+    <section className="relative overflow-hidden bg-white pt-8 pb-0 md:pt-10 lg:pt-12 lg:px-40 md:px-20 px-6 text-slate-900">
+      <div>
         {/* Section Label */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">

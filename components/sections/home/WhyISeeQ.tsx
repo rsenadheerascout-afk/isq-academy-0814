@@ -35,7 +35,7 @@ export default function WhyISeeQ() {
           </div>
         </div>
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl text-slate-900 tracking-tight mb-4">
+        <h2 className="text-5xl sm:text-5xl text-slate-900 tracking-tight mb-4">
           Where Potential Becomes Purpose.
         </h2>
 
@@ -48,7 +48,7 @@ export default function WhyISeeQ() {
       </div>
 
       {/* Feature Cards */}
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         {reasons.map((reason, index) => {
           const Icon = reason.icon;
           return (

@@ -49,7 +49,7 @@ export default function HowWeTeach() {
   return (
     <section className="bg-[#FAF9F6] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
       {/* Header Section */}
-      <div className="max-w-4xl w-full mx-auto text-center mb-12">
+      <div className="max-w-5xl w-full mx-auto text-center mb-12">
         {/* Section Label */}
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
@@ -68,7 +68,7 @@ export default function HowWeTeach() {
       </div>
 
       {/* Grid Section */}
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {principles.map((item, index) => {
           const IconComponent = item.icon;
 

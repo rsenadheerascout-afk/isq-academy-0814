@@ -33,7 +33,7 @@ export default function OngoingProgramsSection() {
   useEffect(() => {
     if (isPaused) return;
 
-    const timer = setInterval(handleNext, 5000);
+    const timer = setInterval(handleNext, 8000);
 
     return () => clearInterval(timer);
   }, [isPaused, handleNext]);
@@ -66,7 +66,7 @@ export default function OngoingProgramsSection() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto lg:px-40 md:px-20 px-6 py-6">
+    <section className="relative overflow-hidden bg-white py-16 lg:px-40 md:px-20 px-6 py-8 md:py-10 lg:py-12 text-slate-900">
       {/* Section Label */}
       <div className="flex justify-center mb-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
