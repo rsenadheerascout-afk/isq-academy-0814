@@ -19,8 +19,8 @@ export default function HowWeTeach() {
     },
     {
       icon: BookOpen,
-      title: 'Globally Reviewed',
-      description: 'Curricula benchmarked against Pearson, Cambridge, and industry standards.',
+      title: 'Real-World Relevant',
+      description: 'Dynamic coursework that rapidly adapts to industry shifts, keeping your skills ahead of the curve. Matched with global standards.',
     },
     {
       icon: GraduationCap,
@@ -54,7 +54,7 @@ export default function HowWeTeach() {
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
               <BookType size={15} strokeWidth={1.8} className="text-primary" />
-              <span>How We Teach</span>
+              <span>Our Approach</span>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ export default function HowWeTeach() {
         </h2>
 
         <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">
-          Six principles that quietly run through every classroom — online or in Kandy.
+          Six principles that quietly run through every classroom — online or in class.
         </p>
       </div>
 

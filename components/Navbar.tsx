@@ -31,9 +31,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-primary text-white text-sm py-2 px-4 text-center font-normal">
+      {/* <div className="bg-primary text-white text-sm py-2 px-4 text-center font-normal">
         Purchasing features are currently disabled. We are working to restore these as soon as possible.
-      </div>
+      </div> */}
 
       <header ref={navRef} className="sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm font-sans font-normal">
         <div className="max-w-7xl mx-auto flex justify-between items-center lg:px-40 md:px-20 px-6 py-4">
