@@ -24,13 +24,13 @@ export default function HowWeTeach() {
     },
     {
       icon: GraduationCap,
-      title: 'Trainer Certification',
-      description: 'Our trainers are certified, evaluated, and continuously coached.',
+      title: 'Industry Vetted Experts',
+      description: 'Certified practitioners actively working in their fields to bring real-world experience directly to the classroom.',
     },
     {
       icon: MessageSquare,
-      title: 'Two-Way Feedback',
-      description: 'Students rate trainers. Trainers rate progress. Nothing is one-sided.',
+      title: 'Holistic Real-World Readiness',
+      description: 'Our outcomes balance sharp technical mastery with strong ethics, resilience, and empathy—building well-rounded professionals, not just skilled technicians.',
     },
     {
       icon: Users,
