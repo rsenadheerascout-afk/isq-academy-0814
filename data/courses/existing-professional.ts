@@ -78,10 +78,12 @@ export const existingProfessionalCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Business Essentials for Workplace Readiness",
         image: "/courses/business-essentials.jpg",
       },
       {
+        slug: "",
         title: "Generative AI in Business",
         image: "/courses/generative-ai.jpg",
       },
@@ -164,10 +166,12 @@ export const existingProfessionalCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Compelling Communication",
         image: "/courses/communication.jpg",
       },
       {
+        slug: "",
         title: "Business Essentials for Workplace Readiness",
         image: "/courses/business-essentials.jpg",
       },
@@ -250,10 +254,12 @@ export const existingProfessionalCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Compelling Communication",
         image: "/courses/communication.jpg",
       },
       {
+        slug: "",
         title: "Generative AI in Business",
         image: "/courses/generative-ai.jpg",
       },
@@ -338,10 +344,12 @@ export const existingProfessionalCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Business Essentials for Workplace Readiness",
         image: "/courses/business-essentials.jpg",
       },
       {
+        slug: "",
         title: "Digital Transformation Programs",
         image: "/courses/digital-transformation.jpg",
       },

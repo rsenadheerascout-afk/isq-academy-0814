@@ -79,10 +79,12 @@ export const schoolEducationCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "A/L ICT Pathway",
         image: "/courses/al-ict.jpg",
       },
       {
+        slug: "",
         title: "Life Skills for Future Leaders",
         image: "/courses/life-skills.jpg",
       },
@@ -167,10 +169,12 @@ export const schoolEducationCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "O/L ICT",
         image: "/courses/ol-ict.jpg",
       },
       {
+        slug: "",
         title: "Software Engineering Foundation",
         image: "/courses/software-engineering.jpg",
       },
@@ -255,10 +259,12 @@ export const schoolEducationCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Cambridge ICT",
         image: "/courses/cambridge-ict.jpg",
       },
       {
+        slug: "",
         title: "O/L ICT",
         image: "/courses/ol-ict.jpg",
       },
@@ -343,10 +349,12 @@ export const schoolEducationCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Pearson ICT",
         image: "/courses/pearson-ict.jpg",
       },
       {
+        slug: "",
         title: "A/L ICT Pathway",
         image: "/courses/al-ict.jpg",
       },

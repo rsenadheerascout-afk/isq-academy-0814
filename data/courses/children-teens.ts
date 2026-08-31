@@ -83,10 +83,12 @@ export const childrenTeensCourses: Course[] = [
 
         relatedCourses: [
             {
+                slug: "",
                 title: "O/L ICT",
                 image: "/courses/ol-ict.jpg",
             },
             {
+                slug: "",
                 title: "AI for Everyday Life",
                 image: "/courses/ai-everyday.jpg",
             },

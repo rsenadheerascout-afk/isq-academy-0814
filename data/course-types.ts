@@ -26,6 +26,7 @@ export interface Course {
   testimonials: CourseTestimonial[];
 
   relatedCourses: {
+    slug: string;
     title: string;
     image: string;
   }[];

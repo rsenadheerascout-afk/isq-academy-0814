@@ -79,10 +79,12 @@ export const seniorCitizensCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Smartphone Essentials",
         image: "/courses/smartphone-essentials.jpg",
       },
       {
+        slug: "",
         title: "Safe Internet Usage",
         image: "/courses/safe-internet.jpg",
       },
@@ -167,10 +169,12 @@ export const seniorCitizensCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Digital Confidence for Seniors",
         image: "/courses/digital-confidence.jpg",
       },
       {
+        slug: "",
         title: "Safe Internet Usage",
         image: "/courses/safe-internet.jpg",
       },
@@ -255,10 +259,12 @@ export const seniorCitizensCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Smartphone Essentials",
         image: "/courses/smartphone-essentials.jpg",
       },
       {
+        slug: "",
         title: "AI for Everyday Life",
         image: "/courses/ai-everyday.jpg",
       },
@@ -343,10 +349,12 @@ export const seniorCitizensCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Safe Internet Usage",
         image: "/courses/safe-internet.jpg",
       },
       {
+        slug: "",
         title: "Digital Confidence for Seniors",
         image: "/courses/digital-confidence.jpg",
       },

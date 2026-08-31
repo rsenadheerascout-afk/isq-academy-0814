@@ -80,10 +80,12 @@ export const careerTracksCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Software Engineering Foundation",
         image: "/courses/software-engineering.jpg",
       },
       {
+        slug: "",
         title: "DevSecOps with AI",
         image: "/courses/devsecops.jpg",
       },
@@ -169,10 +171,12 @@ export const careerTracksCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI Full-Stack Developer",
         image: "/courses/ai-full-stack.jpg",
       },
       {
+        slug: "",
         title: "Software Engineering Foundation",
         image: "/courses/software-engineering.jpg",
       },
@@ -258,10 +262,12 @@ export const careerTracksCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI Full-Stack Developer",
         image: "/courses/ai-full-stack.jpg",
       },
       {
+        slug: "",
         title: "Software Engineering Foundation",
         image: "/courses/software-engineering.jpg",
       },
@@ -347,10 +353,12 @@ export const careerTracksCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI Full-Stack Developer",
         image: "/courses/ai-full-stack.jpg",
       },
       {
+        slug: "",
         title: "DevSecOps with AI",
         image: "/courses/devsecops.jpg",
       },

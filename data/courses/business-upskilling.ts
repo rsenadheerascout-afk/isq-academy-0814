@@ -79,10 +79,12 @@ export const businessUpskillingCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "generative-ai-in-business",
         title: "Generative AI in Business",
         image: "/courses/generative-ai.jpg",
       },
       {
+        slug: "leadership-in-ai-era",
         title: "Leadership in AI Era",
         image: "/courses/ai-leadership.jpg",
       },
@@ -167,10 +169,12 @@ export const businessUpskillingCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Women in Cyber Security",
         image: "/courses/cyber-security.jpg",
       },
       {
+        slug: "",
         title: "DevSecOps with AI",
         image: "/courses/devsecops.jpg",
       },
@@ -255,10 +259,12 @@ export const businessUpskillingCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI Productivity for Teams",
         image: "/courses/ai-productivity.jpg",
       },
       {
+        slug: "",
         title: "Leadership in AI Era",
         image: "/courses/ai-leadership.jpg",
       },
@@ -343,10 +349,12 @@ export const businessUpskillingCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Generative AI in Business",
         image: "/courses/generative-ai.jpg",
       },
       {
+        slug: "",
         title: "Digital Transformation Programs",
         image: "/courses/digital-transformation.jpg",
       },

@@ -79,10 +79,12 @@ export const womenEmpowermentCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "DevSecOps with AI",
         image: "/courses/devsecops.jpg",
       },
       {
+        slug: "",
         title: "AI for Women Professionals",
         image: "/courses/ai-professionals.jpg",
       },
@@ -167,10 +169,12 @@ export const womenEmpowermentCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI for Women Professionals",
         image: "/courses/ai-professionals.jpg",
       },
       {
+        slug: "",
         title: "Women Leadership Through Technology",
         image: "/courses/leadership.jpg",
       },
@@ -255,10 +259,12 @@ export const womenEmpowermentCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "Generative AI in Business",
         image: "/courses/generative-ai.jpg",
       },
       {
+        slug: "",
         title: "Digital Entrepreneurship for Women",
         image: "/courses/entrepreneurship.jpg",
       },
@@ -343,10 +349,12 @@ export const womenEmpowermentCourses: Course[] = [
 
     relatedCourses: [
       {
+        slug: "",
         title: "AI for Women Professionals",
         image: "/courses/ai-professionals.jpg",
       },
       {
+        slug: "",
         title: "Digital Entrepreneurship for Women",
         image: "/courses/entrepreneurship.jpg",
       },
