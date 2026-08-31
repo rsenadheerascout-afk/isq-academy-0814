@@ -30,7 +30,7 @@ function CareerAccelerationSection() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl"
+        className="pointer-events-none absolute bottom-20 -left-40 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl"
       />
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Label */}

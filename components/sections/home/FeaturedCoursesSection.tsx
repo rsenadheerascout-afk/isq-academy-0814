@@ -15,7 +15,7 @@ export interface featureCourseSectionProps{
 
 function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) {
   return (
-    <section className="relative overflow-clip bg-gray-50 py-16 lg:px-40 md:px-20 px-6">
+    <section className="relative overflow-clip bg-gray-50 py-8 lg:px-40 md:px-20 px-6">
       
       <div className="max-w-7xl mx-auto z-10 relative">
         <h2 className="text-3xl md:text-4xl mb-12 text-center">

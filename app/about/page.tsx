@@ -100,17 +100,15 @@ export default function AboutPage() {
           className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-primary/30 blur-3xl animate-spot-one"
         />
         <div aria-hidden="true"
-          className="absolute top-[45%] -right-32 w-80 h-80 rounded-full bg-secondary/20 blur-3xl animate-spot-two"
+          className="absolute top-[75%] -left-32 w-80 h-80 rounded-full bg-purple-600/10 blur-3xl animate-spot-two"
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-6 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
           {/* Our Mission */}
           <div>
             <h2 className="text-3xl mb-6 text-gray-900">Our Mission</h2>
             <div className="space-y-4">
               <p>
-                We improve professional thinking and performance through
-                flexible learning led by industry experts and experienced
-                academics.
+                We improve professional thinking and performance through flexible learning led by industry experts and experienced academics.
               </p>
               <p>
                 iSeeQ Academy offers a broad programme of short courses.
@@ -125,7 +123,7 @@ export default function AboutPage() {
                     {/* Why Learn */}
           <WhyLearnSection />
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-6 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
           {/* Our Courses */}
           <div>
             <h2 className="text-3xl mb-6 text-gray-900">Our Courses</h2>

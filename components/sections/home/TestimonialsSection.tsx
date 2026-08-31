@@ -37,7 +37,7 @@ function TestimonialsSection({ testimonials = [] }: TestimonialsProps) {
       />
 
       <div className="relative z-10">
-        <h2 className="text-3xl md:text-4xl mb-12">
+        <h2 className="text-3xl md:text-4xl mb-6">
           What our <span className="font-serif italic text-primary">learners</span> are saying
         </h2>
 

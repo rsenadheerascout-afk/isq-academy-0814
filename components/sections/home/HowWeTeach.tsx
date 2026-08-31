@@ -47,9 +47,14 @@ export default function HowWeTeach() {
   ];
 
   return (
-    <section className="bg-[#FAF9F6] min-h-screen py-16 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
+    <section className="relative overflow-clip bg-[#FAF9F6] min-h-screen py-8 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
+      <div
+  aria-hidden="true"
+  className="pointer-events-none absolute -bottom-32 -right-32 z-0 h-96 w-96 rounded-full bg-[#00beb2]/20 blur-3xl"
+/>
+
       {/* Header Section */}
-      <div className="max-w-5xl w-full mx-auto text-center mb-12">
+      <div className="max-w-5xl w-full mx-auto text-center mb-12 relative z-10">
         {/* Section Label */}
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
@@ -68,7 +73,7 @@ export default function HowWeTeach() {
       </div>
 
       {/* Grid Section */}
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
         {principles.map((item, index) => {
           const IconComponent = item.icon;
 
@@ -82,7 +87,7 @@ export default function HowWeTeach() {
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-6 backdrop-blur-sm">
                     <IconComponent className="w-5 h-5 text-indigo-200" />
                   </div>
-                  <h3 className="text-xl font-serif font-medium text-white mb-2">
+                  <h3 className="text-xl font-medium text-white mb-2">
                     {item.title}
                   </h3>
                   <p className="text-slate-300 text-sm leading-relaxed mb-6">
@@ -111,7 +116,7 @@ export default function HowWeTeach() {
                 <div className="w-10 h-10 rounded-xl bg-indigo-50/70 flex items-center justify-center mb-6">
                   <IconComponent className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-serif font-medium text-slate-900 mb-2">
+                <h3 className="text-xl font-medium text-slate-900 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed">

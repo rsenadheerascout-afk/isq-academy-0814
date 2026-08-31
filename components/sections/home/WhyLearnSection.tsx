@@ -6,21 +6,22 @@ const icons = [Laptop, Zap, Clock3, Heart];
 
 function WhyLearnSection() {
   return (
-    <section className="relative max-w-auto mx-auto overflow-hidden py-16 lg:px-40 md:px-20 px-6">
-      {/* Bottom transition to Featured Courses */}
+    <section className="relative overflow-hidden">
+      {/* Bottom transition */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-32 bg-gradient-to-b from-white to-gray-50"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-32 bg-white"
       />
 
-      {/* Matching teal patch */}
+      {/* Matching yellow patch */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-32 -right-32 z-0 h-96 w-96 rounded-full bg-[#00beb2]/20 blur-3xl"
+        className="pointer-events-none absolute bottom-32 -right-32 z-0 h-60 w-60 rounded-full bg-secondary/20 blur-3xl"
       />
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 text-gray-800">
+        
         {/* Our Belief */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
@@ -34,7 +35,7 @@ function WhyLearnSection() {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl mb-6 text-center text-gray-900">
           {whyLearnContent.title}{" "}
           <span className="text-primary italic font-serif">
             {whyLearnContent.highlightedTitle}
@@ -42,19 +43,19 @@ function WhyLearnSection() {
         </h2>
 
         {/* Description */}
-        <p className="max-w-6xl mx-auto text-center text-gray-700 text-lg leading-relaxed mb-16 md:mb-20">
+        <p className="max-w-4xl mx-auto text-center text-gray-700 text-base md:text-lg leading-relaxed mb-16">
           {whyLearnContent.description}
         </p>
 
         {/* Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-16 lg:gap-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12 lg:gap-y-16">
           {whyLearnContent.benefits.map((item, i) => {
             const Icon = icons[i % icons.length];
 
             return (
               <div
                 key={item.step}
-                className="flex items-start gap-5 md:gap-6"
+                className="flex items-start gap-5"
               >
                 {/* Icon */}
                 <div className="relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
@@ -75,7 +76,7 @@ function WhyLearnSection() {
                     {item.step}
                   </div>
 
-                  <h3 className="text-xl mb-2">
+                  <h3 className="text-xl mb-2 text-gray-900">
                     {item.title}
                   </h3>
 
