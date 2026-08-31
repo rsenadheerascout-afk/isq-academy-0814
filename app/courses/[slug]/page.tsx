@@ -209,7 +209,7 @@ export default async function SingleCoursePage({
             What our learners are saying
           </h2>
 
-          <Testimonials />
+          <Testimonials testimonials={course.testimonials} />
         </section>
 
         {/* Related Courses */}

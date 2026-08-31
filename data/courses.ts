@@ -23,10 +23,20 @@ export interface Course {
     content: string[];
   }[];
 
+  testimonials: CourseTestimonial[];
+
   relatedCourses: {
     title: string;
     image: string;
   }[];
+}
+
+export interface CourseTestimonial {
+  id: string;
+  name: string;
+  role: string;
+  quote: string;
+  image?: string;
 }
 
 export const courses: Course[] = [
@@ -82,6 +92,30 @@ export const courses: Course[] = [
           "No previous technical knowledge is required.",
           "Learners should be willing to participate in practical activities and group discussions.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "life-skills-1",
+        name: "Course Participant",
+        role: "Student",
+        quote:
+          "The activities helped me become more confident when communicating with others and working as part of a team.",
+      },
+      {
+        id: "life-skills-2",
+        name: "Parent of a Learner",
+        role: "Parent",
+        quote:
+          "I noticed a real improvement in my child's confidence, communication, and willingness to take responsibility.",
+      },
+      {
+        id: "life-skills-3",
+        name: "Course Participant",
+        role: "School Student",
+        quote:
+          "The practical activities made learning about leadership and problem solving much easier and more enjoyable.",
       },
     ],
 
@@ -150,6 +184,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "ol-ict-1",
+        name: "Course Participant",
+        role: "O/L Student",
+        quote:
+          "The lessons helped me understand ICT concepts more clearly and gave me more confidence with practical activities.",
+      },
+      {
+        id: "ol-ict-2",
+        name: "Course Participant",
+        role: "School Student",
+        quote:
+          "The structured approach made it easier to prepare for examinations while improving my practical computer skills.",
+      },
+      {
+        id: "ol-ict-3",
+        name: "Course Participant",
+        role: "O/L ICT Student",
+        quote:
+          "I found the practical exercises especially useful because they helped me connect what I learned in class with real computer tasks.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "A/L ICT Pathway",
@@ -211,6 +269,30 @@ export const courses: Course[] = [
           "Designed for A/L ICT students.",
           "Basic computer knowledge is recommended.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "al-ict-1",
+        name: "Course Participant",
+        role: "A/L ICT Student",
+        quote:
+          "The programme helped me understand difficult ICT concepts while giving me practical experience with programming and databases.",
+      },
+      {
+        id: "al-ict-2",
+        name: "Course Participant",
+        role: "A/L Student",
+        quote:
+          "The combination of theory, practical exercises, and examination preparation made my ICT studies much more organized.",
+      },
+      {
+        id: "al-ict-3",
+        name: "Course Participant",
+        role: "A/L ICT Student",
+        quote:
+          "I became more confident solving ICT problems and applying programming concepts to practical situations.",
       },
     ],
 
@@ -278,6 +360,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "pearson-ict-1",
+        name: "Course Participant",
+        role: "Pearson ICT Student",
+        quote:
+          "The course gave me a clear understanding of ICT concepts while allowing me to develop practical digital skills.",
+      },
+      {
+        id: "pearson-ict-2",
+        name: "Course Participant",
+        role: "Student",
+        quote:
+          "The guided exercises helped me understand how the technology I study is applied in real-world situations.",
+      },
+      {
+        id: "pearson-ict-3",
+        name: "Course Participant",
+        role: "ICT Student",
+        quote:
+          "The structured learning approach made it easier to stay focused and build confidence with different ICT applications.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Cambridge ICT",
@@ -339,6 +445,30 @@ export const courses: Course[] = [
           "Suitable for students following a Cambridge ICT programme.",
           "Basic computer literacy is recommended.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "cambridge-ict-1",
+        name: "Course Participant",
+        role: "Cambridge ICT Student",
+        quote:
+          "The practical projects helped me understand ICT concepts beyond the textbook and apply them with greater confidence.",
+      },
+      {
+        id: "cambridge-ict-2",
+        name: "Course Participant",
+        role: "Student",
+        quote:
+          "The course provided a good balance between theory and practical learning, which made studying ICT much more engaging.",
+      },
+      {
+        id: "cambridge-ict-3",
+        name: "Course Participant",
+        role: "ICT Student",
+        quote:
+          "I especially appreciated the structured approach to assessment preparation and practical ICT activities.",
       },
     ],
 
@@ -408,6 +538,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "ai-full-stack-1",
+        name: "Course Participant",
+        role: "Aspiring Software Developer",
+        quote:
+          "The project-based approach helped me understand how frontend, backend, databases, and APIs work together in a real application.",
+      },
+      {
+        id: "ai-full-stack-2",
+        name: "Course Participant",
+        role: "Junior Developer",
+        quote:
+          "Learning how to integrate AI into full-stack applications gave me a much better understanding of modern software development.",
+      },
+      {
+        id: "ai-full-stack-3",
+        name: "Course Participant",
+        role: "Technology Professional",
+        quote:
+          "The practical projects helped me connect individual development concepts into a complete software development workflow.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Software Engineering Foundation",
@@ -470,6 +624,30 @@ export const courses: Course[] = [
           "No professional design experience is required.",
           "Basic computer literacy is recommended.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "ui-ux-1",
+        name: "Course Participant",
+        role: "Aspiring UI/UX Designer",
+        quote:
+          "The course helped me understand the design process from user research and wireframes through to prototypes and usability testing.",
+      },
+      {
+        id: "ui-ux-2",
+        name: "Course Participant",
+        role: "Junior Designer",
+        quote:
+          "I became much more confident creating user-focused designs and explaining the decisions behind my design choices.",
+      },
+      {
+        id: "ui-ux-3",
+        name: "Course Participant",
+        role: "Design Student",
+        quote:
+          "The portfolio project gave me practical experience that I could use to demonstrate my skills beyond theoretical knowledge.",
       },
     ],
 
@@ -538,6 +716,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "devsecops-1",
+        name: "Course Participant",
+        role: "IT Professional",
+        quote:
+          "The course gave me a much clearer understanding of how development, deployment, automation, and security fit together.",
+      },
+      {
+        id: "devsecops-2",
+        name: "Course Participant",
+        role: "Software Developer",
+        quote:
+          "The practical approach to CI/CD, containers, and security helped me understand modern software delivery much better.",
+      },
+      {
+        id: "devsecops-3",
+        name: "Course Participant",
+        role: "Technology Professional",
+        quote:
+          "I found the AI-assisted workflows particularly useful for understanding how modern tools can support DevSecOps practices.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "AI Full-Stack Developer",
@@ -600,6 +802,30 @@ export const courses: Course[] = [
           "No professional software engineering experience is required.",
           "Basic computer literacy is recommended.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "software-engineering-1",
+        name: "Course Participant",
+        role: "Aspiring Software Engineer",
+        quote:
+          "The programme gave me a strong foundation in programming, databases, APIs, testing, and the practices used by professional developers.",
+      },
+      {
+        id: "software-engineering-2",
+        name: "Course Participant",
+        role: "Junior Developer",
+        quote:
+          "I became much more confident not only writing code but also understanding how software should be tested, maintained, and delivered.",
+      },
+      {
+        id: "software-engineering-3",
+        name: "Course Participant",
+        role: "Technology Student",
+        quote:
+          "The practical project helped me bring together everything I learned and approach software development in a more structured way.",
       },
     ],
 
@@ -668,6 +894,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "cyber-security-1",
+        name: "Course Participant",
+        role: "Cybersecurity Learner",
+        quote:
+          "The course gave me a clear introduction to cybersecurity and helped me understand the different career opportunities available in the field.",
+      },
+      {
+        id: "cyber-security-2",
+        name: "Course Participant",
+        role: "IT Professional",
+        quote:
+          "The practical security activities made complex cybersecurity topics easier to understand and apply.",
+      },
+      {
+        id: "cyber-security-3",
+        name: "Course Participant",
+        role: "Career Changer",
+        quote:
+          "I gained the confidence to explore cybersecurity as a career and developed a much stronger understanding of everyday security risks.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "DevSecOps with AI",
@@ -729,6 +979,30 @@ export const courses: Course[] = [
           "No previous business qualification is required.",
           "Suitable for aspiring and existing women entrepreneurs.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "entrepreneurship-1",
+        name: "Course Participant",
+        role: "Entrepreneur",
+        quote:
+          "The course helped me turn my business idea into a clearer digital strategy and understand how technology can support growth.",
+      },
+      {
+        id: "entrepreneurship-2",
+        name: "Course Participant",
+        role: "Small Business Owner",
+        quote:
+          "I learned practical ways to improve my online presence, reach customers, and use digital tools more effectively.",
+      },
+      {
+        id: "entrepreneurship-3",
+        name: "Course Participant",
+        role: "Aspiring Entrepreneur",
+        quote:
+          "The business planning activities helped me think more clearly about my value proposition, customers, and digital opportunities.",
       },
     ],
 
@@ -796,6 +1070,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "ai-professionals-1",
+        name: "Course Participant",
+        role: "Business Professional",
+        quote:
+          "The course showed me practical ways to use AI for research, communication, and everyday professional tasks without overcomplicating the process.",
+      },
+      {
+        id: "ai-professionals-2",
+        name: "Course Participant",
+        role: "Working Professional",
+        quote:
+          "I became much more confident writing effective prompts and using AI as part of my regular workflow.",
+      },
+      {
+        id: "ai-professionals-3",
+        name: "Course Participant",
+        role: "Professional",
+        quote:
+          "The focus on responsible AI use helped me understand both the opportunities and the limitations of these tools.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Generative AI in Business",
@@ -857,6 +1155,30 @@ export const courses: Course[] = [
           "Suitable for professionals and aspiring leaders.",
           "No technical background is required.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "leadership-1",
+        name: "Course Participant",
+        role: "Team Leader",
+        quote:
+          "The programme helped me become more confident in communication, decision-making, and using technology to support my team.",
+      },
+      {
+        id: "leadership-2",
+        name: "Course Participant",
+        role: "Manager",
+        quote:
+          "I gained practical leadership approaches that I could immediately apply when working with different people and situations.",
+      },
+      {
+        id: "leadership-3",
+        name: "Course Participant",
+        role: "Professional",
+        quote:
+          "The combination of leadership development and digital skills made the programme particularly relevant to today's workplace.",
       },
     ],
 
@@ -925,6 +1247,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "digital-confidence-1",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I feel much more comfortable using my computer and smartphone now, especially for everyday tasks and communication.",
+      },
+      {
+        id: "digital-confidence-2",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "The patient and practical approach helped me learn at my own pace without feeling overwhelmed by technology.",
+      },
+      {
+        id: "digital-confidence-3",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I gained confidence using email, online services, and digital tools that I previously found difficult to understand.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Smartphone Essentials",
@@ -986,6 +1332,30 @@ export const courses: Course[] = [
           "Learners should bring their own smartphone where possible.",
           "No previous smartphone training is required.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "smartphone-essentials-1",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I learned how to use many of the smartphone features I had previously been afraid to explore.",
+      },
+      {
+        id: "smartphone-essentials-2",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "The practical exercises made it much easier to understand messaging, photos, settings, and useful applications.",
+      },
+      {
+        id: "smartphone-essentials-3",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I now feel much more independent when using my smartphone for everyday communication and services.",
       },
     ],
 
@@ -1053,6 +1423,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "safe-internet-1",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I now have a much better understanding of phishing, scams, passwords, and how to protect my personal information online.",
+      },
+      {
+        id: "safe-internet-2",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "The real-world examples helped me recognize suspicious messages and understand what to do when something does not look right.",
+      },
+      {
+        id: "safe-internet-3",
+        name: "Course Participant",
+        role: "Digital Learner",
+        quote:
+          "The course made me feel safer and more confident when using online services and communicating on the internet.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Smartphone Essentials",
@@ -1114,6 +1508,30 @@ export const courses: Course[] = [
           "No previous AI knowledge is required.",
           "Basic smartphone or computer familiarity is helpful.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "ai-everyday-1",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "The course explained AI in a simple and practical way and showed me how it can help with everyday tasks.",
+      },
+      {
+        id: "ai-everyday-2",
+        name: "Course Participant",
+        role: "Senior Learner",
+        quote:
+          "I learned how to ask AI useful questions and became much more comfortable experimenting with these new tools.",
+      },
+      {
+        id: "ai-everyday-3",
+        name: "Course Participant",
+        role: "Digital Learner",
+        quote:
+          "The focus on privacy and responsible use gave me confidence to explore AI without feeling overwhelmed.",
       },
     ],
 
@@ -1182,6 +1600,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "ai-productivity-1",
+        name: "Course Participant",
+        role: "Team Manager",
+        quote:
+          "The programme helped our team identify practical ways to use AI for communication, research, documentation, and repetitive tasks.",
+      },
+      {
+        id: "ai-productivity-2",
+        name: "Course Participant",
+        role: "Knowledge Worker",
+        quote:
+          "I learned workflows that save time while still keeping human judgement and oversight at the centre of the work.",
+      },
+      {
+        id: "ai-productivity-3",
+        name: "Course Participant",
+        role: "Business Professional",
+        quote:
+          "The practical examples made it much easier to see where AI could genuinely improve our team's everyday productivity.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Generative AI in Business",
@@ -1243,6 +1685,30 @@ export const courses: Course[] = [
           "No technical cybersecurity background is required.",
           "Designed for employees and workplace teams.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "cyber-awareness-1",
+        name: "Course Participant",
+        role: "Business Employee",
+        quote:
+          "The training helped me recognize phishing attempts and understand the small security habits that can make a big difference.",
+      },
+      {
+        id: "cyber-awareness-2",
+        name: "Course Participant",
+        role: "Team Member",
+        quote:
+          "The real-world examples made cybersecurity easier to understand and showed me how my everyday actions can affect the organization.",
+      },
+      {
+        id: "cyber-awareness-3",
+        name: "Course Participant",
+        role: "Office Professional",
+        quote:
+          "I now feel more confident identifying suspicious emails, protecting accounts, and reporting potential security incidents.",
       },
     ],
 
@@ -1310,6 +1776,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "digital-transformation-1",
+        name: "Course Participant",
+        role: "Business Manager",
+        quote:
+          "The programme helped me understand digital transformation as a business improvement process rather than simply adopting new technology.",
+      },
+      {
+        id: "digital-transformation-2",
+        name: "Course Participant",
+        role: "Business Professional",
+        quote:
+          "The practical approach to process improvement, automation, data, and AI gave me useful ideas for improving our workflows.",
+      },
+      {
+        id: "digital-transformation-3",
+        name: "Course Participant",
+        role: "Team Leader",
+        quote:
+          "I gained a clearer framework for identifying digital opportunities and turning them into practical transformation initiatives.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "AI Productivity for Teams",
@@ -1371,6 +1861,30 @@ export const courses: Course[] = [
           "Designed for managers, team leaders, business professionals, and decision makers.",
           "No technical AI background is required.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "ai-leadership-1",
+        name: "Course Participant",
+        role: "Business Leader",
+        quote:
+          "The course helped me understand AI from a leadership perspective and think more strategically about adoption within an organization.",
+      },
+      {
+        id: "ai-leadership-2",
+        name: "Course Participant",
+        role: "Manager",
+        quote:
+          "I gained practical ideas for leading teams through AI-driven change while keeping people, governance, and responsible use in focus.",
+      },
+      {
+        id: "ai-leadership-3",
+        name: "Course Participant",
+        role: "Senior Professional",
+        quote:
+          "The AI adoption roadmap exercises helped me move from general interest in AI toward a more structured approach to implementation.",
       },
     ],
 
@@ -1437,6 +1951,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "compelling-communication-1",
+        name: "Course Participant",
+        role: "Business Professional",
+        quote:
+          "The course helped me communicate my ideas more clearly and confidently in meetings, presentations, and everyday workplace conversations.",
+      },
+      {
+        id: "compelling-communication-2",
+        name: "Course Participant",
+        role: "Team Leader",
+        quote:
+          "The practical communication techniques helped me become more confident when speaking with colleagues and stakeholders.",
+      },
+      {
+        id: "compelling-communication-3",
+        name: "Course Participant",
+        role: "Professional",
+        quote:
+          "I particularly valued the practical exercises because I could immediately apply what I learned in my workplace.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Business Essentials for Workplace Readiness",
@@ -1496,6 +2034,30 @@ export const courses: Course[] = [
           "No previous AI experience is required.",
           "Basic computer literacy is recommended.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "business-essentials-1",
+        name: "Course Participant",
+        role: "Graduate",
+        quote:
+          "The course helped me understand how businesses operate and gave me practical skills that I can apply in the workplace.",
+      },
+      {
+        id: "business-essentials-2",
+        name: "Course Participant",
+        role: "Working Professional",
+        quote:
+          "The workplace-focused activities helped me become more confident in professional communication and problem solving.",
+      },
+      {
+        id: "business-essentials-3",
+        name: "Course Participant",
+        role: "Career Starter",
+        quote:
+          "The programme gave me a clearer understanding of professional expectations and helped me prepare for the workplace.",
       },
     ],
 
@@ -1561,6 +2123,30 @@ export const courses: Course[] = [
       },
     ],
 
+    testimonials: [
+      {
+        id: "business-essentials-1",
+        name: "Course Participant",
+        role: "Graduate",
+        quote:
+          "The course helped me understand how businesses operate and gave me practical skills that I can apply in the workplace.",
+      },
+      {
+        id: "business-essentials-2",
+        name: "Course Participant",
+        role: "Working Professional",
+        quote:
+          "The workplace-focused activities helped me become more confident in professional communication and problem solving.",
+      },
+      {
+        id: "business-essentials-3",
+        name: "Course Participant",
+        role: "Career Starter",
+        quote:
+          "The programme gave me a clearer understanding of professional expectations and helped me prepare for the workplace.",
+      },
+    ],
+
     relatedCourses: [
       {
         title: "Compelling Communication",
@@ -1622,6 +2208,30 @@ export const courses: Course[] = [
           "Suitable for business professionals, managers, and graduates.",
           "No previous ESG qualification is required.",
         ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "esg-risk-1",
+        name: "Course Participant",
+        role: "Business Professional",
+        quote:
+          "The programme gave me a practical understanding of ESG risks and how they can affect organizational decision-making.",
+      },
+      {
+        id: "esg-risk-2",
+        name: "Course Participant",
+        role: "Risk Professional",
+        quote:
+          "The structured approach helped me understand how environmental, social, and governance factors can be identified and assessed.",
+      },
+      {
+        id: "esg-risk-3",
+        name: "Course Participant",
+        role: "Business Manager",
+        quote:
+          "I found the practical risk-management exercises particularly useful for connecting ESG concepts with real organizational challenges.",
       },
     ],
 
