@@ -74,36 +74,42 @@ export default function Footer() {
 
         {/* Branding */}
         <div className="flex flex-col items-start md:items-end">
-          <Link href="/" className="mb-4">
-            <Image
-              src="/isq-aca-whlogo.png"
-              alt="iSeeQ Academy"
-              width={180}
-              height={40}
-              className="h-15 w-auto object-contain"
-            />
-          </Link>
-          {/* Social Media icons */}
-          <div className="flex gap-4">
-            {[
-              { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/company/iseeq-academy" },
-              { name: "Instagram", icon: FaInstagram, url: "#" },
-              { name: "Facebook", icon: FaFacebookF, url: "#" },
-            ].map((social) => {
-              const Icon = social.icon;
-              return (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank" rel="noopener noreferrer" aria-label={social.name}
-                  className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-primary text-black transition duration-100 hover:bg-secondary hover:text-black"
-                >
-                  <Icon className="w-3.5 h-3.5" />
-                </a>
-              );
-            })}
+          <div className="w-[auto]">
+            <Link href="/" className="mb-4 block">
+              <Image
+                src="/isq-aca-whlogo.png"
+                alt="iSeeQ Academy"
+                width={180}
+                height={40}
+                className="h-15 w-auto object-contain"
+              />
+            </Link>
+
+            {/* Social Media icons */}
+            <div className="grid w-full grid-cols-3 place-items-center-safe">
+              {[
+                { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/company/iseeq-academy" },
+                { name: "Instagram", icon: FaInstagram, url: "#" },
+                { name: "Facebook", icon: FaFacebookF, url: "https://www.facebook.com/ISeeQ-Academy-61583222218319/" },
+              ].map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-primary text-black transition duration-100 hover:bg-secondary hover:text-black"
+                  >
+                    <Icon className="w-3.5 h-3.5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
+
       </div>
 
       {/* Copyright - Bottom Left */}
