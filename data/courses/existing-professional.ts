@@ -1,15 +1,15 @@
 import { Course } from "../course-types";
 
 export const existingProfessionalCourses: Course[] = [
-      {
+  {
     slug: "compelling-communication",
     title: "Compelling Communication",
     description:
       "Develop practical communication skills to communicate clearly, confidently, and effectively in professional environments.",
     image: "/courses/communication.jpg",
-    price: "US$500",
+    price: "LKR 5000",
     duration: "6 weeks",
-    nextStartDate: "2026-10-01",
+    nextStartDate: "2026-11-08",
     category: "Business Upskilling",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / Self-paced",
@@ -58,6 +58,7 @@ export const existingProfessionalCourses: Course[] = [
         role: "Business Professional",
         quote:
           "The course helped me communicate my ideas more clearly and confidently in meetings, presentations, and everyday workplace conversations.",
+        image: "/testimonials/communication-stud.jpg",
       },
       {
         id: "compelling-communication-2",
