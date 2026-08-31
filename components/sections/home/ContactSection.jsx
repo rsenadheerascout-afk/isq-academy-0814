@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, MessageCircle, } from "lucide-react";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="max-w-auto mx-auto py-16 lg:px-40 md:px-20 px-6 scroll-mt-20"        >
+        <section id="contact" className="max-w-auto mx-auto py-8 lg:px-40 md:px-20 px-6 scroll-mt-20"        >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 {/* LEFT: Contact Information */}
                 <div className="space-y-6">
