@@ -28,7 +28,7 @@ function CareerAudience() {
           <div className="bg-white border border-gray-200 rounded-2xl p-7">
             <h2 className="text-xl mb-6">
               Who Is This{" "}
-              <span className="text-[#00beb2]">
+              <span className="text-primary">
                 Program For?
               </span>
             </h2>
@@ -41,7 +41,7 @@ function CareerAudience() {
                 >
                   <CheckCircle2
                     size={18}
-                    className="text-[#00beb2] shrink-0 mt-0.5"
+                    className="text-primary shrink-0 mt-0.5"
                   />
 
                   {item}
@@ -74,7 +74,7 @@ function CareerAudience() {
           <div className="bg-white border border-gray-200 rounded-2xl p-7">
             <h2 className="text-xl mb-6">
               What You Will{" "}
-              <span className="text-[#00beb2]">
+              <span className="text-primary">
                 Walk Away With
               </span>
             </h2>
@@ -87,7 +87,7 @@ function CareerAudience() {
                 >
                   <CheckCircle2
                     size={17}
-                    className="text-[#00beb2] shrink-0 mt-0.5"
+                    className="text-primary shrink-0 mt-0.5"
                   />
 
                   {item}

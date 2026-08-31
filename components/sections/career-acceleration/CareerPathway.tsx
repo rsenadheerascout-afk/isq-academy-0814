@@ -54,7 +54,7 @@ function CareerPathway() {
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
                         <Target
                             size={15}
-                            className="text-[#00beb2]"
+                            className="text-primary"
                         />
                         <span>Your Journey</span>
                     </div>
@@ -62,7 +62,7 @@ function CareerPathway() {
 
                 <h2 className="text-3xl md:text-4xl text-center mb-4">
                     The{" "}
-                    <span className="text-[#00beb2] italic">
+                    <span className="text-primary italic">
                         6-Month
                     </span>{" "}
                     Career Acceleration Pathway
@@ -80,7 +80,7 @@ function CareerPathway() {
                         title={
                             <>
                                 3-Month{" "}
-                                <span className="text-[#00beb2]">
+                                <span className="text-primary">
                                     Intensive Crash Program
                                 </span>
                             </>
@@ -93,7 +93,7 @@ function CareerPathway() {
 
                     {/* Connector */}
                     <div className="hidden lg:flex items-center justify-center">
-                        <div className="bg-[#00beb2] text-white rounded-full p-2">
+                        <div className="bg-primary text-white rounded-full p-2">
                             <ChevronRight size={18} strokeWidth={3} />
                         </div>
                     </div>
@@ -104,7 +104,7 @@ function CareerPathway() {
                         title={
                             <>
                                 6-Month{" "}
-                                <span className="text-[#00beb2]">
+                                <span className="text-primary">
                                     Industry Internship
                                 </span>
                             </>
@@ -119,11 +119,11 @@ function CareerPathway() {
                     <div className="bg-[#292727] rounded-3xl p-8 flex flex-col items-center justify-center text-center">
                         <Award
                             size={48}
-                            className="text-[#00beb2] mb-5"
+                            className="text-primary mb-5"
                             strokeWidth={1.5}
                         />
 
-                        <p className="text-[#00beb2] text-xs font-medium uppercase tracking-widest mb-3">
+                        <p className="text-primary text-xs font-medium uppercase tracking-widest mb-3">
                             The Outcome
                         </p>
 
@@ -194,7 +194,7 @@ function PathwayCard({
                         >
                             <Icon
                                 size={25}
-                                className="mx-auto text-[#00beb2] mb-2"
+                                className="mx-auto text-primary mb-2"
                                 strokeWidth={1.8}
                             />
 
@@ -208,7 +208,7 @@ function PathwayCard({
                 })}
             </div>
 
-            <div className="mt-auto bg-[#00beb2]/10 border border-[#00beb2]/10 text-[#007f78] text-xs font-medium py-2.5 px-4 rounded-full text-center">
+            <div className="mt-auto bg-primary/10 border border-primary/10 text-[#007f78] text-xs font-medium py-2.5 px-4 rounded-full text-center">
                 {outcome}
             </div>
         </div>

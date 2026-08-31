@@ -22,15 +22,15 @@ function CareerCTA() {
                 </h2>
 
                 <p className="text-gray-400 text-sm md:text-base">
-                  <span className="text-[#00beb2]">
+                  <span className="text-primary">
                     Upgrade
                   </span>{" "}
                   your skills.{" "}
-                  <span className="text-[#00beb2]">
+                  <span className="text-primary">
                     Gain
                   </span>{" "}
                   real experience.{" "}
-                  <span className="text-[#00beb2]">
+                  <span className="text-primary">
                     Get
                   </span>{" "}
                   placed.
@@ -40,7 +40,7 @@ function CareerCTA() {
               <div className="flex flex-wrap justify-center gap-3 shrink-0">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-[#00beb2] text-white px-7 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
                 >
                   Apply Now
                   <ArrowRight size={17} />
@@ -48,7 +48,7 @@ function CareerCTA() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 border border-gray-600 text-white px-7 py-3 rounded-full hover:border-[#00beb2] transition-colors text-sm"
+                  className="inline-flex items-center gap-2 border border-gray-600 text-white px-7 py-3 rounded-full hover:border-primary transition-colors text-sm"
                 >
                   Talk to an Advisor
                   <MessageCircle size={17} />
@@ -95,7 +95,7 @@ function Feature({
 }) {
   return (
     <div className="flex items-center gap-2 text-gray-400 text-sm">
-      <span className="text-[#00beb2]">
+      <span className="text-primary">
         {icon}
       </span>
 

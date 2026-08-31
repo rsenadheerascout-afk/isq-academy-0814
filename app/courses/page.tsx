@@ -226,7 +226,7 @@ export default function CoursesPage() {
                   setSelectedSubjects([]);
                   setSelectedDurations([]);
                 }}
-                className="text-sm text-[#00beb2] hover:underline"
+                className="text-sm text-primary hover:underline"
               >
                 Clear all filters
               </button>
@@ -296,7 +296,7 @@ export default function CoursesPage() {
                   setSelectedSubjects([]);
                   setSelectedDurations([]);
                 }}
-                className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-[#00beb2] transition-colors"
+                className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-primary transition-colors"
               >
                 Clear filters
               </button>

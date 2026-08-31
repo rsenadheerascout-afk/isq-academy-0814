@@ -33,12 +33,12 @@ function CareerTechnologies() {
           {technologies.map((technology) => (
             <div
               key={technology}
-              className="bg-white border border-gray-200 rounded-xl px-5 py-4 shadow-sm hover:border-[#00beb2] transition-colors"
+              className="bg-white border border-gray-200 rounded-xl px-5 py-4 shadow-sm hover:border-primary transition-colors"
             >
               <div className="flex items-center gap-2">
                 <FileText
                   size={18}
-                  className="text-[#00beb2]"
+                  className="text-primary"
                   strokeWidth={1.8}
                 />
 

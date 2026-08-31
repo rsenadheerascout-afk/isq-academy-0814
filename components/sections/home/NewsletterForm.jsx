@@ -22,7 +22,7 @@ function NewsletterForm() {
             </label>
             <input
               type="text"
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md"
             />
           </div>
           {/* <div>
@@ -31,7 +31,7 @@ function NewsletterForm() {
             </label>
             <input
               type="text"
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md"
             />
           </div> */}
           {/* <div>
@@ -39,7 +39,7 @@ function NewsletterForm() {
               Country *
             </label>
             <select
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md bg-white"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md bg-white"
             >
               <option></option>
               <option>Sri Lanka</option>
@@ -53,7 +53,7 @@ function NewsletterForm() {
             </label>
             <input
               type="email"
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md"
             />
           </div>
           <div>
@@ -62,7 +62,7 @@ function NewsletterForm() {
             </label>
             <input
               type="tel"
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md"
             />
           </div>
           {/* <div>
@@ -70,7 +70,7 @@ function NewsletterForm() {
               Course(s) of interest (optional)
             </label>
             <select
-              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-[#00beb2] rounded-md bg-white"
+              className="w-full border border-gray-400 p-2 focus:outline-none focus:border-primary rounded-md bg-white"
             >
               <option></option>
               <option>Compelling Communication</option>
@@ -80,7 +80,7 @@ function NewsletterForm() {
           </div> */}
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 mt-4 hover:bg-[#00beb2] transition-colors rounded-xl"
+            className="w-full bg-black text-white py-3 mt-4 hover:bg-primary transition-colors rounded-xl"
           >
             Sign up
           </button>

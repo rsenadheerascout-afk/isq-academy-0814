@@ -28,7 +28,7 @@ function WhyLearnSection() {
             <Heart
               size={15}
               strokeWidth={1.8}
-              className="text-[#00beb2]"
+              className="text-primary"
             />
             <span>{whyLearnContent.label}</span>
           </div>
@@ -59,7 +59,7 @@ function WhyLearnSection() {
               >
                 {/* Icon */}
                 <div className="relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full border-[7px] border-[#00beb2] border-r-transparent border-b-transparent -rotate-45" />
+                  <div className="absolute inset-0 rounded-full border-[7px] border-primary border-r-transparent border-b-transparent -rotate-45" />
 
                   <div className="w-[68px] h-[68px] md:w-20 md:h-20 rounded-full bg-[#292727] flex items-center justify-center">
                     <Icon
@@ -72,7 +72,7 @@ function WhyLearnSection() {
 
                 {/* Content */}
                 <div className="pt-0.5">
-                  <div className="text-sm font-medium text-[#00beb2] mb-2">
+                  <div className="text-sm font-medium text-primary mb-2">
                     {item.step}
                   </div>
 

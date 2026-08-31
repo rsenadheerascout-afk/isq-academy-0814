@@ -27,7 +27,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
             <Link
               key={course.slug}
               href={`/courses`}
-              className="bg-white border border-gray-200 border-b-4 border-b-[#00beb2] shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 flex flex-col group cursor-pointer rounded-2xl"
+              className="bg-white border border-gray-200 border-b-4 border-b-primary shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.20)] transition-all duration-300 flex flex-col group cursor-pointer rounded-2xl"
             >
               <div className="h-48 w-full relative overflow-hidden rounded-2xl">
                 <Image
@@ -38,7 +38,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
                   className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-2xl"
                 />
 
-                <div className="absolute inset-0 bg-[#00beb2]/10"></div>
+                <div className="absolute inset-0 bg-primary/10"></div>
               </div>
 
               <div className="p-6 flex-grow flex flex-col justify-between">
@@ -74,7 +74,7 @@ function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) 
       </div>
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-[#00beb2]/20 blur-3xl" 
+        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" 
       />
       <div 
         aria-hidden="true" 

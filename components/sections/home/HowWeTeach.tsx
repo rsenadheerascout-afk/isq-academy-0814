@@ -50,7 +50,7 @@ export default function HowWeTeach() {
     <section className="relative overflow-clip bg-[#FAF9F6] min-h-screen py-8 lg:px-40 md:px-20 px-6 flex flex-col justify-center items-center font-sans text-slate-800">
       <div
   aria-hidden="true"
-  className="pointer-events-none absolute -bottom-32 -right-32 z-0 h-96 w-96 rounded-full bg-[#00beb2]/20 blur-3xl"
+  className="pointer-events-none absolute -bottom-32 -right-32 z-0 h-96 w-96 rounded-full bg-primary/20 blur-3xl"
 />
 
       {/* Header Section */}

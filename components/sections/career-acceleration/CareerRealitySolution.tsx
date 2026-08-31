@@ -60,7 +60,7 @@ function CareerRealitySolution() {
 
             {/* Solution */}
             <div className="p-8 md:p-10 bg-[#333333]">
-              <h2 className="text-2xl text-[#00beb2] mb-2">
+              <h2 className="text-2xl text-primary mb-2">
                 The Solution
               </h2>
 
@@ -78,7 +78,7 @@ function CareerRealitySolution() {
                   >
                     <Check
                       size={19}
-                      className="text-[#00beb2] shrink-0 mt-0.5"
+                      className="text-primary shrink-0 mt-0.5"
                     />
                     {item}
                   </li>
@@ -87,7 +87,7 @@ function CareerRealitySolution() {
             </div>
 
             {/* Message */}
-            <div className="bg-[#00beb2] p-8 md:p-10 flex flex-col justify-center">
+            <div className="bg-primary p-8 md:p-10 flex flex-col justify-center">
               <h3 className="text-xl md:text-2xl text-white leading-snug mb-6">
                 We don't blame anyone.
                 <br />

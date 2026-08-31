@@ -10,7 +10,7 @@ export default function ContactSection() {
                 <div className="space-y-6">
                     {/* Heading */}
                     <div>
-                        <span className="text-[#00beb2] text-sm">
+                        <span className="text-primary text-sm">
                             Visit Us
                         </span>
                         <h2 className="text-4xl md:text-5xl text-gray-900 mt-2 mb-4 tracking-tight"            >

@@ -45,7 +45,7 @@ function CareerTransformation() {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl text-center mb-12">
           We Don't Just Train. We{" "}
-          <span className="text-[#00beb2] italic">
+          <span className="text-primary italic">
             Transform.
           </span>
         </h2>
@@ -59,10 +59,10 @@ function CareerTransformation() {
                 key={service.title}
                 className="text-center p-5"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-2xl bg-[#00beb2]/10 border border-[#00beb2]/10 flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-2xl bg-primary/10 border border-primary/10 flex items-center justify-center">
                   <Icon
                     size={22}
-                    className="text-[#00beb2]"
+                    className="text-primary"
                     strokeWidth={1.8}
                   />
                 </div>

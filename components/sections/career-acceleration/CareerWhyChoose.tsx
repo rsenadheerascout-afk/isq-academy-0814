@@ -53,7 +53,7 @@ function CareerWhyChoose() {
               >
                 <Icon
                   size={21}
-                  className="text-[#00beb2] shrink-0"
+                  className="text-primary shrink-0"
                   strokeWidth={1.8}
                 />
 

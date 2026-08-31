@@ -7,7 +7,7 @@ function OrganizationsSection() {
         <h2 className="text-3xl mb-6">
           Learning and Development for your organization
         </h2>
-        <div className="w-12 h-1 bg-[#00beb2] mx-auto mb-6 rounded-full"></div>
+        <div className="w-12 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
         <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Help your teams develop the practical knowledge, skills, and
           confidence they need to perform at their best.
