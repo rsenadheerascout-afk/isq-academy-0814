@@ -1,4 +1,5 @@
-import type { CourseTestimonial } from "@/data/courses";
+import Image from "next/image";
+import type { CourseTestimonial } from "@/data/course-types";
 
 interface TestimonialsProps {
   testimonials: CourseTestimonial[];
@@ -34,6 +35,8 @@ export default function Testimonials({
             <img
               src={testimonial.image}
               alt={testimonial.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full mb-4 object-cover"
             />
           ) : (
