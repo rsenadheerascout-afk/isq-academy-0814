@@ -58,12 +58,11 @@ export default function CoursesPage() {
   };
 
   const subjectFilters = [
-    "Career Tracks",
-    "Business Upskilling",
-    "Women Empowerment",
-    "Senior Citizens",
-    "School Education",
-    "Children & Teens",
+    "Foundation Programs",
+    "Career Accelerator Tracks",
+    "Professional Upskilling",
+    "Young Innovators",
+    "Digital Inclusion",
   ];
 
   const durationFilters = ["6 weeks", "8 weeks"];
