@@ -1,21 +1,17 @@
 import type { Course } from "./course-types";
 
-import { childrenTeensCourses } from "./courses/children-teens";
-import { schoolEducationCourses } from "./courses/school-education";
-import { careerTracksCourses } from "./courses/career-tracks";
-import { womenEmpowermentCourses } from "./courses/women-empowerment";
-import { seniorCitizensCourses } from "./courses/senior-citizens";
-import { businessUpskillingCourses } from "./courses/business-upskilling";
-import { existingProfessionalCourses } from "./courses/existing-professional";
+import {foundationProgramsCourses} from "@/data/courses/foundation-programs"
+import { careerAcceleratorCourses } from "./courses/career-accelerator";
+import { digitalInclusionCourses } from "./courses/digital-inclusion";
+import { professionalUpskillingCourses } from "./courses/professional-upskilling";
+import { youngInnovatorsCourses } from "./courses/young-innovators";
 
 export const courses: Course[] = [
-  ...childrenTeensCourses,
-  ...schoolEducationCourses,
-  ...careerTracksCourses,
-  ...womenEmpowermentCourses,
-  ...seniorCitizensCourses,
-  ...businessUpskillingCourses,
-  ...existingProfessionalCourses,
+  ...foundationProgramsCourses,
+  ...careerAcceleratorCourses,
+  ...digitalInclusionCourses,
+  ...professionalUpskillingCourses,
+  ...youngInnovatorsCourses,
 ];
 
 export function getCourseBySlug(slug: string) {
