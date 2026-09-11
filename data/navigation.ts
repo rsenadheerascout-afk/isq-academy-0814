@@ -14,59 +14,180 @@ export interface Category {
 
 export const courseCategories: Category[] = [
   {
-    id: 'career-tracks',
-    label: 'Career Tracks',
-    href: '/courses?filter=Career%20Tracks',
+    id: "foundation-programs",
+    label: "Foundation Programs",
+    href: "/courses?filter=Foundation%20Programs",
     subCategories: [
-      { label: 'AI Full-Stack Developer', href: '/courses/ai-full-stack' },
-      { label: 'UI/UX Designer', href: '/courses/ui-ux' },
-      { label: 'DevSecOps with AI', href: '/courses/devsecops' },
-      { label: 'Software Engineering Foundation', href: '/courses/software-engineering' },
+      { label: "Diploma in ICT (DICT)", href: "/courses/diploma-in-ict" },
+      {
+        label: "Programming Fundamentals I & II",
+        href: "/courses/programming-fundamentals-1-2",
+      },
+      {
+        label: "3D Printing, Virtual & Augmented Reality",
+        href: "/courses/3d-printing-vr-ar",
+      },
+      {
+        label: "Spoken English & IT Essentials",
+        href: "/courses/spoken-english-it-essentials",
+      },
+      {
+        label: "Digital Marketing Foundations",
+        href: "/courses/digital-marketing-foundations",
+      },
+      {
+        label: "Life & Employability Skills",
+        href: "/courses/life-employability-skills",
+      },
+      {
+        label: "Graphic Design & UI/UX Foundations",
+        href: "/courses/graphic-design-ui-ux-foundations",
+      },
+      {
+        label: "Cybersecurity Foundations",
+        href: "/courses/cybersecurity-foundations",
+      },
+      { label: "AI Literacy", href: "/courses/ai-literacy" },
+      {
+        label: "Data Science Foundations",
+        href: "/courses/data-science-foundations",
+      },
+      {
+        label: "Business Startup & Entrepreneurship",
+        href: "/courses/business-startup-entrepreneurship",
+      },
     ],
   },
   {
-    id: 'business-upskilling',
-    label: 'Business Upskilling',
-    href: '/courses?filter=Business%20Upskilling',
+    id: "career-accelerator-tracks",
+    label: "Career Accelerator Tracks",
+    href: "/courses?filter=Career%20Accelerator%20Tracks",
     subCategories: [
-      { label: 'AI Productivity for Teams', href: '/courses/ai-productivity' },
-      { label: 'Cyber Awareness Training', href: '/courses/cyber-awareness' },
-      { label: 'Digital Transformation Programs', href: '/courses/digital-transformation' },
-      { label: 'Leadership in AI Era', href: '/courses/ai-leadership' },
+      {
+        label: "Full-Stack Web Development — React Track",
+        href: "/courses/full-stack-web-development-react-track",
+      },
+      {
+        label: "Full-Stack Web Development — .NET Track",
+        href: "/courses/full-stack-web-development-dotnet-track",
+      },
+      {
+        label: "Cybersecurity & AI Threat Intelligence",
+        href: "/courses/cybersecurity-ai-threat-intelligence",
+      },
+      {
+        label: "Data Science & Analytics",
+        href: "/courses/data-science-analytics",
+      },
+      {
+        label: "AI-Augmented Software Testing & QA",
+        href: "/courses/ai-augmented-software-testing-qa",
+      },
+      {
+        label: "IT Project Management",
+        href: "/courses/it-project-management",
+      },
+      { label: "UI/UX Design", href: "/courses/ui-ux-design" },
+      {
+        label: "DevSecOps & Cloud Security (AI-Driven)",
+        href: "/courses/devsecops-cloud-security-ai-driven",
+      },
+      {
+        label: "Software Architecture & Product Design",
+        href: "/courses/software-architecture-product-design",
+      },
+      { label: "AI & Machine Learning", href: "/courses/ai-machine-learning" },
+      {
+        label: "Undergraduate Internship Program",
+        href: "/courses/undergraduate-internship-program",
+      },
     ],
   },
   {
-    id: 'women-empowerment',
-    label: 'Women Empowerment',
-    href: '/courses?filter=Women%20Empowerment',
+    id: "professional-upskilling",
+    label: "Professional Upskilling",
+    href: "/courses?filter=Professional%20Upskilling",
     subCategories: [
-      { label: 'Women in Cyber Security', href: '/courses/cyber-security' },
-      { label: 'Digital Entrepreneurship for Women', href: '/courses/entrepreneurship' },
-      { label: 'AI for Women Professionals', href: '/courses/ai-professionals' },
-      { label: 'Women Leadership Through Technology', href: '/courses/leadership' },
+      {
+        label: "AI for Working Professionals",
+        href: "/courses/ai-for-working-professionals",
+      },
+      {
+        label: "AI for Business (Entrepreneurs & Managers)",
+        href: "/courses/ai-for-business-entrepreneurs-and-managers",
+      },
+      {
+        label: "AI for Teachers & People in Academia",
+        href: "/courses/ai-for-teachers-and-people-in-academia",
+      },
+      {
+        label: "Cybersecurity Industry Certification",
+        href: "/courses/cybersecurity-industry-certification",
+      },
+      { label: "Digital Navigator", href: "/courses/digital-navigator" },
+      {
+        label: "Business Startup & Entrepreneurship",
+        href: "/courses/business-startup-and-entrepreneurship",
+      },
+      {
+        label: "Professional Communication & Teamwork",
+        href: "/courses/professional-communication-and-teamwork",
+      },
+      { label: "Professional English", href: "/courses/professional-english" },
+      {
+        label: "Financial Literacy & Digital Finance Tools",
+        href: "/courses/financial-literacy-and-digital-finance-tools",
+      },
+      { label: "Digital Marketing", href: "/courses/digital-marketing" },
+      { label: "Life Skills", href: "/courses/life-skills" },
     ],
   },
   {
-    id: 'senior-citizens',
-    label: 'Senior Citizens',
-    href: '/courses?filter=Senior%20Citizens',
+    id: "digital-inclusion",
+    label: "Digital Inclusion",
+    href: "/courses?filter=Digital%20Inclusion",
     subCategories: [
-      { label: 'Digital Confidence for Seniors', href: '/courses/digital-confidence' },
-      { label: 'Smartphone Essentials', href: '/courses/smartphone-essentials' },
-      { label: 'Safe Internet Usage', href: '/courses/safe-internet' },
-      { label: 'AI for Everyday Life', href: '/courses/ai-everyday' },
+      {
+        label: "Bridging the Digital Gender Gap",
+        href: "/courses/bridging-the-digital-gender-gap",
+      },
+      {
+        label: "Empowering Women in Cybersecurity",
+        href: "/courses/empowering-women-in-cybersecurity",
+      },
+      {
+        label: "Digital Competency Training — Seniors",
+        href: "/courses/digital-competency-training-seniors",
+      },
+      {
+        label: "Digital Competency Training — Youth",
+        href: "/courses/digital-competency-training-youth",
+      },
+      {
+        label: "Digital Responsibility, Legal & Ethical Aspects",
+        href: "/courses/digital-responsibility-legal-and-ethical-aspects",
+      },
+      {
+        label: "Cybersecurity Awareness",
+        href: "/courses/cybersecurity-awareness",
+      },
     ],
   },
   {
-    id: 'other-courses',
-    label: 'Other Courses',
-    href: '/courses?filter=School%20Education',
+    id: "young-innovators",
+    label: "Young Innovators",
+    href: "/courses?filter=Young%20Innovators",
     subCategories: [
-      { label: 'Life Skills for Future Leaders', href: '/courses/life-skills' },
-      { label: 'Pearson ICT', href: '/courses/pearson-ict' },
-      { label: 'Cambridge ICT', href: '/courses/cambridge-ict' },
-      { label: 'A/L ICT Pathway', href: '/courses/al-ict' },
-      { label: 'O/L ICT', href: '/courses/ol-ict' },
-    ]
+      { label: "Local O/L & A/L ICT", href: "/courses/local-ol-and-al-ict" },
+      { label: "London O/L & A/L ICT", href: "/courses/london-ol-and-al-ict" },
+      {
+        label: "Grade 6–9 School Curriculum Support",
+        href: "/courses/grade-6-9-school-curriculum-support",
+      },
+      { label: "Digital Whiz Kids", href: "#/courses/digital-whiz-kids" },
+      { label: "Digital Whiz Teens", href: "#/courses/digital-whiz-teens" },
+      { label: "Spoken English", href: "/courses/spoken-english" },
+      { label: "Life Skills", href: "/courses/life-skills" },
+    ],
   },
 ];
