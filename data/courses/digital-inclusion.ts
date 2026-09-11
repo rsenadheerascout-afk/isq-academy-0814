@@ -7,25 +7,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Digitally confident and equipped with skills to access education, work, and opportunity online.",
     image: "/courses/bridging-the-digital-gender-gap.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "2 Months",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "3–4 hours per week",
+    studyMode: "Community workshops / mentor led",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Digital Inclusion & Community Lead",
+      bio: "Dedicated to closing the gender digital divide through accessible technology literacy, empowerment, and online safety programs.",
+      image: "/instructors/gender-gap-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Ensuring equal access to digital literacy opens vital pathways to independent learning, workforce participation, and economic mobility.",
+          "This initiative equips participants with foundational web navigation, safe digital identity management, and essential software tools to access online opportunity.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -47,13 +50,35 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "No prior digital background required.",
+          "Open to all learners seeking foundational computer confidence.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "bdgg-1",
+        name: "Program Participant",
+        role: "Community Learner",
+        quote:
+          "Learning how to navigate digital platforms safely gave me the confidence to apply for online learning programs on my own.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "digital-competency-training-youth",
+        title: "Digital Competency Training — Youth",
+        image: "/courses/digital-competency-training-youth.jpg",
+      },
+      {
+        slug: "empowering-women-in-cybersecurity",
+        title: "Empowering Women in Cybersecurity",
+        image: "/courses/empowering-women-in-cybersecurity.jpg",
+      },
+    ],
   },
   {
     slug: "empowering-women-in-cybersecurity",
@@ -61,25 +86,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Introduced to a real pathway into the cybersecurity field, in one of tech's most in-demand and underrepresented specializations.",
     image: "/courses/empowering-women-in-cybersecurity.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "3 Months",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "4–5 hours per week",
+    studyMode: "Mentor guided / hands-on lab",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Cybersecurity Mentor & Advocate",
+      bio: "Passionate about encouraging gender diversity within information security, threat defense, and digital risk management.",
+      image: "/instructors/women-cyber-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Cybersecurity remains one of the fastest-growing technology domains with a critical shortage of female professionals.",
+          "This entry-level pathway introduces core security concepts, network fundamentals, ethical defense strategies, and industry career pathways.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -100,13 +128,35 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "Basic computer literacy.",
+          "Interest in technology, system defense, or digital security.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "ewc-1",
+        name: "Program Participant",
+        role: "Security Trainee",
+        quote:
+          "This course demystified cybersecurity and showed me a clear, actionable career path I never thought was accessible.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "cybersecurity-awareness",
+        title: "Cybersecurity Awareness",
+        image: "/courses/cybersecurity-awareness.jpg",
+      },
+      {
+        slug: "bridging-the-digital-gender-gap",
+        title: "Bridging the Digital Gender Gap",
+        image: "/courses/bridging-the-digital-gender-gap.jpg",
+      },
+    ],
   },
   {
     slug: "digital-competency-training-seniors",
@@ -114,25 +164,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Comfortable and self-sufficient using everyday digital tools and staying safely connected.",
     image: "/courses/digital-competency-training-seniors.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "6 Weeks",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "2–3 hours per week",
+    studyMode: "Paced workshops / hands-on support",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Senior Digital Literacy Instructor",
+      bio: "Specializes in patient, step-by-step guidance to help mature adults gain independence with personal devices and online communication.",
+      image: "/instructors/seniors-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Digital connectedness is key to staying in touch with family, managing daily services, and maintaining personal independence.",
+          "Designed specifically for older adults, this course provides gentle, practice-heavy instruction on mobile devices, internet safety, and messaging platforms.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -154,13 +207,30 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "Access to a smartphone, tablet, or personal computer.",
+          "No prior technical knowledge required.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "dcts-1",
+        name: "Program Participant",
+        role: "Senior Learner",
+        quote:
+          "The patient environment made all the difference. I now feel comfortable making video calls and recognizing suspicious online messages.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "cybersecurity-awareness",
+        title: "Cybersecurity Awareness",
+        image: "/courses/cybersecurity-awareness.jpg",
+      },
+    ],
   },
   {
     slug: "digital-competency-training-youth",
@@ -168,25 +238,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Equipped with the baseline digital skills needed for further education and today's job market.",
     image: "/courses/digital-competency-training-youth.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "2 Months",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "3–4 hours per week",
+    studyMode: "Interactive workshops / practical tasks",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Youth Technology Educator",
+      bio: "Focuses on equipping young adults with essential computing tools, digital research skills, and career entry awareness.",
+      image: "/instructors/youth-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Core digital proficiency is mandatory for modern higher education and starting entry-level workplace roles.",
+          "This program builds strong operational skills around productivity software, effective search, online safety, and educational opportunity platforms.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -206,13 +279,34 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "Open to all young adults looking to build foundational digital workplace skills.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "dcty-1",
+        name: "Program Participant",
+        role: "Youth Trainee",
+        quote:
+          "Learning how to properly use digital job portals and online productivity tools gave me a head start for my applications.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "bridging-the-digital-gender-gap",
+        title: "Bridging the Digital Gender Gap",
+        image: "/courses/bridging-the-digital-gender-gap.jpg",
+      },
+      {
+        slug: "digital-responsibility-legal-and-ethical-aspects",
+        title: "Digital Responsibility, Legal & Ethical Aspects",
+        image: "/courses/digital-responsibility-legal-and-ethical-aspects.jpg",
+      },
+    ],
   },
   {
     slug: "digital-responsibility-legal-and-ethical-aspects",
@@ -220,25 +314,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Aware of your digital rights, responsibilities, and how to navigate the internet safely, legally, and ethically.",
     image: "/courses/digital-responsibility-legal-and-ethical-aspects.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "6 Weeks",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "2–3 hours per week",
+    studyMode: "Seminar style / case discussions",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Digital Ethics & Privacy Specialist",
+      bio: "Educating citizens and professionals on data privacy rights, ethical digital citizenship, and online legal frameworks.",
+      image: "/instructors/ethics-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Understanding data privacy, copyright, digital rights, and ethical conduct is crucial as society becomes increasingly connected.",
+          "This course covers individual rights under data privacy laws, ethical online presence, intellectual property basics, and legal awareness.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -258,13 +355,34 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "General interest in digital ethics, online safety, or privacy rights.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "drlea-1",
+        name: "Program Participant",
+        role: "Community Member",
+        quote:
+          "Understanding personal data privacy rights made me far more intentional about how I manage my online presence.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "cybersecurity-awareness",
+        title: "Cybersecurity Awareness",
+        image: "/courses/cybersecurity-awareness.jpg",
+      },
+      {
+        slug: "digital-competency-training-youth",
+        title: "Digital Competency Training — Youth",
+        image: "/courses/digital-competency-training-youth.jpg",
+      },
+    ],
   },
   {
     slug: "cybersecurity-awareness",
@@ -272,25 +390,28 @@ export const digitalInclusionCourses: Course[] = [
     description:
       "Able to recognize and avoid common online scams and security risks in everyday life.",
     image: "/courses/cybersecurity-awareness.jpg",
-    price: "",
-    duration: "",
-    nextStartDate: "",
-    category: "Digital Inclusion — Community Empowerment",
-    commitment: "",
-    studyMode: "",
+    price: "Free / Community Funded",
+    duration: "1 Month",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "2 hours per week",
+    studyMode: "Interactive workshops / self-paced exercises",
 
     lead: {
-      name: "",
-      role: "",
-      bio: "",
-      image: "",
+      name: "Program Coordinator",
+      role: "Security Awareness Trainer",
+      bio: "Focuses on everyday cyber hygiene, phishing prevention, and helping individuals protect personal accounts and data.",
+      image: "/instructors/awareness-lead.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
-        content: [],
+        content: [
+          "Social engineering, phishing scams, and identity theft pose everyday threats to internet users.",
+          "This practical awareness module teaches proactive defense habits, credential protection, safe browsing techniques, and scam identification.",
+        ],
       },
       {
         id: "why-it-counts",
@@ -309,12 +430,33 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
-        content: [],
+        content: [
+          "Open to all individuals seeking to protect their digital footprint.",
+        ],
       },
     ],
 
-    testimonials: [],
+    testimonials: [
+      {
+        id: "csa-1",
+        name: "Program Participant",
+        role: "Course Participant",
+        quote:
+          "The practical examples of real phishing attempts helped me protect both my personal and workplace accounts.",
+      },
+    ],
 
-    relatedCourses: [],
+    relatedCourses: [
+      {
+        slug: "digital-responsibility-legal-and-ethical-aspects",
+        title: "Digital Responsibility, Legal & Ethical Aspects",
+        image: "/courses/digital-responsibility-legal-and-ethical-aspects.jpg",
+      },
+      {
+        slug: "empowering-women-in-cybersecurity",
+        title: "Empowering Women in Cybersecurity",
+        image: "/courses/empowering-women-in-cybersecurity.jpg",
+      },
+    ],
   },
 ];
