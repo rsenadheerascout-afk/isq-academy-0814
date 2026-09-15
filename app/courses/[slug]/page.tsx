@@ -7,6 +7,8 @@ import { courses, getCourseBySlug } from "@/data/courses";
 import Link from "next/link";
 import Image from "next/image";
 
+import CourseBrochure from "@/components/course/CourseBrochure";
+
 export function generateStaticParams() {
   return courses.map((course) => ({
     slug: course.slug,
@@ -99,24 +101,15 @@ export default async function SingleCoursePage({
       {/* STICKY NAVIGATION */}
       <div className="sticky top-0 z-50 flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 shadow-sm md:px-8">
         <nav className="hidden space-x-8 text-sm text-gray-500 md:flex">
-          <Link
-            href="#key-info"
-            className="transition-colors hover:text-black"
-          >
+          <Link href="#key-info" className="transition-colors hover:text-black">
             Key information
           </Link>
 
-          <Link
-            href="#about"
-            className="transition-colors hover:text-black"
-          >
+          <Link href="#about" className="transition-colors hover:text-black">
             About the course
           </Link>
 
-          <Link
-            href="#lead"
-            className="transition-colors hover:text-black"
-          >
+          <Link href="#lead" className="transition-colors hover:text-black">
             Lead
           </Link>
 
@@ -128,9 +121,11 @@ export default async function SingleCoursePage({
           </Link>
         </nav>
 
-        <button className="border-2 border-black px-6 py-2 text-sm transition-colors hover:bg-black hover:text-white">
+        {/* <button className="border-2 border-black px-6 py-2 text-sm transition-colors hover:bg-black hover:text-white">
           Course brochure
-        </button>
+        </button> */}
+
+        <CourseBrochure slug={course.slug} title={course.title} action="view" />
       </div>
 
       {/* MAIN CONTENT */}
@@ -138,59 +133,47 @@ export default async function SingleCoursePage({
         {/* KEY INFORMATION */}
         <section
           id="key-info"
-          className="grid grid-cols-1 gap-8 lg:grid-cols-3 scroll-mt-24">
+          className="grid grid-cols-1 gap-8 lg:grid-cols-3 scroll-mt-24"
+        >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-2">
-
             {/* Price */}
             <div className="border border-gray-200 p-6">
-              <p className="mb-1 text-sm text-gray-500">
-                Price
-              </p>
+              <p className="mb-1 text-sm text-gray-500">Price</p>
 
-              <p className="text-xl">
-                {course.price}
-              </p>
+              <p className="text-xl">{course.price}</p>
             </div>
 
             {/* Duration */}
             <div className="border border-gray-200 p-6">
-              <p className="mb-1 text-sm text-gray-500">
-                Duration
-              </p>
+              <p className="mb-1 text-sm text-gray-500">Duration</p>
 
-              <p className="text-xl">
-                {course.duration}
-              </p>
+              <p className="text-xl">{course.duration}</p>
             </div>
 
             {/* Commitment */}
             <div className="border border-gray-200 p-6">
-              <p className="mb-1 text-sm text-gray-500">
-                Commitment
-              </p>
+              <p className="mb-1 text-sm text-gray-500">Commitment</p>
 
-              <p className="text-xl">
-                {course.commitment}
-              </p>
+              <p className="text-xl">{course.commitment}</p>
             </div>
 
             {/* Study Mode */}
             <div className="border border-gray-200 p-6">
-              <p className="mb-1 text-sm text-gray-500">
-                Study mode
-              </p>
+              <p className="mb-1 text-sm text-gray-500">Study mode</p>
 
-              <p className="text-xl">
-                {course.studyMode}
-              </p>
+              <p className="text-xl">{course.studyMode}</p>
             </div>
-
           </div>
 
           <div className="flex flex-col space-y-4 lg:col-span-1">
-            <button className="w-full bg-black py-4 text-white shadow-md transition-colors hover:bg-gray-800">
+            {/* <button className="w-full bg-black py-4 text-white shadow-md transition-colors hover:bg-gray-800">
               Download Brochure
-            </button>
+            </button> */}
+            <CourseBrochure
+              slug={course.slug}
+              title={course.title}
+              action="download"
+            />
 
             <button className="w-full border-2 border-black py-4 text-black transition-colors hover:bg-gray-50">
               Request a call
@@ -199,27 +182,17 @@ export default async function SingleCoursePage({
         </section>
 
         {/* ABOUT COURSE */}
-        <section
-          id="about"
-          className="max-w-4xl scroll-mt-24">
-          <h2 className="mb-8 text-3xl text-gray-900">
-            About the course
-          </h2>
+        <section id="about" className="max-w-4xl scroll-mt-24">
+          <h2 className="mb-8 text-3xl text-gray-900">About the course</h2>
 
           <CourseAccordion items={courseSections} />
         </section>
 
         {/* COURSE LEAD */}
-        <section
-          id="lead"
-          className="max-w-4xl scroll-mt-24"
-        >
-          <h2 className="mb-8 text-3xl text-gray-900">
-            Academic staff
-          </h2>
+        <section id="lead" className="max-w-4xl scroll-mt-24">
+          <h2 className="mb-8 text-3xl text-gray-900">Academic staff</h2>
 
           <div className="flex flex-col items-start border border-gray-200 bg-white p-8 sm:flex-row sm:space-x-8">
-
             {/* Instructor Image */}
             {course.lead.image ? (
               <Image
@@ -242,69 +215,55 @@ export default async function SingleCoursePage({
                 {course.lead.name}
               </h3>
 
-              <p className="mb-4 text-sm text-gray-600">
-                {course.lead.role}
-              </p>
+              <p className="mb-4 text-sm text-gray-600">{course.lead.role}</p>
 
               <p className="text-sm leading-relaxed text-gray-700">
                 {course.lead.bio}
               </p>
             </div>
-
           </div>
         </section>
 
         {/* TESTIMONIALS */}
-        <section
-          id="testimonials"
-          className="scroll-mt-24"
-        >
+        <section id="testimonials" className="scroll-mt-24">
           <h2 className="mb-8 text-3xl text-gray-900">
             What our learners are saying
           </h2>
 
-          <Testimonials
-            testimonials={course.testimonials}
-          />
+          <Testimonials testimonials={course.testimonials} />
         </section>
 
         {/* RELATED COURSES */}
-        <section
-          id="related-courses"
-          className="border-t border-gray-200 pt-8"
-        >
-          <h2 className="mb-6 text-2xl text-gray-900">
-            Related courses
-          </h2>
+        <section id="related-courses" className="border-t border-gray-200 pt-8">
+          <h2 className="mb-6 text-2xl text-gray-900">Related courses</h2>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-
-            {course.relatedCourses.map((relatedCourse, index) => (
+            {course.relatedCourses?.map((relatedCourse, index) => (
               <div
                 key={index}
                 className="group relative flex aspect-video items-end overflow-hidden bg-gray-100 p-6"
               >
-                {/* Related course image */}
-                <Image
-                  src={relatedCourse.image}
-                  alt={relatedCourse.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <Link href={`/courses/${relatedCourse?.slug}`}>
+                  {/* Related course image */}
+                  <Image
+                    src={relatedCourse?.image}
+                    alt={relatedCourse?.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/50" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/50" />
 
-                {/* Course title */}
-                <h3 className="relative z-10 max-w-xs text-lg text-white">
-                  {relatedCourse.title}
-                </h3>
+                  {/* Course title */}
+                  <h3 className="relative z-10 max-w-xs text-lg text-white">
+                    {relatedCourse?.title}
+                  </h3>
+                </Link>
               </div>
             ))}
-
           </div>
         </section>
-
       </div>
     </main>
   );
