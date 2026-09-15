@@ -105,6 +105,12 @@ export default async function SingleCoursePage({
             Key information
           </Link>
 
+          {course?.roles && course.roles.length > 0 && (
+            <Link href="#career" className="transition-colors hover:text-black">
+              Career Opportunities
+            </Link>
+          )}
+
           <Link href="#about" className="transition-colors hover:text-black">
             About the course
           </Link>
@@ -180,6 +186,26 @@ export default async function SingleCoursePage({
             </button>
           </div>
         </section>
+
+        {/* what you'll become */}
+        {course?.roles && course.roles.length > 0 && (
+          <section id="career" className="max-w-4xl scroll-mt-24">
+            <h2 className="mb-8 text-3xl text-gray-900">
+              Career Opportunities
+            </h2>
+
+            <ul className="flex flex-wrap gap-3">
+              {course.roles.map((role, index) => (
+                <li
+                  key={index}
+                  className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800"
+                >
+                  {role}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* ABOUT COURSE */}
         <section id="about" className="max-w-4xl scroll-mt-24">
