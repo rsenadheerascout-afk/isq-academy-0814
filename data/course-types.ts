@@ -9,6 +9,7 @@ export interface Course {
   nextStartDate: string;
   commitment: string;
   studyMode: string;
+  roles?: string[];
 
   lead: {
     name: string;
