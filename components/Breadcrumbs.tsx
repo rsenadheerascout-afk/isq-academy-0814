@@ -8,8 +8,8 @@ export default function Breadcrumbs() {
   const pathNames = pathname.split('/').filter((path) => path);
 
   return (
-    <div className="max-w-7xl mx-auto">
-    <nav aria-label="breadcrumb" className="py-4 px-4 md:px-6 bg-gray-50">
+    <div className="max-w-7xl mx-auto ">
+    <nav aria-label="breadcrumb" className="py-4 px-4 md:px-6 bg-linear-to-r from-gray-50/0 via-gray-50 via-5% to-gray-50/0">
       <ol className="flex items-center space-x-2 text-sm text-gray-500 font-montserrat">
         <li>
           <Link href="/" className="hover:text-primary transition-colors">
