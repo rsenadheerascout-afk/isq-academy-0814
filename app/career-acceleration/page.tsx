@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CareerAccelerationSection from "@/components/sections/home/CareerAccelerationSection";
+import CareerAccelerationSection from "@/components/sections/home/CareerAccelerationSection-degree";
 import CareerAccelerationHero from "@/components/sections/career-acceleration/CareerAccelerationHero";
 import CareerRealitySolution from "@/components/sections/career-acceleration/CareerRealitySolution";
 import CareerPathway from "@/components/sections/career-acceleration/CareerPathway";
