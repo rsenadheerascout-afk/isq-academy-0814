@@ -13,7 +13,7 @@ export const youngInnovatorsCourses: Course[] = [
     category: "Young Innovators",
     commitment: "2–4 hours per week",
     studyMode: "Tutor guided / exam preparation",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Local ICT Curriculum Specialist",
@@ -89,7 +89,7 @@ export const youngInnovatorsCourses: Course[] = [
     category: "Young Innovators",
     commitment: "2–4 hours per week",
     studyMode: "Tutor guided / exam preparation",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "International ICT Curriculum Specialist",
@@ -160,7 +160,7 @@ export const youngInnovatorsCourses: Course[] = [
     category: "Young Innovators",
     commitment: "2–4 hours per week",
     studyMode: "Tutor guided / academic support",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Secondary Education Educator",
@@ -233,7 +233,10 @@ export const youngInnovatorsCourses: Course[] = [
   //   category: "Young Innovators",
   //   commitment: "2 hours per week",
   //   studyMode: "Tutor guided / fun workshops",
-
+  // roles:[
+  //     "Software Engineer",
+  //     "Web Developer"
+  //   ],
   //   lead: {
   //     name: "Course Instructor",
   //     role: "Early STEM & Tech Instructor",
@@ -304,7 +307,10 @@ export const youngInnovatorsCourses: Course[] = [
   //   category: "Young Innovators",
   //   commitment: "3–4 hours per week",
   //   studyMode: "Tutor guided / project based",
-
+  // roles:[
+  //     "Software Engineer",
+  //     "Web Developer"
+  //   ],
   //   lead: {
   //     name: "Course Instructor",
   //     role: "Youth Tech Acceleration Coach",
@@ -377,7 +383,7 @@ export const youngInnovatorsCourses: Course[] = [
     category: "Young Innovators",
     commitment: "2–4 hours per week",
     studyMode: "Tutor guided / interactive workshops",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "English Language Specialist",
@@ -445,7 +451,7 @@ export const youngInnovatorsCourses: Course[] = [
     category: "Young Innovators",
     commitment: "2–4 hours per week",
     studyMode: "Tutor guided / interactive workshops",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Youth Development Coach",

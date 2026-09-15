@@ -13,7 +13,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "AI Productivity & Automation Specialist",
@@ -85,7 +85,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Business Strategy & AI Integration Lead",
@@ -161,7 +161,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "EdTech & Academic Innovation Consultant",
@@ -232,7 +232,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Cybersecurity Defense Specialist",
@@ -303,7 +303,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Digital Literacy Facilitator",
@@ -372,7 +372,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Startup Advisor & Venture Mentor",
@@ -448,7 +448,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Workplace Dynamics Coach",
@@ -524,7 +524,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Corporate Communications Trainer",
@@ -593,7 +593,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Financial Literacy & Fintech Advisor",
@@ -662,7 +662,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Digital Growth Strategist",
@@ -733,7 +733,7 @@ export const professionalUpskillingCourses: Course[] = [
     category: "Professional Upskilling",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Personal Development Coach",

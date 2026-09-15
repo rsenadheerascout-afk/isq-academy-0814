@@ -13,7 +13,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "3–4 hours per week",
     studyMode: "Community workshops / mentor led",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Digital Inclusion & Community Lead",
@@ -33,9 +33,7 @@ export const digitalInclusionCourses: Course[] = [
       {
         id: "why-it-counts",
         title: "Why It Counts",
-        content: [
-          "Certificate of Completion; community-recognized program.",
-        ],
+        content: ["Certificate of Completion; community-recognized program."],
       },
       {
         id: "modules",
@@ -92,7 +90,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "4–5 hours per week",
     studyMode: "Mentor guided / hands-on lab",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Cybersecurity Mentor & Advocate",
@@ -170,7 +168,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "2–3 hours per week",
     studyMode: "Paced workshops / hands-on support",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Senior Digital Literacy Instructor",
@@ -244,7 +242,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "3–4 hours per week",
     studyMode: "Interactive workshops / practical tasks",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Youth Technology Educator",
@@ -320,7 +318,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "2–3 hours per week",
     studyMode: "Seminar style / case discussions",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Digital Ethics & Privacy Specialist",
@@ -396,7 +394,7 @@ export const digitalInclusionCourses: Course[] = [
     category: "Digital Inclusion",
     commitment: "2 hours per week",
     studyMode: "Interactive workshops / self-paced exercises",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Program Coordinator",
       role: "Security Awareness Trainer",

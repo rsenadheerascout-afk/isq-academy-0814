@@ -13,7 +13,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "8–10 hours per week",
     studyMode: "Tutor guided / project & internship based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Lead Full-Stack Web Architect",
@@ -93,7 +93,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "8–10 hours per week",
     studyMode: "Tutor guided / project & internship based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Enterprise .NET Systems Architect",
@@ -173,7 +173,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / hands-on lab",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Threat Intelligence & Cyber Defense Lead",
@@ -247,7 +247,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Lead Data Scientist",
@@ -321,7 +321,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / hands-on lab",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "QA Automation & Test Engineering Lead",
@@ -395,7 +395,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "5–7 hours per week",
     studyMode: "Tutor guided / workshop based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Senior IT Project Program Director",
@@ -415,9 +415,7 @@ export const careerAcceleratorCourses: Course[] = [
       {
         id: "why-it-counts",
         title: "Why It Counts",
-        content: [
-          "Structured pathway to recognized industry certification.",
-        ],
+        content: ["Structured pathway to recognized industry certification."],
       },
       {
         id: "modules",
@@ -469,7 +467,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Lead Product Designer & UX Researcher",
@@ -543,7 +541,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / hands-on lab",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Cloud Infrastructure & DevSecOps Lead",
@@ -617,7 +615,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Principal Software Architect",
@@ -691,7 +689,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "6–8 hours per week",
     studyMode: "Tutor guided / project based",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "AI & Machine Learning Lead",
@@ -757,7 +755,7 @@ export const careerAcceleratorCourses: Course[] = [
     slug: "undergraduate-internship-program",
     title: "Undergraduate Internship Program",
     description:
-      "Workplace-experienced with a real employer, backed by six months of targeted technical training — the combination employers say closes the \"no experience\" gap for new graduates.",
+      'Workplace-experienced with a real employer, backed by six months of targeted technical training — the combination employers say closes the "no experience" gap for new graduates.',
     image: "/courses/undergraduate-internship-program.jpg",
     price: "Contact for Placement Details",
     duration: "6-Month Learning + 3-Month Internship (Paid / Unpaid options)",
@@ -765,7 +763,7 @@ export const careerAcceleratorCourses: Course[] = [
     category: "Career Accelerator Tracks",
     commitment: "8–12 hours per week",
     studyMode: "Tutor guided / industry placement",
-
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Industry Placement Director",
