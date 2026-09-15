@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 
 import HeroSection from "@/components/sections/home/HeroSection";
-import WhyLearnSection from "@/components/sections/home/WhyLearnSection";
+// import WhyLearnSection from "@/components/sections/home/WhyLearnSection";
 import FeaturedCoursesSection from "@/components/sections/home/FeaturedCoursesSection";
 import TestimonialsSection from "@/components/sections/home/TestimonialsSection";
-import AboutSection from "@/components/sections/home/AboutSection";
+// import AboutSection from "@/components/sections/home/AboutSection";
 import OrganizationsSection from "@/components/sections/home/OrganizationsSection";
 import ContactSection from "@/components/sections/home/ContactSection";
 import OngoingProgramsSection from "@/components/sections/home/OngoingProgramsSection";
-import CareerAccelerationSection from "@/components/sections/home/CareerAccelerationSection";
+import CareerAccelerationSectionDegree from "@/components/sections/home/CareerAccelerationSection-degree";
+import CareerAccelerationSectionSchool from "@/components/sections/home/CareerAccelerationSection-school";
+import CareerAccelerationSectionIndustry from "@/components/sections/home/CareerAccelerationSection-industry";
 import WomenSection from "@/components/sections/home/WomenSection";
 import SeniorSection from "@/components/sections/home/SeniorSection";
 
-import { featuredCourses, testimonials, } from "@/data/home";
+import { featuredCourses, testimonials } from "@/data/home";
 import WhyISeeQ from "@/components/sections/home/WhyISeeQ";
 import HowWeTeach from "@/components/sections/home/HowWeTeach";
 
@@ -77,12 +79,15 @@ export default function HomePage() {
         <HeroSection imageLink="/about-academy.jpg" />
 
         {/* Career Acceleration Pathway Section */}
-      <CareerAccelerationSection />
+        <CareerAccelerationSectionSchool BottomSection={false} />
+        <CareerAccelerationSectionDegree BottomSection={true} />
+        <CareerAccelerationSectionIndustry BottomSection={false} />
+
+        <OngoingProgramsSection />
+        
         <WomenSection />
 
         <SeniorSection />
-
-        <OngoingProgramsSection />
 
         <WhyISeeQ />
 
