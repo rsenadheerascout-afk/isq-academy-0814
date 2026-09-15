@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import {  ArrowRight,  Briefcase,  CheckCircle2,  MonitorPlay,  Target,  Users,} from "lucide-react";
+import {
+  ArrowRight,
+  Briefcase,
+  CheckCircle2,
+  MonitorPlay,
+  Target,
+  Users,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -12,17 +19,23 @@ const roles = [
   "Backend Developer",
 ];
 
-function CareerAccelerationSection() {
+interface CareerAccelerationSectionProps {
+  BottomSection: boolean;
+}
+
+function CareerAccelerationSection({BottomSection} : CareerAccelerationSectionProps) {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [showBox] = useState(BottomSection);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [showBox]);
+
   return (
-    <section className="relative overflow-hidden bg-white py-8 md:py-10 lg:py-12 lg:px-40 md:px-20 px-6">
+    <section className="relative overflow-visible bg-white py-8 md:py-10 lg:py-12 lg:px-40 md:px-20 px-6">
       {/* Background accents */}
       <div
         aria-hidden="true"
@@ -93,51 +106,54 @@ function CareerAccelerationSection() {
             </p>
           </div>
         </div>
-        <div className="relative mt-10">
-          {/* Floating Tag */}
-          <div className="absolute -top-4 z-10 bg-secondary text-black text-sm px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-[#1e1c1c]">
-            <span>Become a</span>
-            {/* <span className="text-black/70">➔</span> */}
-            <span className=" font-serif italic font-semibold text-black transition-all duration-300">
-              {roles[currentRoleIndex]}
-            </span>
-          </div>
 
-          {/* Bottom Highlight Card */}
-          <div className="bg-[#292727] rounded-2xl pt-12 p-6 md:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div>
-              <div className="flex flex-wrap gap-x-6 gap-y-3 mb-3">
-                <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-primary" />
-                  Practical Training
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-primary" />
-                  Real Projects
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-primary" />
-                  Industry Internship
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle2 size={17} className="text-primary" />
-                  Career Support
-                </div>
-              </div>
-              <p className="text-gray-300 text-sm">
-                Explore the complete Career Acceleration Pathway and see how the
-                program takes you from learning to employment.
-              </p>
+        {showBox && (
+          <div className="relative mt-10">
+            {/* Floating Tag */}
+            <div className="absolute -top-4 z-10 bg-secondary text-black text-sm px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-[#1e1c1c]">
+              <span>Become a</span>
+              {/* <span className="text-black/70">➔</span> */}
+              <span className=" font-serif italic font-semibold text-black transition-all duration-300">
+                {roles[currentRoleIndex]}
+              </span>
             </div>
-            <Link
-              href="/courses?filter=Career%20Tracks"
-              className="shrink-0 inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
-            >
-              Explore More
-              <ArrowRight size={17} />
-            </Link>
+
+            {/* Bottom Highlight Card */}
+            <div className="bg-[#292727] rounded-2xl pt-12 p-6 md:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div>
+                <div className="flex flex-wrap gap-x-6 gap-y-3 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-white">
+                    <CheckCircle2 size={17} className="text-primary" />
+                    Practical Training
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white">
+                    <CheckCircle2 size={17} className="text-primary" />
+                    Real Projects
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white">
+                    <CheckCircle2 size={17} className="text-primary" />
+                    Industry Internship
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white">
+                    <CheckCircle2 size={17} className="text-primary" />
+                    Career Support
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Explore the complete Career Acceleration Pathway and see how
+                  the program takes you from learning to employment.
+                </p>
+              </div>
+              <Link
+                href="/courses?filter=Career%20Accelerator%20Tracks"
+                className="shrink-0 inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-[#00aaa0] transition-colors text-sm"
+              >
+                Explore More
+                <ArrowRight size={17} />
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
