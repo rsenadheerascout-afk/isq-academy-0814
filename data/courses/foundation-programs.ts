@@ -72,16 +72,16 @@ export const foundationProgramsCourses: Course[] = [
       },
     ],
     relatedCourses: [
-      {
-        slug: "programming-fundamentals-1-2",
-        title: "Programming Fundamentals I & II",
-        image: "/courses/programming-fundamentals.jpg",
-      },
-      {
-        slug: "cybersecurity-foundations",
-        title: "Cybersecurity Foundations",
-        image: "/courses/cybersecurity-foundations.jpg",
-      },
+      // {
+      //   slug: "programming-fundamentals-1-2",
+      //   title: "Programming Fundamentals I & II",
+      //   image: "/courses/programming-fundamentals.jpg",
+      // },
+      // {
+      //   slug: "cybersecurity-foundations",
+      //   title: "Cybersecurity Foundations",
+      //   image: "/courses/cybersecurity-foundations.jpg",
+      // },
     ],
   },
   {

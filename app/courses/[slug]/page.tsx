@@ -263,31 +263,62 @@ export default async function SingleCoursePage({
         <section id="related-courses" className="border-t border-gray-200 pt-8">
           <h2 className="mb-6 text-2xl text-gray-900">Related courses</h2>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {course.relatedCourses?.map((relatedCourse, index) => (
-              <div
-                key={index}
-                className="group relative flex aspect-video items-end overflow-hidden bg-gray-100 p-6"
-              >
-                <Link href={`/courses/${relatedCourse?.slug}`}>
-                  {/* Related course image */}
-                  <Image
-                    src={relatedCourse?.image}
-                    alt={relatedCourse?.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+          <div>
+            {course.relatedCourses && course.relatedCourses.length > 0 ? (
+              <div className="space-y-6">
+                {/* 2-Column Grid for Courses */}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {course.relatedCourses.map((relatedCourse, index) => (
+                    <div
+                      key={index}
+                      className="group relative flex aspect-video items-end overflow-hidden rounded-lg bg-gray-100 p-6 shadow-sm"
+                    >
+                      <Link
+                        href={`/courses/${relatedCourse?.slug}`}
+                        className="absolute inset-0 flex items-end p-6"
+                      >
+                        {/* Related course image */}
+                        <Image
+                          src={relatedCourse?.image}
+                          alt={relatedCourse?.title || "Related course"}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/50" />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/50" />
 
-                  {/* Course title */}
-                  <h3 className="relative z-10 max-w-xs text-lg text-white">
-                    {relatedCourse?.title}
-                  </h3>
+                        {/* Course title */}
+                        <h3 className="relative z-10 max-w-xs text-lg font-medium text-white">
+                          {relatedCourse?.title}
+                        </h3>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Long button underneath when courses are present */}
+                <Link
+                  href={`/courses?filter=${course.category}`}
+                  className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white py-4 text-center text-sm font-regular text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+                >
+                  Show All Related Courses
                 </Link>
               </div>
-            ))}
+            ) : (
+              /* Large takeover button when NO courses are given */
+              <Link
+                href={`/courses?filter=${course.category}`}
+                className="flex min-h-[200px] w-full flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-gray-50 p-8 text-center transition-colors hover:border-gray-400 hover:bg-gray-100"
+              >
+                <span className="text-3xl font-regular text-gray-900">
+                  Show All Related Courses
+                </span>
+                <span className="mt-1 text-sm text-gray-500">
+                  Explore the complete catalog of related topics
+                </span>
+              </Link>
+            )}
           </div>
         </section>
       </div>
