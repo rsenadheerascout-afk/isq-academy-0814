@@ -18,7 +18,8 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-futura-lt-paneuropean), ui-sans-serif, system-ui, -apple-system, sans-serif;
+    /* font-family: var(--font-futura-lt-paneuropean), ui-sans-serif, system-ui, -apple-system, sans-serif; */
+    font-family: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
   }
 }
 
@@ -38,7 +39,8 @@ html {
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --font-sans: var(--font-geist-sans);
+  /* --font-sans: var(--font-geist-sans); */
+  --font-sans: var(--font-urbanist);
   --font-mono: var(--font-geist-mono);
 }
 
