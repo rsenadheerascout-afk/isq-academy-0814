@@ -6,7 +6,7 @@ export const foundationProgramsCourses: Course[] = [
     title: "Diploma in ICT (DICT)",
     description:
       "Job-ready for entry-level ICT support, junior technical, or administrative-tech roles — and set up to progress directly into our Career Accelerator tracks or university-level computing.",
-    image: "/courses/diploma-in-ict.jpg",
+    image: "/courses/full-stack-development.jpg",
     price: "Contact us",
     duration: "6 Months",
     nextStartDate: "2026-10-01",
