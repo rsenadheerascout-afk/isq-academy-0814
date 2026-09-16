@@ -22,7 +22,7 @@ export const courseCategories: Category[] = [
         label: "3D Printing, Virtual & Augmented Reality",
         href: "/courses/3d-printing-vr-ar",
       },
-      { label: "AI Literacy", href: "/courses/ai-literacy" },
+      { label: "AI & ML Foundation", href: "/courses/ai-ml-foundation" },
       {
         label: "Business Startup & Entrepreneurship",
         href: "/courses/business-startup-entrepreneurship",
@@ -45,8 +45,8 @@ export const courseCategories: Category[] = [
         href: "/courses/graphic-design-ui-ux-foundations",
       },
       {
-        label: "Life & Employability Skills",
-        href: "/courses/life-employability-skills",
+        label: "Professional Grooming",
+        href: "/courses/professional-grooming",
       },
       {
         label: "Programming Fundamentals I & II",
@@ -150,6 +150,10 @@ export const courseCategories: Category[] = [
     label: "Digital Inclusion",
     href: "/courses?filter=Digital%20Inclusion",
     subCategories: [
+      {
+        label: "AI Awareness",
+        href: "/courses/ai-awareness",
+      },
       {
         label: "Bridging the Digital Gender Gap",
         href: "/courses/bridging-the-digital-gender-gap",
