@@ -300,7 +300,7 @@ export default async function SingleCoursePage({
                 {/* Long button underneath when courses are present */}
                 <Link
                   href={`/courses?filter=${course.category}`}
-                  className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white py-4 text-center text-sm font-regular text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+                  className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white py-4 text-center text-sm font-regular text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-1"
                 >
                   Show All Related Courses
                 </Link>
@@ -309,7 +309,7 @@ export default async function SingleCoursePage({
               /* Large takeover button when NO courses are given */
               <Link
                 href={`/courses?filter=${course.category}`}
-                className="flex min-h-[200px] w-full flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-gray-50 p-8 text-center transition-colors hover:border-gray-400 hover:bg-gray-100"
+                className="flex min-h-[200px] w-full flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-gray-50 p-8 text-center transition-all hover:border-gray-300 hover:bg-gray-100 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-1"
               >
                 <span className="text-3xl font-regular text-gray-900">
                   Show All Related Courses
