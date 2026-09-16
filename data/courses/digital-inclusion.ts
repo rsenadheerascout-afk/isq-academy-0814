@@ -2,6 +2,83 @@ import { Course } from "../course-types";
 
 export const digitalInclusionCourses: Course[] = [
   {
+    slug: "ai-awareness",
+    title: "AI Awareness",
+    description:
+      "Digitally confident and equipped with skills to access education, work, and opportunity online.",
+    image: "/courses/ai-awareness.jpg",
+    price: "Free / Community Funded",
+    duration: "2 Months",
+    nextStartDate: "2026-10-01",
+    category: "Digital Inclusion",
+    commitment: "3–4 hours per week",
+    studyMode: "Community workshops / mentor led",
+    roles: ["Software Engineer", "Web Developer"],
+    lead: {
+      name: "Program Coordinator",
+      role: "Digital Inclusion & Community Lead",
+      bio: "Dedicated to closing the gender digital divide through accessible technology literacy, empowerment, and online safety programs.",
+      image: "/instructors/gender-gap-lead.jpg",
+    },
+
+    sections: [
+      {
+        id: "description",
+        title: "Description",
+        content: [
+          "Ensuring equal access to digital literacy opens vital pathways to independent learning, workforce participation, and economic mobility.",
+          "This initiative equips participants with foundational web navigation, safe digital identity management, and essential software tools to access online opportunity.",
+        ],
+      },
+      {
+        id: "why-it-counts",
+        title: "Why It Counts",
+        content: ["Certificate of Completion; community-recognized program."],
+      },
+      {
+        id: "modules",
+        title: "Modules and activities",
+        content: [
+          "Core digital literacy",
+          "Online safety",
+          "Practical device & internet skills",
+          "Confidence building",
+        ],
+      },
+      {
+        id: "requirements",
+        title: "Requirements",
+        content: [
+          "No prior digital background required.",
+          "Open to all learners seeking foundational computer confidence.",
+        ],
+      },
+    ],
+
+    testimonials: [
+      {
+        id: "bdgg-1",
+        name: "Program Participant",
+        role: "Community Learner",
+        quote:
+          "Learning how to navigate digital platforms safely gave me the confidence to apply for online learning programs on my own.",
+      },
+    ],
+
+    relatedCourses: [
+      {
+        slug: "digital-competency-training-youth",
+        title: "Digital Competency Training — Youth",
+        image: "/courses/digital-competency-training-youth.jpg",
+      },
+      {
+        slug: "empowering-women-in-cybersecurity",
+        title: "Empowering Women in Cybersecurity",
+        image: "/courses/empowering-women-in-cybersecurity.jpg",
+      },
+    ],
+  },
+  {
     slug: "bridging-the-digital-gender-gap",
     title: "Bridging the Digital Gender Gap",
     description:
