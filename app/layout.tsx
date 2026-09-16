@@ -8,27 +8,27 @@ import Footer from "@/components/Footer";
 const futuraLtPaneuropean = localFont({
   src: [
     {
-      path: "./fonts/FuturaLTPaneuropeanBook.woff2",
+      path: "./fonts/paneuropean/FuturaLTPaneuropeanBook.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/FuturaLTPaneuropeanBookItalic.woff2",
+      path: "./fonts/paneuropean/FuturaLTPaneuropeanBookItalic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "./fonts/FuturaLTPaneuropeanBoldItalic.woff2",
+      path: "./fonts/paneuropean/FuturaLTPaneuropeanBoldItalic.woff2",
       weight: "700",
       style: "italic",
     },
     {
-      path: "./fonts/FuturaLTPaneuropeanExtraBold.woff2",
+      path: "./fonts/paneuropean/FuturaLTPaneuropeanExtraBold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "./fonts/FuturaLTPaneuropeanExtraBoldItalic.woff2",
+      path: "./fonts/paneuropean/FuturaLTPaneuropeanExtraBoldItalic.woff2",
       weight: "800",
       style: "italic",
     },
