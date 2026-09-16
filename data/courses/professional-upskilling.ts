@@ -360,82 +360,82 @@ export const professionalUpskillingCourses: Course[] = [
       },
     ],
   },
-  {
-    slug: "business-startup-and-entrepreneurship",
-    title: "Business Startup & Entrepreneurship",
-    description:
-      "Ready to plan and launch a business idea with a practical, tested framework rather than guesswork.",
-    image: "/courses/business-startup-and-entrepreneurship.jpg",
-    price: "Contact us",
-    duration: "Short Course",
-    nextStartDate: "2026-10-01",
-    category: "Professional Upskilling",
-    commitment: "3–5 hours per week",
-    studyMode: "Tutor guided / workshop based",
-    roles: ["Software Engineer", "Web Developer"],
-    lead: {
-      name: "Course Instructor",
-      role: "Startup Advisor & Venture Mentor",
-      bio: "Guiding early-stage founders through product-market fit, practical business planning, and lean launching strategies.",
-      image: "/instructors/business-lead.jpg",
-    },
+  // {
+  //   slug: "business-startup-and-entrepreneurship",
+  //   title: "Business Startup & Entrepreneurship",
+  //   description:
+  //     "Ready to plan and launch a business idea with a practical, tested framework rather than guesswork.",
+  //   image: "/courses/business-startup-and-entrepreneurship.jpg",
+  //   price: "Contact us",
+  //   duration: "Short Course",
+  //   nextStartDate: "2026-10-01",
+  //   category: "Professional Upskilling",
+  //   commitment: "3–5 hours per week",
+  //   studyMode: "Tutor guided / workshop based",
+  //   roles: ["Software Engineer", "Web Developer"],
+  //   lead: {
+  //     name: "Course Instructor",
+  //     role: "Startup Advisor & Venture Mentor",
+  //     bio: "Guiding early-stage founders through product-market fit, practical business planning, and lean launching strategies.",
+  //     image: "/instructors/business-lead.jpg",
+  //   },
 
-    sections: [
-      {
-        id: "description",
-        title: "Description",
-        content: [
-          "Launching a successful venture requires structured planning and market validation.",
-          "This program covers market research, business model canvas design, essential budgeting, and targeted launch marketing strategies.",
-        ],
-      },
-      {
-        id: "why-it-counts",
-        title: "Why It Counts",
-        content: ["Certificate of Completion."],
-      },
-      {
-        id: "modules",
-        title: "Modules and activities",
-        content: [
-          "Idea validation & market research",
-          "Business planning essentials",
-          "Budgeting & basic finance",
-          "Launch & marketing fundamentals",
-        ],
-      },
-      {
-        id: "requirements",
-        title: "Requirements",
-        content: [
-          "An entrepreneurial mindset or a business idea you wish to develop.",
-        ],
-      },
-    ],
+  //   sections: [
+  //     {
+  //       id: "description",
+  //       title: "Description",
+  //       content: [
+  //         "Launching a successful venture requires structured planning and market validation.",
+  //         "This program covers market research, business model canvas design, essential budgeting, and targeted launch marketing strategies.",
+  //       ],
+  //     },
+  //     {
+  //       id: "why-it-counts",
+  //       title: "Why It Counts",
+  //       content: ["Certificate of Completion."],
+  //     },
+  //     {
+  //       id: "modules",
+  //       title: "Modules and activities",
+  //       content: [
+  //         "Idea validation & market research",
+  //         "Business planning essentials",
+  //         "Budgeting & basic finance",
+  //         "Launch & marketing fundamentals",
+  //       ],
+  //     },
+  //     {
+  //       id: "requirements",
+  //       title: "Requirements",
+  //       content: [
+  //         "An entrepreneurial mindset or a business idea you wish to develop.",
+  //       ],
+  //     },
+  //   ],
 
-    testimonials: [
-      {
-        id: "bs-1",
-        name: "Course Participant",
-        role: "Small Business Owner",
-        quote:
-          "The market validation exercises saved me from making costly mistakes before launching my main service line.",
-      },
-    ],
+  //   testimonials: [
+  //     {
+  //       id: "bs-1",
+  //       name: "Course Participant",
+  //       role: "Small Business Owner",
+  //       quote:
+  //         "The market validation exercises saved me from making costly mistakes before launching my main service line.",
+  //     },
+  //   ],
 
-    relatedCourses: [
-      {
-        slug: "digital-marketing",
-        title: "Digital Marketing",
-        image: "/courses/digital-marketing.jpg",
-      },
-      {
-        slug: "financial-literacy-and-digital-finance-tools",
-        title: "Financial Literacy & Digital Finance Tools",
-        image: "/courses/financial-literacy-and-digital-finance-tools.jpg",
-      },
-    ],
-  },
+  //   relatedCourses: [
+  //     {
+  //       slug: "digital-marketing",
+  //       title: "Digital Marketing",
+  //       image: "/courses/digital-marketing.jpg",
+  //     },
+  //     {
+  //       slug: "financial-literacy-and-digital-finance-tools",
+  //       title: "Financial Literacy & Digital Finance Tools",
+  //       image: "/courses/financial-literacy-and-digital-finance-tools.jpg",
+  //     },
+  //   ],
+  // },
   {
     slug: "professional-communication-and-teamwork",
     title: "Professional Communication & Teamwork",
