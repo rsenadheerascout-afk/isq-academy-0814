@@ -311,9 +311,9 @@ export const foundationProgramsCourses: Course[] = [
     ],
     relatedCourses: [
       {
-        slug: "life-employability-skills",
-        title: "Life & Employability Skills",
-        image: "/courses/life-employability.jpg",
+        slug: "professional-grooming",
+        title: "Professional Grooming",
+        image: "/courses/professional-grooming.jpg",
       },
     ],
   },
@@ -394,8 +394,8 @@ export const foundationProgramsCourses: Course[] = [
     ],
   },
   {
-    slug: "life-employability-skills",
-    title: "Life & Employability Skills",
+    slug: "professional-grooming",
+    title: "Professional Grooming",
     description:
       "Interview-ready with the communication, teamwork, and workplace-readiness skills employers consistently rank above technical skills for entry-level hires.",
     image: "/courses/life-employability.jpg",
