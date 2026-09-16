@@ -619,8 +619,8 @@ export const foundationProgramsCourses: Course[] = [
     ],
   },
   {
-    slug: "ai-literacy",
-    title: "AI Literacy",
+    slug: "ai-ml-foundation",
+    title: "AI & ML Foundation",
     description:
       "Able to use today's AI tools effectively, responsibly, and confidently — a baseline skill now expected across almost every modern job, regardless of field.",
     image: "/courses/ai-literacy.jpg",
@@ -762,9 +762,9 @@ export const foundationProgramsCourses: Course[] = [
         image: "/courses/programming-fundamentals.jpg",
       },
       {
-        slug: "ai-literacy",
-        title: "AI Literacy",
-        image: "/courses/ai-literacy.jpg",
+        slug: "ai-ml-foundation",
+        title: "AI & ML Foundation",
+        image: "/courses/ai-ml-foundation.jpg",
       },
     ],
   },
