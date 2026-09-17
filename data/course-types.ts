@@ -21,6 +21,7 @@ export interface Course {
   sections: {
     id: string;
     title: string;
+    icon?: string;
     content: string[];
   }[];
 
