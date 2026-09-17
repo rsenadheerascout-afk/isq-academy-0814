@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Bookmark, Users } from "lucide-react";
 
 export interface featureCourse {
   slug: string;
@@ -16,10 +17,19 @@ export interface featureCourseSectionProps{
 function FeaturedCoursesSection({ featuredCourses }: featureCourseSectionProps) {
   return (
     <section className="relative overflow-clip bg-gray-50 py-8 lg:px-40 md:px-20 px-6">
-      
+      <div className="flex justify-center mb-5">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+          <Bookmark            
+          size={15}
+            strokeWidth={1.8}
+            className="text-primary"
+          />
+          <span>Our Top Picks</span>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto z-10 relative">
         <h2 className="text-3xl md:text-4xl mb-12 text-center">
-          Featured Courses
+          Featured <span className="italic font-serif text-primary">Courses.</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

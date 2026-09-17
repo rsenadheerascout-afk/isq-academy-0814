@@ -1,6 +1,7 @@
 "use client";
 
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import { Users } from "lucide-react";
 import React from "react";
 
 export interface Testimonial {
@@ -25,6 +26,7 @@ function TestimonialsSection({ testimonials = [] }: TestimonialsProps) {
   return (
     <section className="relative mx-auto overflow-hidden bg-white py-5 pb-20 lg:px-40 md:px-20 px-4 text-center">
       {/* Top fade */}
+      
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-50 to-white"
@@ -37,6 +39,16 @@ function TestimonialsSection({ testimonials = [] }: TestimonialsProps) {
       />
 
       <div className="relative z-10">
+         <div className="flex justify-center mb-5">
+    <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+      <Users
+        size={15}
+        strokeWidth={1.8}
+        className="text-primary"
+      />
+      <span>Testimonials</span>
+    </div>
+  </div>
         <h2 className="text-3xl md:text-4xl mb-6">
           What our <span className="font-serif italic text-primary">learners</span> are saying
         </h2>

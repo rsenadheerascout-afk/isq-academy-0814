@@ -74,7 +74,7 @@ export default function HomePage() {
       />
 
       <main className="min-h-screen bg-white text-black font-sans font-normal overflow-hidden">
-        <HeroSection imageLink="/about-academy.jpg" />
+        <HeroSection imageLink="/about-academy.png"/>
 
         {/* Career Acceleration Pathway Section */}
       <CareerAccelerationSection />

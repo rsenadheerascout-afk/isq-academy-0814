@@ -10,11 +10,15 @@ export default function ContactSection() {
                 <div className="space-y-6">
                     {/* Heading */}
                     <div>
-                        <span className="text-primary text-sm">
-                            Visit Us
-                        </span>
+                
+                        <div className="flex justify-center mb-6">
+  <div className="inline-flex items-left gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
+    <MapPin size={15} strokeWidth={1.8} className="text-primary" />
+    <span>Visit Us</span>
+  </div>
+</div>
                         <h2 className="text-4xl md:text-5xl text-gray-900 mt-2 mb-4 tracking-tight"            >
-                            Come in for a Chat.
+                            Come in for <span className="italic font-serif text-primary">a Chat.</span>
                         </h2>
                         <p className="text-gray-500 text-lg">
                             We&apos;d rather meet you than email you. Step in for a quick chat.

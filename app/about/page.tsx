@@ -79,16 +79,17 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="relative w-full min-h-[280px] md:min-h-[360px] overflow-hidden">
         <Image
-          src="/hero-back.jpg"
+          src="/hero-back.png"
           alt="About iSeeQ Academy"
           className="absolute inset-0 w-full h-full object-cover"
           fill
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00BEB2]/70 via-[#00BEB2]/30 to-[#D7A900]/30 border-b border-[#00BEB2]/30 py-16 px-6"/>
         <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-20 md:py-28">
-          <h1 className="text-4xl md:text-5xl text-white tracking-tight">
+          <h1 className="text-4xl md:text-5xl text-white text-shadow-lg text-shadow-black-500/50 tracking-tight">
             About iSeeQ Academy
           </h1>
+          <div className="w-32 h-1 bg-[#F3D25A] text-shadow-lg shadow-black-500/50 mt-6 mb-6 rounded-lg"></div>
         </div>
       </section>
 
@@ -105,7 +106,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-6 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
           {/* Our Mission */}
           <div>
-            <h2 className="text-3xl mb-6 text-gray-900">Our Mission</h2>
+            <h2 className="text-3xl mb-6 text-gray-900">Our <span className="italic font-serif text-primary">Mission</span></h2>
             <div className="space-y-4">
               <p>
                 We improve professional thinking and performance through flexible learning led by industry experts and experienced academics.
@@ -126,7 +127,7 @@ export default function AboutPage() {
           <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-6 space-y-16 text-gray-800 text-base md:text-lg leading-relaxed">
           {/* Our Courses */}
           <div>
-            <h2 className="text-3xl mb-6 text-gray-900">Our Courses</h2>
+            <h2 className="text-3xl mb-6 text-gray-900">Our <span className="italic font-serif text-primary">Courses</span></h2>
 
             <div className="space-y-4">
               <p>
@@ -161,7 +162,7 @@ export default function AboutPage() {
           {/* Our Instructors */}
           <div className="max-w-6xl mx-auto ">
             <h2 className="text-3xl mb-6 text-gray-900 font-normal">
-              Our Advisors
+              Our <span className="italic font-serif text-primary">Advisors</span>
             </h2>
 
             <div className="space-y-6">
@@ -213,7 +214,7 @@ export default function AboutPage() {
 
           {/* Our Community */}
           <div>
-            <h2 className="text-3xl mb-6 text-gray-900">Our Community</h2>
+            <h2 className="text-3xl mb-6 text-gray-900">Our <span className="italic font-serif text-primary">Community</span></h2>
             <p className="mb-6">
               <span className="text-gray-900">Dr. Sarah Jenkins: </span>
               <span className="italic text-gray-600">
