@@ -1,11 +1,25 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { useState } from "react";
+import {
+  BookOpenIcon,
+  LightBulbIcon,
+  Squares2X2Icon,
+  ClipboardDocumentCheckIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
+
+const sectionIcons = {
+  description: BookOpenIcon,
+  "why-it-counts": LightBulbIcon,
+  modules: Squares2X2Icon,
+  requirements: ClipboardDocumentCheckIcon,
+};
 
 type AccordionItem = {
   id: string;
   title: string;
+  icon?: string;
   content: React.ReactNode;
 };
 
@@ -25,18 +39,35 @@ export default function CourseAccordion({ items }: { items: AccordionItem[] }) {
             onClick={() => toggleOpen(item.id)}
             className="w-full flex justify-between items-center p-5 font-semibold text-left hover:bg-gray-50 transition-colors"
           >
-            {item.title}
+            <div className="flex items-center gap-3">
+              {item.icon &&
+                (() => {
+                  const Icon =
+                    sectionIcons[item.icon as keyof typeof sectionIcons];
+
+                  return Icon ? (
+                    <Icon
+                      className="h-5 w-5 shrink-0 text-teal-600"
+                      aria-hidden="true"
+                    />
+                  ) : null;
+                })()}
+
+              <span>{item.title}</span>
+            </div>
             <ChevronDownIcon
               className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
-                openId === item.id ? 'transform rotate-180' : ''
+                openId === item.id ? "transform rotate-180" : ""
               }`}
             />
           </button>
-          
+
           {/* Content Area */}
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              openId === item.id ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+              openId === item.id
+                ? "max-h-[1000px] opacity-100"
+                : "max-h-0 opacity-0"
             }`}
           >
             <div className="p-5 pt-0 text-gray-700 leading-relaxed text-sm">
