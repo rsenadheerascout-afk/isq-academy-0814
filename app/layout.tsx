@@ -140,7 +140,7 @@ export default function RootLayout({
 }) {
   return (
     // 2. Inject the CSS variable into the HTML tag here
-    <html lang="en" className={`${futuraLtPaneuropean.variable} ${urbanist.variable}`}>
+    <html lang="en" className={`${futuraLtPaneuropean.variable} ${urbanist.variable} overflow-x-hidden`}>
       <body className="antialiased bg-white text-black">
         <Navbar />
         {children}
