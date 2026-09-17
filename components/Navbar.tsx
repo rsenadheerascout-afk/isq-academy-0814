@@ -159,9 +159,9 @@ export default function Navbar() {
             <Link
               href="/q360"
               onClick={closeAll}
-              className="hover:text-primary font-medium"
+              className=" group transition-all font-bold hover:text-2xl hover:z-10 hover:text-primary hover:text-shadow-sm hover:text-shadow-primary/30"
             >
-              Q 360°
+              Q<span className=" group-hover:font-serif">360°</span>
             </Link>
           </nav>
 
