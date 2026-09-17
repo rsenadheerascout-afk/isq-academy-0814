@@ -5,9 +5,7 @@ interface TestimonialsProps {
   testimonials: CourseTestimonial[];
 }
 
-export default function Testimonials({
-  testimonials,
-}: TestimonialsProps) {
+export default function Testimonials({ testimonials }: TestimonialsProps) {
   if (!testimonials || testimonials.length === 0) {
     return (
       <div className="border border-gray-200 p-8 text-center">
@@ -19,49 +17,100 @@ export default function Testimonials({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-3 font-montserrat font-normal">
-      {testimonials.map((testimonial) => (
-        <div
-          key={testimonial.id}
-          className="border border-gray-200 p-8 flex flex-col items-center text-center bg-white shadow-sm hover:shadow-md transition-shadow"
+    <div className="relative w-full max-w-6xl mx-auto px-12 py-8 bg-black">
+      {/* Navigation Arrow - Left */}
+      {/* <button
+        aria-label="Previous testimonial"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors p-2"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          {/* Quote mark */}
-          <span className="text-5xl text-gray-300 font-serif leading-none mb-2">
-            “
-          </span>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button> */}
 
-          {/* Testimonial Image */}
-          {testimonial.image ? (
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              width={64}
-              height={64}
-              className="w-16 h-16 rounded-full mb-4 object-cover"
-            />
-          ) : (
-            <div
-              className="w-16 h-16 bg-gray-200 rounded-full mb-4"
-              aria-hidden="true"
-            />
-          )}
+      {/* Testimonials Grid */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 font-montserrat font-normal">
+        {testimonials.map((testimonial) => (
+          <div
+            key={testimonial.id}
+            className="relative bg-white pt-10 pb-8 px-6 flex flex-col justify-between text-left shadow-sm hover:shadow-md transition-shadow"
+          >
+            {/* Teal Floating Quote Mark */}
+            <span className="absolute -top-1 right-4 text-[#00a896] text-9xl scale-150 font-serif leading-none select-none">
+              ”
+            </span>
 
-          {/* Name */}
-          <h4 className="text-gray-900 font-medium">
-            {testimonial.name}
-          </h4>
+            {/* Testimonial Quote */}
+            <p className="text-gray-900 text-sm leading-relaxed mb-6">
+              {testimonial.quote}&quot;
+            </p>
 
-          {/* Role */}
-          <p className="text-xs text-gray-500 mb-6">
-            {testimonial.role}
-          </p>
+            {/* Profile Section */}
+            <div>
+              {/* Divider Line */}
+              <div className="border-t border-gray-100 pt-4 mb-2" />
 
-          {/* Quote */}
-          <p className="text-sm text-gray-700 italic leading-relaxed">
-            "{testimonial.quote}"
-          </p>
-        </div>
-      ))}
+              <div className="flex items-center gap-3">
+                {/* Profile Image */}
+                {testimonial.image ? (
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover shrink-0"
+                  />
+                ) : (
+                  <div
+                    className="w-12 h-12 bg-gray-200 rounded-full shrink-0"
+                    aria-hidden="true"
+                  />
+                )}
+
+                {/* Name & Role */}
+                <div className="flex flex-col">
+                  <h4 className="text-gray-900 font-medium text-sm leading-snug">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-xs text-gray-500 italic">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrow - Right */}
+      {/* <button
+        aria-label="Next testimonial"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors p-2"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button> */}
     </div>
   );
 }
