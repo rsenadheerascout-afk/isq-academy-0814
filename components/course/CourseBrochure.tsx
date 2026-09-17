@@ -44,9 +44,21 @@ export default function CourseBrochure({
       <a
         href={brochureUrl}
         download={downloadFileName}
-        className="block w-full bg-black py-4 text-center text-white shadow-md transition-colors hover:bg-gray-800"
+        aria-label="Download Brochure"
+        className="flex h-10 w-10 items-center justify-center bg-white text-black transition-colors hover:bg-gray-100 focus:outline-blue-700"
       >
-        Download Brochure
+        <svg
+          className="h-6 w-6 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
       </a>
     );
   }
@@ -56,7 +68,7 @@ export default function CourseBrochure({
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="border-2 border-black px-6 py-2 text-sm transition-colors hover:bg-black hover:text-white"
+        className=" bg-black text-white cursor-pointer border-2 border-black px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
       >
         Course brochure
       </button>
