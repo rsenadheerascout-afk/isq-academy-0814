@@ -13,21 +13,19 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "ICT & Computing Fundamentals Specialist",
       bio: "Empowering students with foundational technical, networking, and productivity skills for academic and workplace success.",
-      image: "/instructors/ict-lead.jpg",
+      image: "/instructors/communication.jpg",
     },
 
     sections: [
       {
         id: "description",
         title: "Description",
+        icon: "description",
         content: [
           "Essential computing skills form the backbone of modern business operations and higher technical education.",
           "This program provides a comprehensive grounding in computer systems, basic software engineering concepts, digital security, and core workplace software.",
@@ -36,6 +34,7 @@ export const foundationProgramsCourses: Course[] = [
       {
         id: "why-it-counts",
         title: "Why It Counts",
+        icon: "why-it-counts",
         content: [
           "Academy Diploma on completion, plus a foundation that satisfies prerequisites for our advanced Career Accelerator programs.",
         ],
@@ -43,6 +42,7 @@ export const foundationProgramsCourses: Course[] = [
       {
         id: "modules",
         title: "Modules and activities",
+        icon: "modules",
         content: [
           "Computer systems & networks",
           "Office & productivity software",
@@ -55,6 +55,7 @@ export const foundationProgramsCourses: Course[] = [
       {
         id: "requirements",
         title: "Requirements",
+        icon: "requirements",
         content: [
           "No prior computing experience required.",
           "Basic interest in technology and problem-solving.",
@@ -70,13 +71,27 @@ export const foundationProgramsCourses: Course[] = [
         quote:
           "The program gave me a solid technical foundation. I went from having basic computer knowledge to troubleshooting systems confidently.",
       },
+      {
+        id: "dict-1",
+        name: "Course Participant",
+        role: "ICT Student",
+        quote:
+          "The program gave me a solid technical foundation. I went from having basic computer knowledge to troubleshooting systems confidently.",
+      },
+      {
+        id: "dict-1",
+        name: "Course Participant",
+        role: "ICT Student",
+        quote:
+          "The program gave me a solid technical foundation. I went from having basic computer knowledge to troubleshooting systems confidently.",
+      },
     ],
     relatedCourses: [
-      // {
-      //   slug: "programming-fundamentals-1-2",
-      //   title: "Programming Fundamentals I & II",
-      //   image: "/courses/programming-fundamentals.jpg",
-      // },
+      {
+        slug: "programming-fundamentals-1-2",
+        title: "Programming Fundamentals I & II",
+        image: "/courses/programming-fundamentals-1-2.jpg",
+      },
       // {
       //   slug: "cybersecurity-foundations",
       //   title: "Cybersecurity Foundations",
@@ -89,17 +104,14 @@ export const foundationProgramsCourses: Course[] = [
     title: "Programming Fundamentals I & II",
     description:
       "Confident writing and reading real code — ready for university computing courses or an entry point into our Full-Stack Web Development tracks.",
-    image: "/courses/programming-fundamentals.jpg",
+    image: "/courses/programming-fundamentals-1-2.jpg",
     price: "Contact us",
     duration: "3 Months",
     nextStartDate: "2026-10-01",
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Software Engineering Lead",
@@ -178,10 +190,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / hands-on lab",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Spatial Computing & Prototyping Specialist",
@@ -255,10 +264,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / workshop based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Professional Communications Trainer",
@@ -329,10 +335,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Digital Marketing Strategist",
@@ -405,10 +408,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / interactive workshops",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Career Readiness Coach",
@@ -479,10 +479,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Visual & Interface Designer",
@@ -554,10 +551,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Cybersecurity & Defense Specialist",
@@ -630,10 +624,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "3–5 hours per week",
     studyMode: "Tutor guided / practical workshops",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "AI & Automation Consultant",
@@ -701,10 +692,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / project based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Data Analyst & Educator",
@@ -780,10 +768,7 @@ export const foundationProgramsCourses: Course[] = [
     category: "Foundation Programs",
     commitment: "4–6 hours per week",
     studyMode: "Tutor guided / workshop based",
-    roles:[
-      "Software Engineer",
-      "Web Developer"
-    ],
+    roles: ["Software Engineer", "Web Developer"],
     lead: {
       name: "Course Instructor",
       role: "Startup Advisor & Founder",
