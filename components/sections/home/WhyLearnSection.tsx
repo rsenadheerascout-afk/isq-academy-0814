@@ -23,7 +23,7 @@ function WhyLearnSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-16 text-gray-800">
         
         {/* Our Belief */}
-        <div className="flex justify-center mb-6">
+        {/* <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
             <Heart
               size={15}
@@ -32,7 +32,7 @@ function WhyLearnSection() {
             />
             <span>{whyLearnContent.label}</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Heading */}
         <h2 className="text-3xl md:text-4xl mb-6 text-center text-gray-900">

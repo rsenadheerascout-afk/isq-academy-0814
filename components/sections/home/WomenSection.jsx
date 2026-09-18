@@ -58,7 +58,7 @@ export default function Women() {
               Women in Technology
             </div> */}
             <h2 className="mt-3 text-3xl font-normal leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Bridging the Digital Gender Gap, One woman at a time.
+              Bridging the Digital Gender Gap, <span className="italic font-serif text-primary">One woman at a time.</span>
             </h2>
 
             <p className="mt-3 text-base text-slate-600 sm:text-lg sm:leading-relaxed">

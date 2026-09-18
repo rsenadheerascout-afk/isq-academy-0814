@@ -36,7 +36,7 @@ export default function WhyISeeQ() {
         </div>
         {/* Heading */}
         <h2 className="text-5xl sm:text-5xl text-slate-900 tracking-tight mb-4">
-          Where Potential Becomes Purpose.
+          Where Potential Becomes <span className="italic font-serif text-primary">Purpose.</span>
         </h2>
 
         {/* Subtitle */}

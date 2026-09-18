@@ -10,7 +10,7 @@ export default function Seniors() {
     <section className="relative overflow-hidden bg-white pt-2 pb-0 md:pt-2 lg:pt-2 lg:px-40 md:px-20 px-6 text-slate-900">
       <div>
         {/* Section Label */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mt-10 mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-slate-200 rounded-full text-sm text-slate-600">
             <LiaHatCowboySolid size={15} strokeWidth={1.8} className="text-primary" />
             <span>Digital Inclusion</span>
@@ -23,7 +23,7 @@ export default function Seniors() {
               Digital Inclusion
             </div> */}
             <h2 className="mt-3 text-3xl font-normal leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              No one should be left behind by technology.
+              No one should be left behind  <span className="font-serif italic text-primary">by technology.</span>
             </h2>
             <p className="mt-3 text-base text-slate-600 sm:text-lg sm:leading-relaxed">
               A warm, patient classroom for our parents and grandparents —
@@ -81,7 +81,7 @@ export default function Seniors() {
 
             <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
               <Image
-                src="/senior-2.jpg"
+                src="/senior-2.png"
                 alt="Senior gentleman using a smartphone with confidence"
                 loading="lazy"
                 width={1024}
