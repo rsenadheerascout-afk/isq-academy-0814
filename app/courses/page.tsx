@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { courses } from "@/data/courses";
+import CoursesSkeleton from "@/components/skeletons/CoursesSkeleton";
 
-export default function CoursesPage() {
+function CoursesContent() {
   const searchParams = useSearchParams();
   const filterParam = searchParams.get("filter");
 
@@ -226,5 +227,13 @@ export default function CoursesPage() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function CoursesPage() {
+  return (
+    <Suspense fallback={<CoursesSkeleton/>}>
+      <CoursesContent />
+    </Suspense>
   );
 }
