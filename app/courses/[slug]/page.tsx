@@ -253,9 +253,9 @@ export default async function SingleCoursePage({
               )}
 
               <div className="space-y-2 text-center sm:text-left">
-                <h3 className="text-lg font-bold text-white">Academic Staff</h3>
+                <h3 className="text-lg font-bold text-white">{course.lead.name} </h3>
                 <p className="text-xs font-medium text-gray-400">
-                  {course.lead.name} &bull; {course.lead.role}
+                   {course.lead.role}
                 </p>
                 <p className="text-sm leading-relaxed text-gray-300 pt-1">
                   {course.lead.bio}

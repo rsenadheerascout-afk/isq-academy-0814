@@ -72,14 +72,14 @@ export const foundationProgramsCourses: Course[] = [
           "The program gave me a solid technical foundation. I went from having basic computer knowledge to troubleshooting systems confidently.",
       },
       {
-        id: "dict-1",
+        id: "dict-2",
         name: "Course Participant",
         role: "ICT Student",
         quote:
           "The program gave me a solid technical foundation. I went from having basic computer knowledge to troubleshooting systems confidently.",
       },
       {
-        id: "dict-1",
+        id: "dict-3",
         name: "Course Participant",
         role: "ICT Student",
         quote:

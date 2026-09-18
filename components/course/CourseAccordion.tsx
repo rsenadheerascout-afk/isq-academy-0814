@@ -40,10 +40,10 @@ export default function CourseAccordion({ items }: { items: AccordionItem[] }) {
             className="w-full flex justify-between items-center p-5 font-semibold text-left hover:bg-gray-50 transition-colors"
           >
             <div className="flex items-center gap-3">
-              {item.icon &&
+              {item.id &&
                 (() => {
                   const Icon =
-                    sectionIcons[item.icon as keyof typeof sectionIcons];
+                    sectionIcons[item.id as keyof typeof sectionIcons];
 
                   return Icon ? (
                     <Icon

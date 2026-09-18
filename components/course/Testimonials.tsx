@@ -47,12 +47,12 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
           >
             {/* Teal Floating Quote Mark */}
             <span className="absolute -top-1 right-4 text-[#00a896] text-9xl scale-150 font-serif leading-none select-none">
-              ”
+              &rdquo;
             </span>
 
             {/* Testimonial Quote */}
-            <p className="text-gray-900 text-sm leading-relaxed mb-6">
-              {testimonial.quote}&quot;
+            <p className="text-gray-900 text-sm leading-relaxed mb-6 italic">
+              &rdquo;{testimonial.quote}&ldquo;
             </p>
 
             {/* Profile Section */}
