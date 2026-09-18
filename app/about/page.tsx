@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-export interface Advisor {
+ interface Advisor {
   id: string;
   country: string;
   role: string;
@@ -22,7 +22,7 @@ export interface Advisor {
   expertise: string[];
 }
 
-export const advisors: Advisor[] = [
+ const advisors: Advisor[] = [
   {
     id: "1",
     country: "USA",
